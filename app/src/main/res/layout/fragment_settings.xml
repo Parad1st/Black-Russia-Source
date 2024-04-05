@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_14sdp"
+    android:paddingRight="@dimen/_14sdp"
+    android:paddingTop="@dimen/_18sdp" >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_40sdp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_root_ui_medium"
+                android:text="Настройки"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+
+            <TextView
+                android:id="@+id/privacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/pt_root_ui_bold"
+                android:text="Политика конфиденциальности"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:alpha="0.5"
+                android:fontFamily="@font/pt_root_ui_medium"
+                android:text="Ваш никнейм"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:id="@+id/changeNik"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/nik_rectangle2"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:padding="12.0dip"
+                    android:src="@drawable/user1" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/transparent"
+                    android:digits="abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:fontFamily="@font/pt_root_ui_regular"
+                    android:gravity="center_vertical"
+                    android:hint="Введите свой никнейм"
+                    android:inputType="textCapSentences"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/menuTextDisable"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_minus10sdp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/pt_root_ui_bold"
+                    android:text="Получать уведомления"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ToggleButton
+                    android:id="@+id/notification"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginRight="@dimen/_minus20sdp"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="true"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resetSettings"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/button_red_stroke_rectangle"
+                android:fontFamily="@font/pt_root_ui_medium"
+                android:gravity="center"
+                android:text="Сбросить настройки"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/reinstallGame"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_red_rectangle"
+                android:fontFamily="@font/pt_root_ui_medium"
+                android:gravity="center"
+                android:text="Переустановить игру"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/telegramButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/telegram" />
+
+                <Space
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/instagramButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/instagram" />
+
+                <Space
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/vkButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/vk" />
+
+                <Space
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/discordButton"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/discord" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

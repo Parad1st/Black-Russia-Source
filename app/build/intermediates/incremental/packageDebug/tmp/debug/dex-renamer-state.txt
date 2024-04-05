@@ -1,0 +1,7 @@
+#Fri Apr 05 21:54:49 MSK 2024
+base.0=C\:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+base.1=C\:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

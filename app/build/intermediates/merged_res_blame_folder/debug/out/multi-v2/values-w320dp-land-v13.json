@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\src\\main\\res\\values-w320dp-land\\dimens.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "0,0",
+                        "startOffsets": "51,105",
+                        "endColumns": "53,60",
+                        "endOffsets": "104,165"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,113",
+                        "endColumns": "57,64",
+                        "endOffsets": "108,173"
+                    }
+                }
+            ]
+        }
+    ]
+}

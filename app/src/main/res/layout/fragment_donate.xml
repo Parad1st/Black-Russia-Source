@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_14sdp"
+    android:paddingTop="@dimen/_18sdp"
+    android:paddingRight="@dimen/_14sdp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView
+        android:paddingBottom="@dimen/_40sdp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Донат"
+                android:fontFamily="@font/pt_root_ui_medium" />
+            <TextView
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Данные"
+                android:alpha="0.5"
+                android:fontFamily="@font/pt_root_ui_medium" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/nik_rectangle2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+                <ImageView
+                    android:padding="12.0dip"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/user1" />
+                <EditText
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/menuTextDisable"
+                    android:id="@+id/nik"
+                    android:background="@color/transparent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:hint="Имя_Фамилия"
+                    android:singleLine="true"
+                    android:maxLength="20"
+                    android:digits="abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:layout_weight="1.0"
+                    android:inputType="textCapSentences"
+                    android:fontFamily="@font/pt_root_ui_regular" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/nik_rectangle2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+                <ImageView
+                    android:padding="12.0dip"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/email" />
+                <EditText
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/menuTextDisable"
+                    android:id="@+id/email"
+                    android:background="@color/transparent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:hint="Введите ваш Email"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:layout_weight="1.0"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/pt_root_ui_regular" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/nik_rectangle2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+                <ImageView
+                    android:padding="12.0dip"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/ruble" />
+                <EditText
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/menuTextDisable"
+                    android:id="@+id/sum"
+                    android:background="@color/transparent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:hint="Введите сумму"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:digits="\ 1234567890"
+                    android:layout_weight="1.0"
+                    android:inputType="number"
+                    android:fontFamily="@font/pt_root_ui_regular" />
+            </LinearLayout>
+			<TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:id="@+id/deposit"
+                android:background="@drawable/button_red_rectangle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Пополнить счёт"
+                android:fontFamily="@font/pt_root_ui_medium" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

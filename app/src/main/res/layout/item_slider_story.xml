@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <FrameLayout android:paddingLeft="@dimen/_14sdp" android:paddingTop="@dimen/_18sdp" android:paddingRight="@dimen/_14sdp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/_12sdp" android:textColor="@color/white" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/_36sdp" android:fontFamily="@font/pt_root_ui_medium"/>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_50sdp">
+            <TextView android:textSize="@dimen/_22sdp" android:textColor="@color/white" android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/pt_root_ui_bold"/>
+            <FrameLayout android:id="@+id/more" android:background="@drawable/button_red_rectangle" android:layout_width="match_parent" android:layout_height="@dimen/_50sdp" android:layout_marginTop="@dimen/_20sdp">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/_16sdp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Больше" android:fontFamily="@font/pt_root_ui_regular"/>
+                    <ImageView android:padding="@dimen/_2sdp" android:layout_width="wrap_content" android:layout_height="@dimen/_16sdp" android:layout_marginLeft="@dimen/_2sdp" android:src="@drawable/link" android:adjustViewBounds="true"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

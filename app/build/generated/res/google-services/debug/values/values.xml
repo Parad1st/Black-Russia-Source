@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1019412995639-8j85oa5va0hlo6rclm9tnktsrtkojfpg.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://black-russia-419fa-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1019412995639</string>
+    <string name="google_api_key" translatable="false">AIzaSyChvEPu7XIf4oTMyXis21Z-fN3Z5Vhct-8</string>
+    <string name="google_app_id" translatable="false">1:1019412995639:android:cc8a779436f93ee219a9b2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyChvEPu7XIf4oTMyXis21Z-fN3Z5Vhct-8</string>
+    <string name="google_storage_bucket" translatable="false">black-russia-419fa.appspot.com</string>
+    <string name="project_id" translatable="false">black-russia-419fa</string>
+</resources>

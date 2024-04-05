@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\src\\main\\res\\values-w360dp-port\\dimens.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0,0,0",
+                        "startOffsets": "51,109,164,219,285,349,403,467",
+                        "endColumns": "57,54,54,65,63,53,63,67",
+                        "endOffsets": "108,163,218,284,348,402,466,534"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,117,176,235,305,373,431,499",
+                        "endColumns": "61,58,58,69,67,57,67,71",
+                        "endOffsets": "112,171,230,300,368,426,494,566"
+                    }
+                }
+            ]
+        }
+    ]
+}

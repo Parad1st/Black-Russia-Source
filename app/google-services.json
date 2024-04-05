@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1019412995639",
+    "firebase_url": "https://black-russia-419fa-default-rtdb.firebaseio.com",
+    "project_id": "black-russia-419fa",
+    "storage_bucket": "black-russia-419fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019412995639:android:cc8a779436f93ee219a9b2",
+        "android_client_info": {
+          "package_name": "com.blackrussia.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019412995639-8j85oa5va0hlo6rclm9tnktsrtkojfpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChvEPu7XIf4oTMyXis21Z-fN3Z5Vhct-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019412995639-8j85oa5va0hlo6rclm9tnktsrtkojfpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

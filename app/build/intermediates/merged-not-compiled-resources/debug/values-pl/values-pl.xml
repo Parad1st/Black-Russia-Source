@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Przejdź na stronę główną"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Przejdź wyżej"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Więcej opcji"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Gotowe"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Pokaż wszystko"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Wybierz aplikację"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"WYŁ."</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"WŁ."</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Funkcyjny+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"spacja"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Szukaj…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Wyczyść zapytanie"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Zapytanie"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Szukaj"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Wyślij zapytanie"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Wyszukiwanie głosowe"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Udostępnij przez:"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Udostępnij przez: <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Zwiń"</string>
+    <string name="auth_client_needs_enabling_title">Aplikacja wymaga włączenia Usług Google Play.</string>
+    <string name="auth_client_needs_installation_title">Aplikacja wymaga zainstalowania Usług Google Play.</string>
+    <string name="auth_client_needs_update_title">Aplikacja wymaga aktualizacji Usług Google Play.</string>
+    <string name="auth_client_play_services_err_notification_msg">Błąd usług Google Play</string>
+    <string name="auth_client_requested_by_msg">Żądanie z aplikacji %1$s</string>
+    <string name="auth_client_using_bad_version_title">Aplikacja próbowała skorzystać z nieprawidłowej wersji Usług Google Play.</string>
+    <string name="common_google_play_services_enable_button">Włącz Usługi Google Play</string>
+    <string name="common_google_play_services_enable_text">Ta aplikacja nie będzie działać, jeśli nie włączysz Usług Google Play.</string>
+    <string name="common_google_play_services_enable_title">Włącz Usługi Google Play</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Żądanie z aplikacji %1$s</string>
+    <string name="common_google_play_services_install_button">Pobierz Usługi Google Play</string>
+    <string name="common_google_play_services_install_text_phone">Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na telefonie.</string>
+    <string name="common_google_play_services_install_text_tablet">Ta aplikacja nie będzie działać bez Usług Google Play, których nie masz na tablecie.</string>
+    <string name="common_google_play_services_install_title">Pobierz Usługi Google Play</string>
+    <string name="common_google_play_services_invalid_account_text">Podanego konta nie ma na tym urządzeniu. Wybierz inne konto.</string>
+    <string name="common_google_play_services_invalid_account_title">Nieprawidłowe konto</string>
+    <string name="common_google_play_services_needs_enabling_title">Aplikacja wymaga włączenia Usług Google Play.</string>
+    <string name="common_google_play_services_network_error_text">Korzystanie z usług Google Play wymaga połączenia z internetem.</string>
+    <string name="common_google_play_services_network_error_title">Błąd sieci</string>
+    <string name="common_google_play_services_notification_needs_installation_title">Aplikacja wymaga zainstalowania Usług Google Play.</string>
+    <string name="common_google_play_services_notification_needs_update_title">Aplikacja wymaga zaktualizowania Usług Google Play.</string>
+    <string name="common_google_play_services_notification_ticker">Błąd Usług Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Nieznany problem z Usługami Google Play.</string>
+    <string name="common_google_play_services_unsupported_date_text">Data ustawiona na urządzeniu wydaje się nieprawidłowa. Sprawdź datę ustawioną na urządzeniu.</string>
+    <string name="common_google_play_services_unsupported_text">Usługi Google Play, od których zależy działanie niektórych aplikacji, nie są obsługiwane na Twoim urządzeniu. Skontaktuj się z producentem, by uzyskać pomoc.</string>
+    <string name="common_google_play_services_unsupported_title">Usługi Google Play</string>
+    <string name="common_google_play_services_update_button">Aktualizuj</string>
+    <string name="common_google_play_services_update_text">Ta aplikacja nie będzie działać, jeśli nie zaktualizujesz Usług Google Play.</string>
+    <string name="common_google_play_services_update_title">Aktualizuj Usługi Google Play</string>
+    <string name="common_signin_button_text">Zaloguj się</string>
+    <string name="common_signin_button_text_long">Zaloguj się przez Google</string>
+    <string msgid="3209159573327985035" name="copy">"Kopiuj"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Zaawansowane"</string>
+    <string msgid="478774118347071097" name="not_set">"Nie ustawiono"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"Skopiowano „<ns1:g id="SUMMARY">%1$s</ns1:g>” do schowka."</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Szukaj"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"WYŁ."</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"WŁ."</string>
+</resources>

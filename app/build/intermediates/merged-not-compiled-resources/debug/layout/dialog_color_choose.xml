@@ -1,0 +1,20 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1.0">
+
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/dialog_color_pick"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"></com.skydoves.colorpickerview.ColorPickerView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

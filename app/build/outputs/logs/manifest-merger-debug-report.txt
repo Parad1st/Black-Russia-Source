@@ -1,0 +1,512 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f17af24232f7551b11e6031168d27d5\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\650810144836a48efa6814254a5abf23\transformed\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.tuyenmonkey:mkloader:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\02c582e3a568a74b421210affdae1e6e\transformed\jetified-mkloader-1.4.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\f778abe23e245971ebe412b55d5f9a15\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [ru.egslava:MaskedEditText:1.0.5] C:\Users\Parad1st\.gradle\caches\transforms-3\30f7d47dc87a736f620a6c420838c962\transformed\jetified-MaskedEditText-1.0.5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:25:1-40:12
+MERGED from [com.dinuscxj:circleprogressbar:1.3.6] C:\Users\Parad1st\.gradle\caches\transforms-3\2373b024737e758a60f49797f47c02e0\transformed\jetified-circleprogressbar-1.3.6\AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.skydoves:colorpickerpreference:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\827dd6ef6d3f6a866d355e1044cab11b\transformed\jetified-colorpickerpreference-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.skydoves:colorpickerview:2.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d0db4d0801c92bf8c6f068baa821ee02\transformed\jetified-colorpickerview-2.2.0\AndroidManifest.xml:2:1-10:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\245285315bbc8412b0d592b76a8cb7ea\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a779a3b8c9b45937af6c52ed205d68ee\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.akexorcist:round-corner-progress-bar:2.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8a61ff7032e1a0773b0de89fe419a52c\transformed\jetified-round-corner-progress-bar-2.1.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\8e83882f2b65cab9d984503014fd9650\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\53802220654afa607e259441f54619ce\transformed\jetified-glide-4.13.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.mindorks.android:prdownloader:0.6.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3dc9f97ec7d021cf7cf2cb3af53e3937\transformed\jetified-prdownloader-0.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:15:1-38:12
+MERGED from [com.github.hzy3774:AndroidP7zip:v1.7.2] C:\Users\Parad1st\.gradle\caches\transforms-3\5902bcad4207e93ad12e40747b1598d5\transformed\jetified-AndroidP7zip-v1.7.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.hzy:un7zip:1.7.1] C:\Users\Parad1st\.gradle\caches\transforms-3\6dc186ce68d13bfdb74214922627f020\transformed\jetified-un7zip-1.7.1\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Parad1st\.gradle\caches\transforms-3\41320efd38bdd92ee56b39851f7d82b7\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8cb9bffca4df9ebe8b8805b26d4ff344\transformed\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:15:1-40:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1e49de38f0f1c61102a22995dffe19e1\transformed\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\41cf4eee9b91f7bfc3a8f4352adde3ed\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\35def88b97680745d133c7ef2051f649\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\992800f1d1995498b2ae78ff87e50785\transformed\transition-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\cd821585784b0775d96e1e04b7c7d56c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\884199923b95c07da6b8ddc2349677fc\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\0b0dba409f477934ccb72e1ea38d169c\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\51c77468f14470cf8cd2b7ba9986000f\transformed\fragment-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c46cb3959bb15becb55906abe226bf67\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\7d1bc6707921651be6733268ecb8dd61\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\891b1d564385bccd5469e375e4adc58d\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\45d7fc8dc49b8e3be53c45beb4a39fd3\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3d1a8c86a33e0853dd26c9ed307883cc\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a31e84e0331bade51a53303e65c4cb7b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\86f21e3687c0bc0b74b12235c451b9e3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2c6cd07f563db719f6ff147cab6c372b\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\df8c72ec1b77391b424b531d4a977658\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.1] C:\Users\Parad1st\.gradle\caches\transforms-3\8c6b72afa87e5ab71e4742214eca307b\transformed\jetified-activity-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1c12933ae4a0ae2df9e3c8b6112f5efc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\e47a4f0cd69ef08b1c67dae2d30fbde9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:17:1-26:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\81208381260a9c2f124e568966375ee6\transformed\jetified-gifdecoder-4.13.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\dad374b0ecd0074834f99eac3ee8490b\transformed\exifinterface-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a7b17ee4ca59ecae1b178a439adc3322\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5074a3f81679758a3e9d99aae06ca16d\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1b6c83a5823bc365e63f111aa5e617e1\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c744e4708ed673b1147ac490c8c3fb90\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f81b81d57bceff085645b3a402f95ed3\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f9aa2225103523525981f72c3ff8cd3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\db9cb66423474c5e6646161871701e4c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\6310d2c34801985b56d2e189a7f005b5\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.databinding:viewbinding:3.6.3] C:\Users\Parad1st\.gradle\caches\transforms-3\52669012ce694c2b9c1ab2bec9de7b7c\transformed\jetified-viewbinding-3.6.3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d03776eb3586e09fd02ee47e57ddbc67\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3ead8bcc687c7a29ae999510341a0fcd\transformed\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\617fdcaee2f3a608d6cde9759f8d6bcf\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c3fa6f7a69f85b8ad64337dae92d05dd\transformed\lifecycle-runtime-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2887267c2a5b8bc3aa9ded56232488b9\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\39071f8cc740f5abe51157de559da5ff\transformed\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\700511e9596667b52ac348f0717326d3\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f21fd9fc56b714e6796ac0585bf4bfe0\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+	package
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:1-88:12
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:5:22-65
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:8:5-80
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:8:22-77
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:9:22-64
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:10:5-83
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:10:22-80
+uses-permission#android.permission.REQUEST_DELETE_PACKAGES
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:11:22-79
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:12:22-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:25:5-79
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#com.android.vending.CHECK_LICENSE
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:14:5-73
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:14:22-70
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:15:5-71
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:15:22-68
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:16:5-68
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:16:22-65
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:17:5-71
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:17:22-68
+uses-feature#0x00020000
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:19:5-54
+	android:glEsVersion
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:19:19-51
+uses-feature#android.hardware.touchscreen
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:20:5-22:36
+	android:required
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:22:9-33
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:21:9-52
+supports-screens
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:24:5-29:39
+	android:largeScreens
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:26:9-36
+	android:smallScreens
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:29:9-36
+	android:normalScreens
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:27:9-37
+	android:resizeable
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:28:9-34
+	android:anyDensity
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:25:9-34
+application
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:31:5-86:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\650810144836a48efa6814254a5abf23\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\650810144836a48efa6814254a5abf23\transformed\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\f778abe23e245971ebe412b55d5f9a15\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\f778abe23e245971ebe412b55d5f9a15\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:34:5-38:19
+MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:34:5-38:19
+MERGED from [com.dinuscxj:circleprogressbar:1.3.6] C:\Users\Parad1st\.gradle\caches\transforms-3\2373b024737e758a60f49797f47c02e0\transformed\jetified-circleprogressbar-1.3.6\AndroidManifest.xml:11:5-14:19
+MERGED from [com.dinuscxj:circleprogressbar:1.3.6] C:\Users\Parad1st\.gradle\caches\transforms-3\2373b024737e758a60f49797f47c02e0\transformed\jetified-circleprogressbar-1.3.6\AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\53802220654afa607e259441f54619ce\transformed\jetified-glide-4.13.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\53802220654afa607e259441f54619ce\transformed\jetified-glide-4.13.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:28:5-36:19
+MERGED from [com.hzy:un7zip:1.7.1] C:\Users\Parad1st\.gradle\caches\transforms-3\6dc186ce68d13bfdb74214922627f020\transformed\jetified-un7zip-1.7.1\AndroidManifest.xml:11:5-20
+MERGED from [com.hzy:un7zip:1.7.1] C:\Users\Parad1st\.gradle\caches\transforms-3\6dc186ce68d13bfdb74214922627f020\transformed\jetified-un7zip-1.7.1\AndroidManifest.xml:11:5-20
+MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:11:5-16:19
+MERGED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:11:5-16:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Parad1st\.gradle\caches\transforms-3\41320efd38bdd92ee56b39851f7d82b7\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Parad1st\.gradle\caches\transforms-3\41320efd38bdd92ee56b39851f7d82b7\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8cb9bffca4df9ebe8b8805b26d4ff344\transformed\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8cb9bffca4df9ebe8b8805b26d4ff344\transformed\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\0b0dba409f477934ccb72e1ea38d169c\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\0b0dba409f477934ccb72e1ea38d169c\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:24:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\81208381260a9c2f124e568966375ee6\transformed\jetified-gifdecoder-4.13.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\81208381260a9c2f124e568966375ee6\transformed\jetified-gifdecoder-4.13.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\6310d2c34801985b56d2e189a7f005b5\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\6310d2c34801985b56d2e189a7f005b5\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:requestLegacyExternalStorage
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:39:9-52
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:35:9-41
+	android:hardwareAccelerated
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:32:9-44
+	android:allowBackup
+		ADDED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:35:9-35
+	android:largeHeap
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:36:9-33
+	android:icon
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:33:9-45
+	android:logo
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:37:9-41
+	android:isGame
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:34:9-30
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:38:9-44
+activity#com.blackrussia.launcher.activity.StoryActivity
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:40:9-44:82
+	android:screenOrientation
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:43:13-49
+	android:exported
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:42:13-37
+	android:theme
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:44:13-80
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:41:13-75
+provider#androidx.core.content.FileProvider
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:46:9-54:20
+	android:grantUriPermissions
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:50:13-47
+	android:authorities
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:48:13-64
+	android:exported
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:49:13-37
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:47:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:51:13-53:58
+	android:resource
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:53:17-55
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:52:17-67
+activity#com.blackrussia.game.core.GTASA
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:56:9-59:92
+	android:screenOrientation
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:58:13-50
+	android:theme
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:59:13-80
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:57:13-59
+activity#com.blackrussia.launcher.activity.SplashActivity
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:60:9-69:20
+	android:screenOrientation
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:63:13-49
+	android:exported
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:62:13-36
+	android:theme
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:64:13-55
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:61:13-76
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:65:13-68:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:66:17-69
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:66:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:67:17-77
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:67:27-74
+activity#com.blackrussia.launcher.activity.MainActivity
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:70:9-74:68
+	android:screenOrientation
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:73:13-49
+	android:exported
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:72:13-36
+	android:theme
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:74:13-56
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:71:13-74
+activity#com.blackrussia.launcher.activity.LoaderActivity
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:75:9-78:59
+	android:screenOrientation
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:77:13-49
+	android:theme
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:78:13-56
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:76:13-76
+meta-data#android.max_aspect
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:80:9-82:35
+	android:value
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:82:13-32
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:81:13-46
+meta-data#preloaded_fonts
+ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:83:9-85:57
+	android:resource
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:85:13-54
+	android:name
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:84:13-43
+uses-sdk
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f17af24232f7551b11e6031168d27d5\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f17af24232f7551b11e6031168d27d5\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\650810144836a48efa6814254a5abf23\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\650810144836a48efa6814254a5abf23\transformed\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.tuyenmonkey:mkloader:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\02c582e3a568a74b421210affdae1e6e\transformed\jetified-mkloader-1.4.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.tuyenmonkey:mkloader:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\02c582e3a568a74b421210affdae1e6e\transformed\jetified-mkloader-1.4.0\AndroidManifest.xml:8:5-10:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\f778abe23e245971ebe412b55d5f9a15\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\f778abe23e245971ebe412b55d5f9a15\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [ru.egslava:MaskedEditText:1.0.5] C:\Users\Parad1st\.gradle\caches\transforms-3\30f7d47dc87a736f620a6c420838c962\transformed\jetified-MaskedEditText-1.0.5\AndroidManifest.xml:7:5-9:41
+MERGED from [ru.egslava:MaskedEditText:1.0.5] C:\Users\Parad1st\.gradle\caches\transforms-3\30f7d47dc87a736f620a6c420838c962\transformed\jetified-MaskedEditText-1.0.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:30:5-32:41
+MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:30:5-32:41
+MERGED from [com.dinuscxj:circleprogressbar:1.3.6] C:\Users\Parad1st\.gradle\caches\transforms-3\2373b024737e758a60f49797f47c02e0\transformed\jetified-circleprogressbar-1.3.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.dinuscxj:circleprogressbar:1.3.6] C:\Users\Parad1st\.gradle\caches\transforms-3\2373b024737e758a60f49797f47c02e0\transformed\jetified-circleprogressbar-1.3.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.skydoves:colorpickerpreference:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\827dd6ef6d3f6a866d355e1044cab11b\transformed\jetified-colorpickerpreference-2.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.skydoves:colorpickerpreference:2.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\827dd6ef6d3f6a866d355e1044cab11b\transformed\jetified-colorpickerpreference-2.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.skydoves:colorpickerview:2.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d0db4d0801c92bf8c6f068baa821ee02\transformed\jetified-colorpickerview-2.2.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.skydoves:colorpickerview:2.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d0db4d0801c92bf8c6f068baa821ee02\transformed\jetified-colorpickerview-2.2.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\245285315bbc8412b0d592b76a8cb7ea\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\245285315bbc8412b0d592b76a8cb7ea\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a779a3b8c9b45937af6c52ed205d68ee\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a779a3b8c9b45937af6c52ed205d68ee\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.akexorcist:round-corner-progress-bar:2.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8a61ff7032e1a0773b0de89fe419a52c\transformed\jetified-round-corner-progress-bar-2.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.akexorcist:round-corner-progress-bar:2.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8a61ff7032e1a0773b0de89fe419a52c\transformed\jetified-round-corner-progress-bar-2.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\8e83882f2b65cab9d984503014fd9650\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\8e83882f2b65cab9d984503014fd9650\transformed\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
+MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\53802220654afa607e259441f54619ce\transformed\jetified-glide-4.13.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\53802220654afa607e259441f54619ce\transformed\jetified-glide-4.13.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.mindorks.android:prdownloader:0.6.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3dc9f97ec7d021cf7cf2cb3af53e3937\transformed\jetified-prdownloader-0.6.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.mindorks.android:prdownloader:0.6.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3dc9f97ec7d021cf7cf2cb3af53e3937\transformed\jetified-prdownloader-0.6.0\AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:19:5-21:41
+MERGED from [com.github.hzy3774:AndroidP7zip:v1.7.2] C:\Users\Parad1st\.gradle\caches\transforms-3\5902bcad4207e93ad12e40747b1598d5\transformed\jetified-AndroidP7zip-v1.7.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.hzy3774:AndroidP7zip:v1.7.2] C:\Users\Parad1st\.gradle\caches\transforms-3\5902bcad4207e93ad12e40747b1598d5\transformed\jetified-AndroidP7zip-v1.7.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hzy:un7zip:1.7.1] C:\Users\Parad1st\.gradle\caches\transforms-3\6dc186ce68d13bfdb74214922627f020\transformed\jetified-un7zip-1.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hzy:un7zip:1.7.1] C:\Users\Parad1st\.gradle\caches\transforms-3\6dc186ce68d13bfdb74214922627f020\transformed\jetified-un7zip-1.7.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:6:5-43
+MERGED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:6:5-43
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Parad1st\.gradle\caches\transforms-3\41320efd38bdd92ee56b39851f7d82b7\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\Parad1st\.gradle\caches\transforms-3\41320efd38bdd92ee56b39851f7d82b7\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8cb9bffca4df9ebe8b8805b26d4ff344\transformed\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\Parad1st\.gradle\caches\transforms-3\8cb9bffca4df9ebe8b8805b26d4ff344\transformed\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1e49de38f0f1c61102a22995dffe19e1\transformed\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1e49de38f0f1c61102a22995dffe19e1\transformed\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\41cf4eee9b91f7bfc3a8f4352adde3ed\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\41cf4eee9b91f7bfc3a8f4352adde3ed\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\35def88b97680745d133c7ef2051f649\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\35def88b97680745d133c7ef2051f649\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\992800f1d1995498b2ae78ff87e50785\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\992800f1d1995498b2ae78ff87e50785\transformed\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\cd821585784b0775d96e1e04b7c7d56c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\cd821585784b0775d96e1e04b7c7d56c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\884199923b95c07da6b8ddc2349677fc\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\884199923b95c07da6b8ddc2349677fc\transformed\jetified-firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\0b0dba409f477934ccb72e1ea38d169c\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\0b0dba409f477934ccb72e1ea38d169c\transformed\jetified-play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\51c77468f14470cf8cd2b7ba9986000f\transformed\fragment-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\51c77468f14470cf8cd2b7ba9986000f\transformed\fragment-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c46cb3959bb15becb55906abe226bf67\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c46cb3959bb15becb55906abe226bf67\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\7d1bc6707921651be6733268ecb8dd61\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\7d1bc6707921651be6733268ecb8dd61\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\891b1d564385bccd5469e375e4adc58d\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\891b1d564385bccd5469e375e4adc58d\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\45d7fc8dc49b8e3be53c45beb4a39fd3\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\45d7fc8dc49b8e3be53c45beb4a39fd3\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3d1a8c86a33e0853dd26c9ed307883cc\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3d1a8c86a33e0853dd26c9ed307883cc\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a31e84e0331bade51a53303e65c4cb7b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a31e84e0331bade51a53303e65c4cb7b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\86f21e3687c0bc0b74b12235c451b9e3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\86f21e3687c0bc0b74b12235c451b9e3\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2c6cd07f563db719f6ff147cab6c372b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2c6cd07f563db719f6ff147cab6c372b\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\df8c72ec1b77391b424b531d4a977658\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\df8c72ec1b77391b424b531d4a977658\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.1] C:\Users\Parad1st\.gradle\caches\transforms-3\8c6b72afa87e5ab71e4742214eca307b\transformed\jetified-activity-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.1] C:\Users\Parad1st\.gradle\caches\transforms-3\8c6b72afa87e5ab71e4742214eca307b\transformed\jetified-activity-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1c12933ae4a0ae2df9e3c8b6112f5efc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1c12933ae4a0ae2df9e3c8b6112f5efc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\e47a4f0cd69ef08b1c67dae2d30fbde9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\e47a4f0cd69ef08b1c67dae2d30fbde9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\81208381260a9c2f124e568966375ee6\transformed\jetified-gifdecoder-4.13.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] C:\Users\Parad1st\.gradle\caches\transforms-3\81208381260a9c2f124e568966375ee6\transformed\jetified-gifdecoder-4.13.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\dad374b0ecd0074834f99eac3ee8490b\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] C:\Users\Parad1st\.gradle\caches\transforms-3\dad374b0ecd0074834f99eac3ee8490b\transformed\exifinterface-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a7b17ee4ca59ecae1b178a439adc3322\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\a7b17ee4ca59ecae1b178a439adc3322\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5074a3f81679758a3e9d99aae06ca16d\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5074a3f81679758a3e9d99aae06ca16d\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1b6c83a5823bc365e63f111aa5e617e1\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\1b6c83a5823bc365e63f111aa5e617e1\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c744e4708ed673b1147ac490c8c3fb90\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c744e4708ed673b1147ac490c8c3fb90\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f81b81d57bceff085645b3a402f95ed3\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f81b81d57bceff085645b3a402f95ed3\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f9aa2225103523525981f72c3ff8cd3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\5f9aa2225103523525981f72c3ff8cd3\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\db9cb66423474c5e6646161871701e4c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\db9cb66423474c5e6646161871701e4c\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\6310d2c34801985b56d2e189a7f005b5\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\6310d2c34801985b56d2e189a7f005b5\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:3.6.3] C:\Users\Parad1st\.gradle\caches\transforms-3\52669012ce694c2b9c1ab2bec9de7b7c\transformed\jetified-viewbinding-3.6.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:3.6.3] C:\Users\Parad1st\.gradle\caches\transforms-3\52669012ce694c2b9c1ab2bec9de7b7c\transformed\jetified-viewbinding-3.6.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d03776eb3586e09fd02ee47e57ddbc67\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\d03776eb3586e09fd02ee47e57ddbc67\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3ead8bcc687c7a29ae999510341a0fcd\transformed\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\3ead8bcc687c7a29ae999510341a0fcd\transformed\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\617fdcaee2f3a608d6cde9759f8d6bcf\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\617fdcaee2f3a608d6cde9759f8d6bcf\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c3fa6f7a69f85b8ad64337dae92d05dd\transformed\lifecycle-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c3fa6f7a69f85b8ad64337dae92d05dd\transformed\lifecycle-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2887267c2a5b8bc3aa9ded56232488b9\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\2887267c2a5b8bc3aa9ded56232488b9\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\39071f8cc740f5abe51157de559da5ff\transformed\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Parad1st\.gradle\caches\transforms-3\39071f8cc740f5abe51157de559da5ff\transformed\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\700511e9596667b52ac348f0717326d3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\700511e9596667b52ac348f0717326d3\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f21fd9fc56b714e6796ac0585bf4bfe0\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\f21fd9fc56b714e6796ac0585bf4bfe0\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:31:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:33:17-109
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:22-74
+service#com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService
+ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:9-118
+	android:name
+		ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:18-115
+service#com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService
+ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:13:9-15:49
+	android:process
+		ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:15:13-46
+	android:name
+		ADDED from [com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:14:13-108
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.smarteist.autoimageslider.SliderView android:id="@+id/sliderView" android:layout_width="match_parent" android:layout_height="match_parent" app:sliderIndicatorEnabled="true" app:sliderIndicatorGravity="center_horizontal|bottom" app:sliderIndicatorMarginBottom="@dimen/_23sdp" app:sliderIndicatorOrientation="horizontal"/>
+    <ImageView android:layout_gravity="right" android:id="@+id/closeStory" android:padding="@dimen/_5sdp" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:src="@drawable/close"/>
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar android:layout_gravity="bottom" android:id="@+id/progressStory" android:layout_width="match_parent" android:layout_height="@dimen/_5sdp" app:rcBackgroundColor="#25ffffff" app:rcBackgroundPadding="0dp" app:rcMax="5000" app:rcProgress="0" app:rcProgressColor="@color/white25" app:rcRadius="0dp" app:rcReverse="false" app:rcSecondaryProgress="0" app:rcSecondaryProgressColor="@color/white25"/>
+</FrameLayout>

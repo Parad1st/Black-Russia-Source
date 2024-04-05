@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="statusText" />
+    <item type="id" name="downloaderDashboard" />
+    <item type="id" name="progressAsFraction" />
+    <item type="id" name="progressAsPercentage" />
+    <item type="id" name="progressBar" />
+    <item type="id" name="progressAverageSpeed" />
+    <item type="id" name="progressTimeRemaining" />
+    <item type="id" name="pauseButton" />
+    <item type="id" name="cancelButton" />
+    <item type="id" name="approveCellular" />
+    <item type="id" name="textPausedParagraph1" />
+    <item type="id" name="textPausedParagraph2" />
+    <item type="id" name="buttonRow" />
+    <item type="id" name="resumeOverCellular" />
+    <item type="id" name="wifiSettingsButton" />
+    <item type="id" name="imageView1" />
+    <item type="id" name="progressBar1" />
+</resources>

@@ -1,0 +1,32 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.blackrussia.game.test" >
+4
+5    <uses-sdk
+5-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:5:5-74
+6        android:minSdkVersion="17"
+6-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:5:15-41
+7        android:targetSdkVersion="28" />
+7-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:5:42-71
+8
+9    <instrumentation
+9-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:11:5-15:70
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:11:22-76
+11        android:functionalTest="false"
+11-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:13:22-53
+13        android:label="Tests for com.blackrussia.game"
+13-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:15:22-68
+14        android:targetPackage="com.blackrussia.game" />
+14-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:12:22-66
+15
+16    <application android:debuggable="true" >
+16-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:7:5-9:19
+17        <uses-library android:name="android.test.runner" />
+17-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:8:9-60
+17-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest11573760821455427595.xml:8:23-57
+18    </application>
+19
+20</manifest>

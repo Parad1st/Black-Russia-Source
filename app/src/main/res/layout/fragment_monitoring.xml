@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/_14sdp"
+    android:paddingRight="@dimen/_14sdp"
+    android:paddingTop="@dimen/_18sdp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pt_root_ui_medium"
+        android:text="Мониторинг"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:id="@+id/newsLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_minus14sdp"
+        android:layout_marginRight="@dimen/_minus14sdp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.8"
+            android:fontFamily="@font/pt_root_ui_bold"
+            android:text="Истории"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newsRV"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/_14sdp"
+            android:paddingRight="@dimen/_4sdp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:alpha="0.8"
+        android:fontFamily="@font/pt_root_ui_bold"
+        android:text="Наши сервера"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ourServersRV"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/_minus14sdp"
+        android:layout_marginRight="@dimen/_minus14sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_40sdp"
+        android:scrollbarThumbVertical="@drawable/scrollbar_rv"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

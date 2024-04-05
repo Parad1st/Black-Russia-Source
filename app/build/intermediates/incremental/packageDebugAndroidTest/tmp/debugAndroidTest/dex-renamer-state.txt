@@ -1,0 +1,4 @@
+#Fri Apr 05 21:54:48 MSK 2024
+base.0=C\:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

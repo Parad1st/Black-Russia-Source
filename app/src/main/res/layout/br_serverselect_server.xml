@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="160dp" android:layout_height="80dp">
+    <View android:id="@+id/server_list_back_color" android:background="@drawable/server_rectangle_choose" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.4"/>
+    <View android:background="@drawable/server_rectangle_gradient" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="5dp" android:paddingTop="10dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="9sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/br_server_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Server Name" android:fontFamily="@font/muller_bold"/>
+            <TextView android:textSize="9sp" android:textColor="#ffffff" android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/br_server_x2" android:background="@drawable/divider_br_red_s_corn" android:paddingLeft="15dp" android:paddingTop="2dp" android:paddingRight="15dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="x2" android:layout_weight="1" android:fontFamily="@font/muller_bold" android:visibility="gone"/>
+        </FrameLayout>
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar android:id="@+id/br_server_progress" android:layout_width="match_parent" android:layout_height="@dimen/_6sdp" android:layout_marginLeft="10dp" android:layout_marginTop="@dimen/_10sdp" android:layout_marginRight="10dp" app:rcBackgroundColor="#40000000" app:rcBackgroundPadding="0dp" app:rcMax="100" app:rcProgress="0" app:rcProgressColor="@color/gradient1" app:rcRadius="@dimen/_5sdp" app:rcReverse="false" app:rcSecondaryProgress="0" app:rcSecondaryProgressColor="@color/gradient2"/>
+        <TextView android:textSize="9sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/br_server_online" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginRight="5dp" android:text="999/1000" android:fontFamily="@font/muller_bold"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/br_server_image" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" app:srcCompat="@drawable/br_peaw_servers"/>
+</FrameLayout>
