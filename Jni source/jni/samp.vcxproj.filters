@@ -1,0 +1,1133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="chatwindow.cpp" />
+    <ClCompile Include="dialog.cpp" />
+    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="playertags.cpp" />
+    <ClCompile Include="game\RW\RenderWare.cpp">
+      <Filter>game\RW</Filter>
+    </ClCompile>
+    <ClCompile Include="game\aimstuff.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\camera.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\entity.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\font.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\game.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\hooks.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\object.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\pad.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\patches.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\playerped.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\quaternion.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\radarcolors.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scripting.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\splashscreen.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\util1.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\vehicle.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\gui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\imgui_impl_renderware.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="net\gangzonepool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\localplayer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\netgame.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\netrpc.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\objectpool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\pickuppool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\playerpool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\remoteplayer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\scriptrpc.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\textlabelpool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\vehiclepool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="util\armhook.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\util.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\hash\md5.cpp">
+      <Filter>vendor\hash</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <Filter>vendor\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SAMP\samp_auth.cpp">
+      <Filter>vendor\raknet\SAMP</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SAMP\samp_netencr.cpp">
+      <Filter>vendor\raknet\SAMP</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SAMP\SAMPRPC.cpp">
+      <Filter>vendor\raknet\SAMP</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\_findfirst.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\AsynchronousFileIO.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\BitStream.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\BitStream_NoTemplate.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\CheckSum.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\CommandParserInterface.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\DataBlockEncryptor.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\DataCompressor.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\DS_ByteQueue.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\DS_HuffmanEncodingTree.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\DS_Table.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\EncodeClassName.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\ExtendedOverlappedPool.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\FileOperations.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\GetTime.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\InternalPacketPool.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\LinuxStrings.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\LogCommandParser.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\NetworkTypes.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\PluginInterface.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakClient.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakNetCommandParser.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakNetStatistics.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakNetworkFactory.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakPeer.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\rakserver.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RakSleep.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\Rand.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\ReliabilityLayer.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\rijndael.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\RPCMap.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SHA1.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SimpleMutex.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SocketLayer.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\StringCompressor.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\StringTable.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SystemAddressList.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SystemDatabaseClient.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\SystemDatabaseServer.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\TableSerializer.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\TCPInterface.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\raknet\TelnetTransport.cpp">
+      <Filter>vendor\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboardhistory.cpp" />
+    <ClCompile Include="game\textdraw.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="net\textdrawpool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="game\sprite2d.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\widgetmanager.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\widget.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="net\CRawData.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="game\obfuscated.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="scrollbar.cpp" />
+    <ClCompile Include="voice\opensl_io2.cpp">
+      <Filter>voice</Filter>
+    </ClCompile>
+    <ClCompile Include="voice\CENetClient.cpp">
+      <Filter>voice</Filter>
+    </ClCompile>
+    <ClCompile Include="voice\CSoundOutput.cpp">
+      <Filter>voice</Filter>
+    </ClCompile>
+    <ClCompile Include="voice\CStreamPlayer.cpp">
+      <Filter>voice</Filter>
+    </ClCompile>
+    <ClCompile Include="voice\CVoiceChatClient.cpp">
+      <Filter>voice</Filter>
+    </ClCompile>
+    <ClCompile Include="net\streampool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="game\stream.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="CDebugInfo.cpp" />
+    <ClCompile Include="CServerManager.cpp" />
+    <ClCompile Include="util\CJavaWrapper.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CHandlingDefault.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="CFileHashed.cpp" />
+    <ClCompile Include="CCheckFileHash.cpp" />
+    <ClCompile Include="CClientInfo.cpp" />
+    <ClCompile Include="net\CActorPool.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CActorPed.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CExtendedCarColors.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameIntegrity.cpp" />
+    <ClCompile Include="..\santrope-tea-gtasa\encryption\aes.c">
+      <Filter>encr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\santrope-tea-gtasa\encryption\CTinyEncrypt.cpp">
+      <Filter>encr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\santrope-tea-gtasa\encryption\CXTEA3.cpp">
+      <Filter>encr</Filter>
+    </ClCompile>
+    <ClCompile Include="CLocalisation.cpp" />
+    <ClCompile Include="gui\CFontRenderer.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\CFontInstance.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CRenderTarget.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CCustomPlateManager.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\santrope-tea-gtasa\encryption\CTEA.cpp">
+      <Filter>encr</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\AUTOMOBILE_COLLISION_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\CHECK_HASH1_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\CHECK_HASH2_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\COMPONENT_VISIBLE_INTERNAL_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\FIRST_PROTECT_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_INTEGRITY1_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_INTEGRITY2_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES1_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES2_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES3_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES4_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES5_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\GAME_RESOURCES6_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\HANDLING_DATA_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\INITSAMP_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\INSTALLHOOKS_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\MODELINFO_EDITABLE_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\RESET_AFTER_RENDER_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\SERVER_CHECK1_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\SERVER_CHECK2_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\SERVER_CHECK3_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\TINY_ENCRYPT_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\XTEA3_result.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="cryptors\protect_common.cpp">
+      <Filter>cryptors</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\ITouchListener.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="nv_event.cpp" />
+    <ClCompile Include="CSettings.cpp" />
+    <ClCompile Include="vendor\ini\config.cpp" />
+    <ClCompile Include="game\CAdjustableHudColors.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CAdjustableHudPosition.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CAdjustableHudScale.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CInfoBarText.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CWeaponsOutFit.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CRadarRect.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CFirstPersonCamera.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\CSnow.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\snapshothelper.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\rgba.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard.cpp" />
+    <ClCompile Include="net\CUDPSocket.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\ISocket.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="net\CAddress.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chatwindow.h" />
+    <ClInclude Include="dialog.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="playertags.h" />
+    <ClInclude Include="str_obfuscator.hpp" />
+    <ClInclude Include="str_obfuscator_no_template.hpp" />
+    <ClInclude Include="game\RW\RenderWare.h">
+      <Filter>game\RW</Filter>
+    </ClInclude>
+    <ClInclude Include="game\RW\rwcore.h">
+      <Filter>game\RW</Filter>
+    </ClInclude>
+    <ClInclude Include="game\RW\rwlpcore.h">
+      <Filter>game\RW</Filter>
+    </ClInclude>
+    <ClInclude Include="game\aimstuff.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\camera.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\common.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\entity.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\font.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\game.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\object.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\pad.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\playerped.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\quaternion.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\radarcolors.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scripting.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\util.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\vehicle.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\gui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="net\gangzonepool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\localplayer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\netgame.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\objectpool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\pickuppool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\playerpool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\remoteplayer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\textlabelpool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\vehiclepool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="util\armhook.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\hash\md5.h">
+      <Filter>vendor\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imconfig.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_internal.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\stb_rect_pack.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\stb_textedit.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\stb_truetype.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SAMP\samp_netencr.h">
+      <Filter>vendor\raknet\SAMP</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SAMP\SAMPRPC.h">
+      <Filter>vendor\raknet\SAMP</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\_findfirst.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\AsynchronousFileIO.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\AutopatcherPatchContext.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\AutopatcherRepositoryInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\BigTypes.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\BitStream.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\BitStream_NoTemplate.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\CheckSum.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ClientContextStruct.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\CommandParserInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ConsoleServer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DataBlockEncryptor.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DataCompressor.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_BinarySearchTree.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_BPlusTree.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_ByteQueue.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_Heap.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_HuffmanEncodingTree.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_HuffmanEncodingTreeFactory.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_HuffmanEncodingTreeNode.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_LinkedList.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_List.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_Map.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_MemoryPool.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_OrderedChannelHeap.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_OrderedList.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_Queue.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_QueueLinkedList.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_RangeList.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_Table.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_Tree.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\DS_WeightedGraph.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\EmailSender.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\Export.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ExtendedOverlappedPool.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\FileOperations.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\FullyConnectedMesh.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\GetTime.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\InternalPacket.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\InternalPacketPool.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\LinuxStrings.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\LogCommandParser.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\MTUSize.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\multiplayer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\NetworkIDGenerator.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\NetworkTypes.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\PacketEnumerations.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\PacketPool.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\PacketPriority.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\PluginInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakAssert.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakClient.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakClientInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakNetCommandParser.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakNetDefines.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakNetStatistics.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakNetworkFactory.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakPeer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakPeerInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakServer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakServerInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RakSleep.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\Rand.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ReliabilityLayer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\Replica.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ReplicaEnums.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\rijndael.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\rijndael-boxes.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RouterInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RPCMap.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RPCNode.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\RSACrypt.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SHA1.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SimpleMutex.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SimpleTCPServer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SingleProducerConsumer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SocketLayer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\StringCompressor.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\StringTable.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SystemAddressList.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SystemDatabaseClient.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\SystemDatabaseServer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\TableSerializer.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\TCPInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\TelnetTransport.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\ThreadPool.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\TransportInterface.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\raknet\Types.h">
+      <Filter>vendor\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboardhistory.h" />
+    <ClInclude Include="game\textdraw.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="net\textdrawpool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="game\sprite2d.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\widget.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\widgetmanager.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\encrypt.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\vigenere.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\b64.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\common.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="net\CRawData.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="scrollbar.h" />
+    <ClInclude Include="voice\CVoiceChatClient.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\ENetError.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\opensl_io2.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\CENetClient.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\common.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\CRingBuffer.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\CRingBufferMutex.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\CSoundOutput.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="voice\CStreamPlayer.h">
+      <Filter>voice</Filter>
+    </ClInclude>
+    <ClInclude Include="net\streampool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="game\stream.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="CDebugInfo.h" />
+    <ClInclude Include="CServerManager.h" />
+    <ClInclude Include="util\CJavaWrapper.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CHandlingDefault.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="CFileHashed.h" />
+    <ClInclude Include="CCheckFileHash.h" />
+    <ClInclude Include="CClientInfo.h" />
+    <ClInclude Include="net\CActorPool.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CActorPed.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CExtendedCarColors.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameIntegrity.h" />
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\aes.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\CTinyEncrypt.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\CXTEA3.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="CLocalisation.h" />
+    <ClInclude Include="gui\CFontInstance.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\CFontRenderer.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CRenderTarget.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\stb_image_write.h">
+      <Filter>vendor\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CCustomPlateManager.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\santrope-tea-gtasa\encryption\CTEA.h">
+      <Filter>encr</Filter>
+    </ClInclude>
+    <ClInclude Include="crashlytics.h" />
+    <ClInclude Include="cryptors\AUTOMOBILE_COLLISION_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\CHECK_HASH1_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\CHECK_HASH2_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\COMPONENT_VISIBLE_INTERNAL_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\FIRST_PROTECT_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_INTEGRITY1_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_INTEGRITY2_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES1_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES2_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES3_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES4_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES5_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\GAME_RESOURCES6_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\HANDLING_DATA_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\INITSAMP_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\INSTALLHOOKS_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\MODELINFO_EDITABLE_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\RESET_AFTER_RENDER_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\SERVER_CHECK1_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\SERVER_CHECK2_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\SERVER_CHECK3_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\TINY_ENCRYPT_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\XTEA3_result.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\ITouchListener.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptors\protect_common.h">
+      <Filter>cryptors</Filter>
+    </ClInclude>
+    <ClInclude Include="nv_event.h" />
+    <ClInclude Include="CSettings.h" />
+    <ClInclude Include="vendor\ini\config.h" />
+    <ClInclude Include="game\CAdjustableHudColors.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CAdjustableHudPosition.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CAdjustableHudScale.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CInfoBarText.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CWeaponsOutFit.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CRadarRect.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CFirstPersonCamera.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\CSnow.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\rgba.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\snapshothelper.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard.h" />
+    <ClInclude Include="net\ISocket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\CUDPSocket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="net\CAddress.h">
+      <Filter>net</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="game">
+      <UniqueIdentifier>{4a53c100-d51c-4119-b2fc-139bbf7a6ef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\RW">
+      <UniqueIdentifier>{802ef355-4a1d-4501-a850-5d5d2b7499f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{e28e428e-02f9-4ac5-8f8d-d232906a41ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{a2f4bc99-d4d9-4be5-a596-fbb174b19ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{23c11bb9-0b48-4fbc-a8c4-4176832af33c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{f762c243-f660-4d0a-8a74-fd42384a2c3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\hash">
+      <UniqueIdentifier>{3325075e-a927-458e-9836-9cbee3e74c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\imgui">
+      <UniqueIdentifier>{9f348051-bb91-4c85-a252-50cf3e908c34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\inih">
+      <UniqueIdentifier>{90935976-30c0-4b08-98e4-112c7f8b4236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\inih\cpp">
+      <UniqueIdentifier>{528a1a62-eccf-4af9-9b8f-d373315e4b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\raknet">
+      <UniqueIdentifier>{1e999e4b-30f4-4bd4-a9e9-d4995e9b6c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\raknet\SAMP">
+      <UniqueIdentifier>{dca81721-e6fd-439f-a40c-58db29eedf12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="encr">
+      <UniqueIdentifier>{f2c757d1-38c6-4c04-b978-19c81a5a3739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="voice">
+      <UniqueIdentifier>{a01a1712-f70e-411d-8e3e-4f0244d1ee92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cryptors">
+      <UniqueIdentifier>{f97d04c1-dbb3-4184-a5b8-b25e8e201ebc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vendor\raknet\FullyConnectedMesh.cpp__">
+      <Filter>vendor\raknet</Filter>
+    </None>
+    <None Include="vendor\raknet\NetworkIDGenerator.cpp__">
+      <Filter>vendor\raknet</Filter>
+    </None>
+  </ItemGroup>
+</Project>
