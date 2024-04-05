@@ -93,7 +93,7 @@ BlackRussiaSource-main\app\src\main\res\drawable\
 
 По этому пути находятся все изоображения используемые лаунчером, в том чисте и иконка лаунчера.
 
-[drawable](https://cdn.discordapp.com/attachments/862764491624022037/1225944495015591998/image.png?ex=6622f8c8&is=661083c8&hm=e61e83dad2a23762d6bed373f199d1363e45d3fd6efa5a87f74c2fa62abf1e66&)
+![drawable](https://cdn.discordapp.com/attachments/862764491624022037/1225944495015591998/image.png?ex=6622f8c8&is=661083c8&hm=e61e83dad2a23762d6bed373f199d1363e45d3fd6efa5a87f74c2fa62abf1e66&)
 
 Готово!
 ______________________________________
