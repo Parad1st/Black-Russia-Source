@@ -12,4 +12,7 @@
 # Туториал
 Туториал находится тут - [тык*](https://github.com/Parad1st/BlackRussiaSource/blob/main/Tutorial.md)
 
+# Файлы игры
+В лаунчере может не работать установщик файлов. Скачайте файлы игры отксюда - [тык*](https://drive.google.com/file/d/1_8SRrvfS3Mv2AgY0arntJtsJVONnFlR2/view?usp=sharing) и разархивируете в корневую папку телефона. 
+Должно получиться так, что у вас будет папка BlackRussia, а в ней уже другие папки по типу samp.
 
