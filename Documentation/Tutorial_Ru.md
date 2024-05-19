@@ -23,7 +23,7 @@
 ![Открытый проект](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(7).png)
 
 # Подключение server.json и stories.json
-Файлы [server.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/stories.json) отвечают за работу мониторинга серверов и историй в самом лаунчере: отвечают за работу мониторинга серверов и историй в самом лаунчере:
+Файлы [server.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/stories.json) отвечают за работу мониторинга серверов и историй в самом лаунчере:
 ![Меню лаунчера](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(3).png)
 
 Чтобы их подключить, их нужно изменить через любой текстовый редактор, и залить на облако и получить ***ПРЯМУЮ ССЫЛКУ!***
