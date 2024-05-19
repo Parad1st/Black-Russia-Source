@@ -1,7 +1,7 @@
 # BlackRussiaSource
 Исходники лаунчера Black Russia и клиента. Подойдёт для создания своего crmp проекта. 
 
-![BlackRussiaSourceInGame](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/2024-04-05_17-40-45.png))
+![BlackRussiaSourceInGame](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/2024-04-05_17-40-45.png)
 
 # Где написан лаунчер?
 Лаунчер написан в [Android Studio](https://developer.android.com/studio)! Чтобы переделать этот лаунчер под свой проект вам потребуется скачать его. А если захотите как-то кастомизировать лаунчер, то потребуются и некоторые навыки работы с Android Studio.
