@@ -2,25 +2,25 @@
 # Открытие проекта через Android Studio
 Заранее разархивируем скачаный исходник в удобное вам место. 
 
-![Нажмите на Open](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image.jpg)
+![Нажмите на Open](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82.png)
 
 Открываем Android Studio. Там нажимаем open и выбираем папку с самим проектом.
 
-![Выберите проект](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image_1.jpg)
+![Выберите проект](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/%D0%92%D1%8B%D0%B1%D0%BE%D1%80%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0.png)
 
-Теперь выбираем место, куда вы разархивировали проект. Если у папки есть зелёный значёк Android, значит это то что нужно!
+Теперь выбираем место, куда вы разархивировали проект. На операционной системе Windows у папки с проектом будет зелёный значёк Android, если это так, то значит это то что нужно!
 
-![Trust Project](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(6).png)
+![Trust Project](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/Trust%20project.png)
 
 Если появилось данное окно, нажимает Trust Project.
-Проект должен бл открыться. Если у вас появилась ошибка:
+Проект должен был открыться. Если у вас появилась ошибка:
 
-![Error](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/error%20dradle.png)
+![Error](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/error%20dradle%20qut.png)
 
-То просто наживаем на синий текст "Upgrade Gradle Wrapper"
+Если появилась данная ошибка, то просто наживаем на синий текст "Upgrade Gradle wrapper"
 Теперь ваш проект должен открыться, и должны появиться папки:
 
-![Открытый проект](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(7).png)
+![Открытый проект](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B8%CC%86%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82.png)
 
 # Подключение server.json и stories.json
 Файлы [server.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/stories.json) отвечают за работу мониторинга серверов и историй в самом лаунчере:
@@ -31,8 +31,7 @@
 
 Теперь в самом Android Studio переходим по пути app\java\com\blackrussia\launcher\other\Interface.java
 
-![Interface.java](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(8).png)
-
+![Interface.java](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/Interface%20%D1%84%D0%B0%D0%B8%CC%86%D0%BB.png)
 Как мы можем видеть, в данном коде имеются ссылки ведущие до файлов [server.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/BlackRussiaSource/blob/main/Json%20files/stories.json).
 За место этих ссылок, вставляете свои. Напоминаю что нужна именно ***ПРЯМАЯ ССЫЛКА!***
 Всё готово!
