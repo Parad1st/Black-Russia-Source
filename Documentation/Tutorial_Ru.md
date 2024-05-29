@@ -40,26 +40,27 @@
 Теперь давайте скачаем нужные файлы для игры. К сожалению я не смог их добавить на гитхаб так что залил его на Google Drive. Скачать - [тык*](https://drive.google.com/file/d/1_8SRrvfS3Mv2AgY0arntJtsJVONnFlR2/view?usp=sharing)
 Откройте его через WinRar или другой архиватор. Перейдите в папку SAMP и откройте файл settings.ini
 
-![settings.ini](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image_1_1.jpg)
+![settings.ini](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/settings.ini.png)
 
 Ничего не советую менять, кроме ника который будет стоять сразу после установки, и максимальное значение фпс рекомендую поставить как у меня.
-Всё, сохраняем кэш с перезаписью архива:
+Всё, сохраняем кэш с перезаписью архива (скриншот из WinRar для Windows ):
 
-![WinRarSave](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(11).png)
+![WinRarSave](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/Update%20settings.ini.png)
+
 Теперь так же заливаете файл в облако. (прямая ссылка обязательна!)
 
 Теперь как подключить кэш?
 Для этого переходим по пути app\java\com\blackrussia\launcher\activity\LoaderActivity.java
 И теперь меняете ссылку на свою:
 
-![LoaderActivity.java](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(1).png)
+![LoaderActivity.java](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/LoaderActivity.png)
 
 Готово!
 
 # Изменение названия лаунчера
 Изменить название лаунчера очень просто! Для этого нужно перейти в app\res\values\strings\strings.xml и поменять значение "app_name" на своё:
 
-![String](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(2).png)
+![String](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/String%20app%20name.png)
 
 Готово!
 
@@ -83,7 +84,7 @@ BlackRussiaSource-main\app\src\main\res\drawable-xxhdpi-v4\ic_launcher.png
 
 BlackRussiaSource-main\app\src\main\res\drawable-xxxhdpi-v4\ic_launcher.png
 
-![ic_launcher](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(5).png)
+![ic_launcher](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/ic%20launcher.png)
 
 Но это заменена только иконка самого приложения, менять дизайн самого лаунчера нужно здесь:
 
@@ -91,7 +92,7 @@ BlackRussiaSource-main\app\src\main\res\drawable\
 
 По этому пути находятся все изоображения используемые лаунчером, в том чисте и иконка лаунчера.
 
-![drawable](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/image%20(4).png)
+![drawable](https://raw.githubusercontent.com/Parad1st/BlackRussiaSource/main/Documentation/Image/drawable.png)
 
 Готово!
 ______________________________________
