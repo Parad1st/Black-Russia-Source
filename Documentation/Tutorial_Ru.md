@@ -95,5 +95,20 @@ BlackRussiaSource-main\app\src\main\res\drawable\
 ![drawable](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/drawable.png)
 
 Готово!
+
+# Изменение ip сервера и компиляция jni исходников
+Чтобы заменить ip сервера на свой, мы должны открыть папку Jni source и открыть файл находящийся по пути              
+[Jni source/jni/util/CJavaWrapper.cpp](https://github.com/Parad1st/Black-Russia-Source/blob/main/Jni%20source/jni/util/CJavaWrapper.cpp)
+
+![CJavaWrapper.cpp](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/IPCJavaWrapper.png)
+
+На 276 строчке вы увидете ip и порт сервера. Туда нужно вписать наш ip и порт сервера. (на фото показал где). После того как сделали это, сохраняем файл.       
+Теперь нам нужно скомпилировать исходники, для этого переходим на данный сайт - [тык*](https://github.com/android/ndk/wiki/Unsupported-Downloads) и скачиваем NDK для нашей ос (32 битная версия не подходит)
+
+![NDK Download](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/NDK%20Download.png)
+
+Как компилировать на Windows показывал давно на YouTube - [тык*](https://www.youtube.com/watch?v=TSPvYpG15C0&t=74s). Если что туториал старый, и там не использовался Android Studio, но зато Jni исходники компилируются всё также!
+
+ЭТО НЕ ВСЁ! СКОРО ДОПИШУ ТУТОР, ПОКА ЧТО ИГРА НЕ БУДЕТ КОННЕКТИТЬСЯ К СЕРВЕРУ, СКОРО ПОКАЖУ КАК ВСЁ СДЕЛАТЬ!
 ______________________________________
 Пока что туториал не закончен, но он дополняется... Скоро допишу :-)
