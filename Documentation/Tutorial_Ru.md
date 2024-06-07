@@ -98,7 +98,7 @@ BlackRussiaSource-main\app\src\main\res\drawable\
 
 # Изменение ip сервера и компиляция jni исходников
 Чтобы заменить ip сервера на свой, мы должны открыть папку Jni source и открыть файл находящийся по пути              
-[Jni source/jni/util/CJavaWrapper.cpp](https://github.com/Parad1st/Black-Russia-Source/blob/main/Jni%20source/jni/util/CJavaWrapper.cpp)
+Jni source/jni/util/CJavaWrapper.cpp
 
 ![CJavaWrapper.cpp](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/IPCJavaWrapper.png)
 
