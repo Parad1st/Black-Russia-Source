@@ -29,6 +29,8 @@
 
 ![Открытый проект](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%B8%CC%86%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82.png)
 
+
+
 # Подключение server.json и stories.json
 Файлы [server.json](https://github.com/Parad1st/Black-Russia-Source/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/Black-Russia-Source/blob/main/Json%20files/stories.json) отвечают за работу мониторинга серверов и историй в самом лаунчере:
 ![Меню лаунчера](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/image%20(3).png)
@@ -114,7 +116,25 @@ Jni source/jni/util/CJavaWrapper.cpp
 
 ![NDK Download](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/NDK%20Download.png)
 
+## Как компилировать на Windows
+
 Как компилировать на Windows показывал давно на YouTube - [тык*](https://www.youtube.com/watch?v=TSPvYpG15C0&t=74s). Если что туториал старый, и там не использовался Android Studio, но зато Jni исходники компилируются всё также!
+
+Разархивируем скачаный нами архив в удобное место (у меня это рабочий стол)
+
+На Windows открываем командную строку и выбираемм путь до NDK который мы скачали выше
+
+cd "путь к папке с NDK"
+![cd NDK](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/cd%20NDK.png)
+
+Затем коспилируем исходник. Для этого пишем
+
+ndk-build -C "путь к исходнику клиента"
+
+![ndk-build -C](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/ndk-build%20-C.png)
+
+
+
 
 ЭТО НЕ ВСЁ! СКОРО ДОПИШУ ТУТОР, ПОКА ЧТО ИГРА НЕ БУДЕТ КОННЕКТИТЬСЯ К СЕРВЕРУ, СКОРО ПОКАЖУ КАК ВСЁ СДЕЛАТЬ!
 ______________________________________
