@@ -133,6 +133,15 @@ ndk-build -C "путь к исходнику клиента"
 
 ![ndk-build -C](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/ndk-build%20-C.png)
 
+После этого у нас должна пойти компиляция (на скриншоте она завершилась успешно)
+![Компиляция](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Компиляция.png)
+
+Теперь в папке Jni Source/libs/armeabi-v7a у нас должен появиться файл libsamp.so
+
+Осталось заменить его в Android Studio. Он находится по пути app/jniLibs/armeabi-v7a/libsamp.so
+![libsamp.so в Finder](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/libsamp.so%20в%20Finder.png)
+Всё готово!
+
 
 
 
