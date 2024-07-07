@@ -129,7 +129,7 @@ cd "путь к папке с NDK"
 
 Затем компилируем исходник. Для этого пишем
 
-ndk-build -C "путь к исходнику клиента"
+ndk-build -C "путь к нашей папке Jni source"
 
 ![ndk-build -C](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/ndk-build%20-C.png)
 
