@@ -91,7 +91,7 @@ BlackRussiaSource-main\app\src\main\res\drawable-xxhdpi-v4\ic_launcher.png
 
 BlackRussiaSource-main\app\src\main\res\drawable-xxxhdpi-v4\ic_launcher.png
 
-![ic_launcher](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/ic%20launcher.png)
+![ic_launcher](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Drawable%20Screen.png)
 
 Но это заменена только иконка самого приложения, менять дизайн самого лаунчера нужно здесь:
 
