@@ -5,7 +5,7 @@
 4. [Изменение названия лаунчера](https://github.com/Parad1st/Black-Russia-Source/blob/main/Documentation/Tutorial_Ru.md#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BB%D0%B0%D1%83%D0%BD%D1%87%D0%B5%D1%80%D0%B0)
 5. [Изменение иконки лаунчера](https://github.com/Parad1st/Black-Russia-Source/blob/main/Documentation/Tutorial_Ru.md#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8-%D0%BB%D0%B0%D1%83%D0%BD%D1%87%D0%B5%D1%80%D0%B0)
 6. [Изменение ip сервера и компиляция jni исходников](https://github.com/Parad1st/Black-Russia-Source/blob/main/Documentation/Tutorial_Ru.md#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-ip-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B0-%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D1%8F-jni-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2)
-
+7. [Билд проекта и получение apk](https://github.com/Parad1st/Black-Russia-Source/edit/main/Documentation/Tutorial_Ru.md#билд-проекта-и-получение-apk)
 # Открытие проекта через Android Studio
 Заранее разархивируем скачаный исходник в удобное вам место. 
 
@@ -33,6 +33,7 @@
 
 # Подключение server.json и stories.json
 Файлы [server.json](https://github.com/Parad1st/Black-Russia-Source/blob/main/Json%20files/servers.json) и [stories.json](https://github.com/Parad1st/Black-Russia-Source/blob/main/Json%20files/stories.json) отвечают за работу мониторинга серверов и историй в самом лаунчере:
+
 ![Меню лаунчера](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/image%20(3).png)
 
 Чтобы их подключить, их нужно изменить через любой текстовый редактор, и залить на облако и получить ***ПРЯМУЮ ССЫЛКУ!***
@@ -125,6 +126,7 @@ Jni source/jni/util/CJavaWrapper.cpp
 На Windows открываем командную строку и выбираемм путь до NDK который мы скачали выше
 
 cd "путь к папке с NDK"
+
 ![cd NDK](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/cd%20NDK.png)
 
 Затем компилируем исходник. Для этого пишем
@@ -134,13 +136,32 @@ ndk-build -C "путь к нашей папке Jni source"
 ![ndk-build -C](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/ndk-build%20-C.png)
 
 После этого у нас должна пойти компиляция (на скриншоте она завершилась успешно)
+
 ![Компиляция](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Компиляция.png)
 
 Теперь в папке Jni Source/libs/armeabi-v7a у нас должен появиться файл libsamp.so
 
 Осталось заменить его в Android Studio. Он находится по пути app/jniLibs/armeabi-v7a/libsamp.so
+
 ![libsamp.so в Finder](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/libsamp.so%20в%20Finder.png)
+
 Всё готово!
+
+# Билд проекта и получение apk
+Чтобы сделать билд проекта для будующей установки на телефон, в Android Studio нужно нажать Build, затем Build App Bundle(s) / APK(s), и затем Build APK(s)
+
+![Build APK(s)](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Build%20APK.png)
+
+После этого у нас должна пойти компиляция проекта.
+
+![Проект скомпилирован](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Проект%20скомпилирован.png)
+
+Если все получилось то вы увидите это уведомление
+
+![Build locate](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/Build%20locate.png)
+
+Теперь нажмите кнопку locate или перейдите в проводнике по пути Black-Russia-Source-main/app/debug/
+Там и будет лежать наш .apk
 
 
 
