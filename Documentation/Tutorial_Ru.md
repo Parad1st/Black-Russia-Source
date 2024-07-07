@@ -127,7 +127,7 @@ Jni source/jni/util/CJavaWrapper.cpp
 cd "путь к папке с NDK"
 ![cd NDK](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/cd%20NDK.png)
 
-Затем коспилируем исходник. Для этого пишем
+Затем компилируем исходник. Для этого пишем
 
 ndk-build -C "путь к исходнику клиента"
 
