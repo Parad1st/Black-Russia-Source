@@ -88,7 +88,7 @@ public class SettingsFragment extends Fragment {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
                                 startActivity(
-                                        new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/hyper_bonus")));
+                                        new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/blackrussia.online")));
                             }
                         });
         ((ImageView) inflate.findViewById(R.id.discordButton))
