@@ -41,7 +41,7 @@ public class LoaderActivity extends AppCompatActivity {
 
     public void startDownload() {
         folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        String url = "https://www.dropbox.com/scl/fi/ebtr8cy7k5h0f1ebqwqx4/black-cache.7z.zip?rlkey=xg0w0w01ti8zjm0m0ozixj4jt&dl=1";
+        String url = "СЮДА ССЫЛКУ НА ВАШ КЕШ!";
         createDownloadTask(url, folder.getPath()).start();
         /*PRDownloader.download(url, folder.getPath(), "black-cache.7z")
 				 .build()
