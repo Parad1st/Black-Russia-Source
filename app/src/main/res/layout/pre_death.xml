@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pre_death_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_bac0"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pre_death_caption_textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="389dp"
+        android:layout_marginEnd="268dp"
+        android:fontFamily="@font/muller_bold"
+        android:shadowColor="@color/black"
+        android:shadowRadius="0.5"
+        android:text="игроком"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_death_caption_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pre_death_caption_textview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pre_death_caption_textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="258dp"
+        android:fontFamily="@font/muller_bold"
+        android:shadowColor="@color/black"
+        android:shadowRadius="0.5"
+        android:text="ранены"
+        android:textColor="#FFC107"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/pre_death_caption_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pre_death_caption_textview"
+        app:layout_constraintTop_toTopOf="@+id/pre_death_caption_textview"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="435dp"
+        android:layout_height="325dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_load"
+        android:src="@drawable/pre_death_smile_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="134dp"
+        android:layout_height="120dp"
+        android:src="@drawable/pre_death_smile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView49"
+        app:layout_constraintVertical_bias="0.187"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/pre_death_caption_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/muller_bold"
+        android:shadowColor="@color/black"
+        android:shadowRadius="0.5"
+        android:text="Вы были "
+        android:textColor="#ffffff"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView50" />
+
+    <Button
+        android:id="@+id/preDeath_wait_help_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/donate_tile_button_gray"
+        android:clickable="true"
+        android:fontFamily="@font/muller_bold"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="ЖДАТЬ ПОМОЩИ"
+        android:textColor="#ffffff"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_10sdp"
+        app:cornerRadius="15px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="1px"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muller_bold"
+        android:text="*вызывает врача скорой помощи—\nпозволяет реанимировать Вас"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="@+id/preDeath_wait_help_butt"
+        app:layout_constraintStart_toStartOf="@+id/preDeath_wait_help_butt"
+        app:layout_constraintTop_toBottomOf="@+id/preDeath_wait_help_butt" />
+
+    <Button
+        android:id="@+id/preDeath_to_hospital_button"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/donate_tile_button"
+        android:fontFamily="@font/muller_bold"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="В БОЛЬНИЦУ"
+        android:textColor="#ffffff"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_10sdp"
+        app:cornerRadius="15px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeColor="#ffffff"
+        app:strokeWidth="1px"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muller_bold"
+        android:text="*отправляет Вас в больницу —\nдоступно через 15 секунд"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="25px"
+        app:layout_constraintEnd_toEndOf="@+id/preDeath_to_hospital_button"
+        app:layout_constraintStart_toStartOf="@+id/preDeath_to_hospital_button"
+        app:layout_constraintTop_toBottomOf="@+id/preDeath_to_hospital_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

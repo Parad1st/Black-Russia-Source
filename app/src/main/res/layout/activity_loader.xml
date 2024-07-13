@@ -3,17 +3,19 @@
     android:id="@+id/root"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/back"
     android:orientation="vertical"
-    android:padding="@dimen/_20sdp" >
+    android:padding="@dimen/_20sdp">
 
     <ImageView
+        android:id="@+id/br_pasxalk"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_10sdp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/logo_splash" />
+        android:src="@drawable/logo_lux_russia" />
 
     <ImageView
         android:layout_width="@dimen/_30sdp"
@@ -27,7 +29,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/leftButton"
@@ -38,35 +40,26 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/arrow_left"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <LinearLayout
-            android:layout_width="0.0dip"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.0"
             android:background="@drawable/rounded_rectangle_black"
             android:minHeight="@dimen/_50sdp"
             android:orientation="vertical"
-            android:padding="@dimen/_10sdp" >
+            android:padding="@dimen/_10sdp">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pt_root_ui_bold"
                 android:gravity="center"
-                android:text="Важно"
+                android:text="Идет установка"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
 
-            <TextView
-                android:id="@+id/WarnText"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_gravity="center"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:text="Не закрывайте и не сворачивайте приложение до завершения загрузки"
-                android:textSize="@dimen/_13sdp" />
         </LinearLayout>
 
         <ImageView
@@ -78,20 +71,20 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/arrow_right"
-            android:visibility="invisible" />
+            android:visibility="visible" />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="0.0dip"
-        android:layout_weight="1.0" >
+        android:layout_weight="1.0">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_minus30sdp"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -99,12 +92,12 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/loadingText"
@@ -139,15 +132,15 @@
 
                 <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
                     android:id="@+id/progressBar"
-                    android:layout_width="fill_parent"
-                    android:layout_height="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
                     android:layout_marginTop="@dimen/_10sdp"
                     app:rcBackgroundColor="#40000000"
                     app:rcBackgroundPadding="0.0dip"
                     app:rcMax="100.0"
                     app:rcProgress="0.0"
                     app:rcProgressColor="#ffce0e03"
-                    app:rcRadius="@dimen/_5sdp"
+                    app:rcRadius="@dimen/_100sdp"
                     app:rcReverse="false"
                     app:rcSecondaryProgress="0.0"
                     app:rcSecondaryProgressColor="#fff75514" />
@@ -172,6 +165,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/pt_root_ui_medium"
         android:gravity="center"
-        android:text="Если у вас возникли какие-то проблемы, советуем обратиться в Техничекую поддержку!" />
+        android:text="Если у вас возникли какие-то проблемы, советуем обратиться в Техничекую поддержку!"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

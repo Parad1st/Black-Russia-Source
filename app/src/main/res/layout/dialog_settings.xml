@@ -4,14 +4,13 @@
     android:id="@+id/ll_settings_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00000000"
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF353535"
+        android:background="@drawable/dialog_bg"
         app:tabTextColor="@android:color/white" />
 
     <androidx.viewpager.widget.ViewPager
@@ -26,7 +25,6 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#E6212121"
         android:gravity="end"
         android:orientation="horizontal">
 
@@ -36,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:background="@drawable/dialog_button_0"
+            android:background="@drawable/dialog_first_btn_bg"
             android:drawablePadding="10dp"
             android:fontFamily="@font/ttnorms_blackitalic"
             android:paddingLeft="15dp"

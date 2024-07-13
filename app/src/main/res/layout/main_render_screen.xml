@@ -79,8 +79,26 @@
         <include layout="@layout/bhud_layout" />
         <include layout="@layout/bspeed_layout"/>
         <include layout="@layout/menu_action_dialog" />
-        <include layout="@layout/sd_dialog" />
-        <include layout="@layout/br_notification" />
+        <include layout="@layout/radial_menu" />
+        <include layout="@layout/donate_parad1st" />
+        <include layout="@layout/donat_sc" />
+        <include layout="@layout/donate_podt" />
+        <include layout="@layout/window_dialog" />
+        <include layout="@layout/reg_create" />
+        <include layout="@layout/reg_create_sx" />
+        <include layout="@layout/reg_login" />
+        <include layout="@layout/autoshop" />
+        <include layout="@layout/fuel_station" />
+        <include layout="@layout/hassle_tab" />
+        <include layout="@layout/inventory" />
+        <include layout="@layout/jbl" />
+        <include layout="@layout/pre_death" />
+        <include layout="@layout/selectspawnbr" />
+        <include layout="@layout/shopstoreselect" />
+        <include layout="@layout/keyboard" />
+        <include layout="@layout/admin_recon_br" />
+        <include layout="@layout/reg_person"/>
+        <include layout="@layout/br_helper"/>
         <include layout="@layout/br_serverselect" />
     </FrameLayout>
 </FrameLayout>

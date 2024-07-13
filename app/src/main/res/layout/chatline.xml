@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    xmlns:strokeAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_line">
+
+    <TextView
+        android:id="@+id/chat_line_bg"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/chat_line_br"
+        android:fontFamily="@font/pt_root_ui_medium"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/_8sdp"
+        android:visibility="visible" />
+    <ImageView
+        android:id="@+id/chat__line_text_bg"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:background="#ffff00"/>
+
+
+    <TextView
+        android:id="@+id/chat_line_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:includeFontPadding="true"
+        android:text="Чат LUX RUSSIA"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9sdp" />
+
+
+</FrameLayout>

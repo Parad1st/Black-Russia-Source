@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout4regsx"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registration_back"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@id/play_but222"
+        android:layout_width="131dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="354dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/donate_tile_button"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="ВЫБРАТЬ"
+        android:textColor="#ffffffff"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montsserat_semibold"
+        android:text="ВЫБЕРИТЕ ПОЛ ПЕРСОНАЖА"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="247dp"
+        android:layout_height="253dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/toggle_selector_0"
+        android:text="ToggleButton"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBottom_toTopOf="@+id/play_but222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="247dp"
+        android:layout_height="253dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/toggle_selector_1"
+        android:text="ToggleButton"
+        android:textOff=" "
+        android:textOn=" "
+        app:layout_constraintBottom_toTopOf="@+id/play_but222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.518" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

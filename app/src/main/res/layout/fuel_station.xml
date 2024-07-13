@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/br_fuelstation_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/dialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+			<ImageView
+				android:id="@+id/fuelstation_exit"
+				android:layout_width="@dimen/_20sdp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/_10sdp"
+				android:layout_marginEnd="@dimen/_10sdp"
+				android:adjustViewBounds="true"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@drawable/close" />
+			<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/linearLayout5" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+				<ImageView android:id="@id/imageView28" android:layout_width="40.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:srcCompat="@drawable/fuelstation_info" />
+				<TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:id="@+id/fuelstation_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Рекомендуемый тип топлива:" android:layout_weight="1.0" android:fontFamily="@font/montsserat_semibold" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/linearLayout6"
+				android:layout_width="wrap_content"
+				android:layout_height="60.0dip"
+				android:layout_marginTop="20.0dip"
+				android:gravity="center"
+				android:orientation="horizontal"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+				<Space
+					android:layout_width="30.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/fuelstation_1"
+					android:layout_width="110.0dip"
+					android:layout_height="fill_parent"
+					android:background="@drawable/fuelstation_item_active_bg">
+
+					<TextView
+						android:id="@id/textView10"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="20.0dip"
+						android:fontFamily="@font/montserrat_bold"
+						android:text="АИ-92"
+						android:textColor="#ffffffff"
+						android:textSize="18.0sp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/fuelstation_1_info"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montserrat_medium"
+						android:text="50р/литр"
+						android:textColor="#ffffffff"
+						android:textSize="12.0sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/textView10" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<Space
+					android:layout_width="15.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/fuelstation_2"
+					android:layout_width="110.0dip"
+					android:layout_height="fill_parent"
+					android:background="@drawable/fuelstation_item_bg">
+
+					<TextView
+						android:id="@id/textView11"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="20.0dip"
+						android:fontFamily="@font/montserrat_bold"
+						android:text="АИ-95"
+						android:textColor="#ffffffff"
+						android:textSize="18.0sp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/fuelstation_2_info"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montserrat_medium"
+						android:text="50р/литр"
+						android:textColor="#ffffffff"
+						android:textSize="12.0sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/textView11" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<Space
+					android:layout_width="15.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/fuelstation_3"
+					android:layout_width="110.0dip"
+					android:layout_height="fill_parent"
+					android:background="@drawable/fuelstation_item_bg">
+
+					<TextView
+						android:id="@id/textView12"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="20.0dip"
+						android:fontFamily="@font/montserrat_bold"
+						android:text="АИ-98"
+						android:textColor="#ffffffff"
+						android:textSize="18.0sp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/fuelstation_3_info"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montserrat_medium"
+						android:text="50р/литр"
+						android:textColor="#ffffffff"
+						android:textSize="12.0sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/textView12" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<Space
+					android:layout_width="15.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/fuelstation_4"
+					android:layout_width="110.0dip"
+					android:layout_height="fill_parent"
+					android:background="@drawable/fuelstation_item_bg">
+
+					<TextView
+						android:id="@id/textView13"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="20.0dip"
+						android:fontFamily="@font/montserrat_bold"
+						android:text="АИ-100"
+						android:textColor="#ffffffff"
+						android:textSize="18.0sp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/fuelstation_4_info"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montserrat_medium"
+						android:text="50р/литр"
+						android:textColor="#ffffffff"
+						android:textSize="12.0sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/textView13" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<Space
+					android:layout_width="15.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+
+				<androidx.constraintlayout.widget.ConstraintLayout
+					android:id="@+id/fuelstation_5"
+					android:layout_width="110.0dip"
+					android:layout_height="fill_parent"
+					android:background="@drawable/fuelstation_item_bg">
+
+					<TextView
+						android:id="@id/textView14"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="20.0dip"
+						android:fontFamily="@font/montserrat_bold"
+						android:text="ДТ"
+						android:textColor="#ffffffff"
+						android:textSize="18.0sp"
+						app:layout_constraintBottom_toBottomOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="parent" />
+
+					<TextView
+						android:id="@+id/fuelstation_5_info"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:fontFamily="@font/montserrat_medium"
+						android:text="50р/литр"
+						android:textColor="#ffffffff"
+						android:textSize="12.0sp"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toBottomOf="@id/textView14" />
+				</androidx.constraintlayout.widget.ConstraintLayout>
+
+				<Space
+					android:layout_width="30.0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0" />
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/fuelstationBuyButt"
+				android:layout_width="150.0dip"
+				android:layout_height="50.0dip"
+				android:layout_marginBottom="15.0dip"
+				android:background="@drawable/donate_tile_button"
+				android:text="Оплатить"
+				android:textColor="@color/black"
+				app:cornerRadius="5.0dip"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent" />
+			<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintLayout5" android:background="@drawable/fuelstation_item_bg" android:layout_width="130.0dip" android:layout_height="50.0dip" android:layout_marginStart="15.0dip" app:layout_constraintBottom_toBottomOf="@id/fuelstationBuyButt" app:layout_constraintStart_toEndOf="@id/fuelstationBuyButt" app:layout_constraintTop_toTopOf="@id/fuelstationBuyButt">
+				<TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:id="@+id/fuelstation_buyinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1600 р" android:fontFamily="@font/montserrat_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+			<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/constraintLayout2" android:background="@drawable/fuelstation_item_bg" android:layout_width="130.0dip" android:layout_height="50.0dip" android:layout_marginEnd="15.0dip" app:layout_constraintBottom_toBottomOf="@id/fuelstationBuyButt" app:layout_constraintEnd_toStartOf="@id/fuelstationBuyButt" app:layout_constraintTop_toTopOf="@id/fuelstationBuyButt">
+				<TextView android:textSize="20.0sp" android:textColor="#ffffffff" android:id="@+id/fuelstation_literinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="150 л" android:fontFamily="@font/montserrat_bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<SeekBar
+				android:id="@+id/fuelstation_bar"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="35.0dip"
+				android:layout_marginBottom="35.0dip"
+				android:indeterminate="false"
+				android:max="100"
+				android:maxHeight="10.0dip"
+				android:minHeight="10.0dip"
+				android:progress="50"
+				android:progressDrawable="@drawable/fuelstation_seekbar_drawable"
+				android:thumb="@drawable/fuelstation_seekbar_thumb"
+				app:layout_constraintBottom_toTopOf="@+id/fuelstationBuyButt"
+				app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+				app:layout_constraintStart_toStartOf="@id/constraintLayout2"
+				app:layout_constraintTop_toBottomOf="@id/linearLayout6" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

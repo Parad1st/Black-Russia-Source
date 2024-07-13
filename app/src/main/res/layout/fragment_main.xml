@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_activity_root" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/launcher_main_bg">
+
+	<EditText
+		android:id="@+id/edit_text_name"
+		android:layout_width="140dp"
+		android:layout_height="40dp"
+		android:layout_margin="30dp"
+		android:background="@drawable/launcher_main_edit_text_bg"
+		android:digits="abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		android:fontFamily="@font/montserrat_regular"
+		android:gravity="center"
+		android:hint="Nick_Name"
+		android:imeOptions="actionDone|flagNoFullscreen"
+		android:inputType="textCapSentences"
+		android:maxLength="23"
+		android:paddingStart="8dp"
+		android:paddingEnd="8dp"
+		android:singleLine="true"
+		android:textColor="@color/white"
+		android:textColorHint="@color/white15"
+		android:textSize="11.0sp"
+		android:textStyle="italic"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+	<ImageButton android:id="@+id/ib_info" android:background="@drawable/launcher_red_buttons_bg" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/launcher_main_info_ic" android:contentDescription="info" android:layout_marginStart="10dp" app:layout_constraintBottom_toBottomOf="@+id/edit_text_name" app:layout_constraintStart_toEndOf="@+id/edit_text_name" app:layout_constraintTop_toTopOf="@+id/edit_text_name" />
+	<androidx.appcompat.widget.AppCompatButton android:textColor="@color/white" android:id="@+id/button_play" android:background="@drawable/launcher_red_buttons_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="30dp" android:text="Играть" android:drawablePadding="10dp" android:drawableStart="@drawable/launcher_main_play_ic" android:fontFamily="@font/montserrat_bold" android:paddingStart="28dp" android:paddingEnd="36dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/button_clean_game"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="30dp"
+		android:background="@drawable/launcher_main_button_blue_bg"
+		android:drawablePadding="10dp"
+		android:fontFamily="@font/montserrat_regular"
+		android:paddingStart="10dp"
+		android:paddingEnd="10dp"
+		android:text="Переустановить игру"
+		android:textAllCaps="false"
+		android:textColor="@color/white"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+	<ImageButton android:id="@+id/button_vk" android:background="@drawable/launcher_main_social_buttons_blue_bg" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginTop="10dp" android:src="@drawable/launcher_main_vk_ic" android:contentDescription="vk" app:layout_constraintEnd_toEndOf="@+id/button_discord" app:layout_constraintTop_toBottomOf="@+id/button_discord" />
+	<ImageButton android:id="@+id/button_discord" android:background="@drawable/launcher_main_social_buttons_blue_bg" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginBottom="10dp" android:src="@drawable/launcher_main_discord_ic" android:contentDescription="discord" android:layout_marginEnd="30dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+	<ImageButton android:id="@+id/button_telegram" android:background="@drawable/launcher_main_social_buttons_blue_bg" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginBottom="10dp" android:src="@drawable/launcher_main_telegram_ic" android:contentDescription="telegram" android:layout_marginEnd="30dp" app:layout_constraintBottom_toTopOf="@+id/button_discord" app:layout_constraintEnd_toEndOf="parent" />
+	<TextView android:textSize="10.0sp" android:textStyle="italic" android:textColor="@color/white" android:text="· формат ввода: Nick_Name\n· допустимая длина никнейма 3–23 символов\n· в никнейме запрещены оскорбительные
+\nи нецензурные слова\n· никнейм должен содержать только латиницу\n· запрещено использование цифр и символов\n" android:id="@+id/text_view_info_about_nickname" android:background="@drawable/launcher_main_info_bg" android:paddingTop="16dp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:importantForAccessibility="no" android:paddingStart="8dp" android:paddingEnd="8dp" android:layout_marginEnd="32dp" app:layout_constraintStart_toStartOf="@+id/ib_info" app:layout_constraintTop_toBottomOf="@+id/ib_info" />
+	<ProgressBar android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progressbar_custom" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/autoshop_main_layout"
+    android:padding="10px">
+
+        <TextView
+            android:id="@+id/autoshop_pricelabel"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:includeFontPadding="false"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowRadius="5"
+            android:text="@string/autoshop_pricelabel"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_modelname"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_modelname" />
+
+        <ImageView
+            android:layout_marginStart="4dp"
+            android:padding="0.5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/autoshop_priceicon"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_pricelabel"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_pricelabel" />
+
+        <TextView
+            android:id="@+id/autoshop_pricevalue"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:includeFontPadding="false"
+            android:background="@drawable/black_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowRadius="5"
+            android:text="40.000.000 руб."
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_modelname"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_pricelabel" />
+
+        <Button
+            android:id="@+id/testdrive_butt"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:backgroundTint="@color/yellow"
+
+            android:fontFamily="@font/muller_bold"
+            android:padding="0px"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:text="Тест-драйв"
+            android:textColor="#000000"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_8sdp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_modelname"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_pricelabel" />
+
+        <Button
+            android:id="@+id/autoshop_buybutt"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+
+            android:background="@drawable/red_gradient_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:padding="0px"
+            android:shadowColor="@color/white"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:text="Приобрести"
+            android:textColor="#ffffff"
+
+            android:textFontWeight="700"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_modelname"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_modelname"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_pricelabel" />
+
+        <Button
+            android:id="@+id/autoshop_exitbutt"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:background="@drawable/red_gradient_rounded"
+            android:fontFamily="@font/muller_bold"
+
+            android:outlineAmbientShadowColor="#FAFD01"
+            android:padding="0px"
+            android:shadowColor="@color/white"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:text="Выход"
+            android:textColor="#ffffff"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_modelname"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_buybutt"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_buybutt" />
+
+        <TextView
+            android:id="@+id/autoshop_modelname"
+            android:layout_width="320dp"
+            android:layout_height="29dp"
+            android:layout_marginBottom="75dp"
+            android:background="@drawable/red_gradient_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:includeFontPadding="false"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowRadius="2"
+            android:text="BMW M3"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/autoshop_customlabel"
+            android:layout_width="168dp"
+            android:layout_height="28dp"
+            android:background="@drawable/red_gradient_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="bottom|center_horizontal|center_vertical"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:includeFontPadding="false"
+            android:text="Кастомизация"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.255" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/autoshop_maxspeed_layout"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/black_rounded"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_infolabel"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_infolabel">
+
+                <TextView
+                    android:id="@+id/autoshop_maxspeedlabel"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/muller_bold"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="@string/autoshop_max_speed"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/autoshop_aceleration_icon"
+                    app:layout_constraintStart_toEndOf="@+id/autoshop_aceleration_icon"
+                    app:layout_constraintTop_toTopOf="@+id/autoshop_aceleration_icon" />
+
+                <ImageView
+                    android:id="@+id/autoshop_aceleration_icon"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/autoshop_maxspeed_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/black_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_maxspeed_layout"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_maxspeed_layout"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_maxspeed_layout">
+
+                <TextView
+                    android:id="@+id/autoshop_maxspeed_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="100 км/ч"
+                    android:textSize="@dimen/_8sdp"
+                    android:fontFamily="@font/muller_medium"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/autoshop_acceleration_layout"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_rounded"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_infolabel"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_maxspeed_layout">
+
+                <TextView
+                    android:id="@+id/autoshop_accelerationlabel"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/muller_bold"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="@string/autoshop_acceleration"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/autoshop_maxspeed_icon"
+                    app:layout_constraintStart_toEndOf="@+id/autoshop_maxspeed_icon"
+                    app:layout_constraintTop_toTopOf="@+id/autoshop_maxspeed_icon" />
+
+                <ImageView
+                    android:id="@+id/autoshop_maxspeed_icon"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/autoshop_aceleration_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/black_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_acceleration_layout"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_acceleration_layout"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_acceleration_layout">
+
+                <TextView
+                    android:id="@+id/autoshop_acceleration_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100 км/ч"
+                    android:textSize="@dimen/_8sdp"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:fontFamily="@font/muller_medium"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/autoshop_gear_layot"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_rounded"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_infolabel"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_acceleration_layout">
+
+                <TextView
+                    android:id="@+id/autoshop_gear_text"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/muller_bold"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="Привод"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/autoshop_gear_icon"
+                    app:layout_constraintStart_toEndOf="@+id/autoshop_gear_icon"
+                    app:layout_constraintTop_toTopOf="@+id/autoshop_gear_icon" />
+
+                <ImageView
+                    android:id="@+id/autoshop_gear_icon"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/autoshop_gear_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/black_rounded"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_gear_layot"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_gear_layot"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_gear_layot">
+
+                <TextView
+                    android:id="@+id/autoshop_gear_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muller_medium"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="передний"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/autoshop_info_layot"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/black_rounded"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_infolabel"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_gear_layot">
+
+                <TextView
+                    android:id="@+id/autoshop_availablelabel"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/muller_bold"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="@string/autoshop_available"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+
+                    android:textSize="9dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/autoshop_counticon"
+                    app:layout_constraintStart_toEndOf="@+id/autoshop_counticon"
+                    app:layout_constraintTop_toTopOf="@+id/autoshop_counticon" />
+
+                <ImageView
+                    android:id="@+id/autoshop_counticon"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/autoshop_counticon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/black_rounded"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_info_layot"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_info_layot"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_info_layot">
+
+                <TextView
+                    android:id="@+id/autoshop_available_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muller_medium"
+                    android:includeFontPadding="false"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1"
+                    android:shadowRadius="5"
+                    android:text="15"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/autoshop_infolabel"
+            android:layout_width="@dimen/_147sdp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/red_gradient_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="bottom|center_horizontal"
+            android:paddingTop="7dp"
+            android:includeFontPadding="false"
+            android:paddingBottom="7dp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="3"
+            android:text="Информация"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_customlabel" />
+
+        <TextView
+            android:id="@+id/autoshop_colorlabel"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:includeFontPadding="false"
+            android:layout_marginTop="8dp"
+
+            android:background="@drawable/black_rounded"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:shadowColor="@color/black"
+            android:shadowRadius="0.5"
+            android:text="Цвет автомобиля"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="8sp"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_customlabel"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_customlabel"
+            app:layout_constraintTop_toBottomOf="@+id/autoshop_customlabel" />
+
+        <Button
+            android:id="@+id/autoshop_colorright"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:background="@drawable/black_rounded"
+            android:outlineAmbientShadowColor="#FAFD01"
+            android:padding="0px"
+
+            android:shadowColor="#FAFD01"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:text="@string/string_right"
+            android:textColor="#FAFD01"
+            android:textSize="@dimen/_8sdp"
+            app:backgroundTint="@null"
+            app:backgroundTintMode="@null"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_customlabel"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_colorlabel" />
+
+        <Button
+            android:id="@+id/autoshop_colorleft"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:background="@drawable/black_rounded"
+            android:outlineAmbientShadowColor="#FAFD01"
+            android:padding="0px"
+
+            android:shadowColor="#FAFD01"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:text="@string/arrow_left"
+            android:textColor="#FAFD01"
+            android:textSize="@dimen/_8sdp"
+            app:backgroundTint="@null"
+            app:backgroundTintMode="@null"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_customlabel"
+            app:layout_constraintTop_toTopOf="@+id/autoshop_colorlabel" />
+
+        <Button
+            android:id="@+id/autoshop_leftbutt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/autoshop_left_butt"
+
+
+            android:scaleX="1"
+            android:textColor="#FAFD01"
+            app:backgroundTint="@null"
+            app:backgroundTintMode="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_colorlabel"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_colorlabel" />
+
+        <Button
+            android:id="@+id/autoshop_camerabutt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/autoshop_preview"
+            android:visibility="gone"
+            app:backgroundTint="@null"
+            app:backgroundTintMode="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_rightbutt"
+            app:layout_constraintEnd_toEndOf="@+id/autoshop_infolabel"
+            app:layout_constraintHorizontal_bias="0.532"
+            app:layout_constraintStart_toEndOf="@+id/autoshop_rightbutt" />
+
+        <Button
+            android:id="@+id/autoshop_rightbutt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+
+            android:layout_marginStart="52dp"
+            android:background="@drawable/autoshop_left_butt"
+            android:scaleX="-1"
+            android:textColor="#FAFD01"
+            app:backgroundTint="@null"
+            app:backgroundTintMode="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/autoshop_leftbutt"
+            app:layout_constraintStart_toStartOf="@+id/autoshop_infolabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

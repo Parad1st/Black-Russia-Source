@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/br_shopstroreselect_layout"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/launcher_main_info_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView32"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shop_buyinfo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopstore_buyinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muller_bold"
+            android:includeFontPadding="false"
+            android:paddingEnd="10dp"
+            android:text="ЦЕНА: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView32"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/shopstore_left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/autoshop_left_butt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shopstore_right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="24dp"
+        android:rotation="180"
+        android:src="@drawable/autoshop_left_butt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/shopstore_buy"
+        android:layout_width="110dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/keyboard_red_buttons"
+        android:text="Купить"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout6" />
+
+    <Button
+        android:id="@+id/shopstore_exit"
+        android:layout_width="110dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/keyboard_gray_buttons"
+        android:text="Выход"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout6" />
+
+    <ImageView
+        android:id="@+id/shopstore_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/shop_camera"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/shopstore_right"
+        app:layout_constraintStart_toStartOf="@+id/shopstore_right"
+        app:layout_constraintTop_toBottomOf="@+id/shopstore_right" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

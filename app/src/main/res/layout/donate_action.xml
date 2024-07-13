@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="130dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/donate_tile_background" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="126dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/muller_medium"
+        android:gravity="center"
+        android:text="Bugatti Chiron"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView23"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/imageView19" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="79dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/imageView19"
+        app:srcCompat="@drawable/auto_econom" />
+
+    <Button
+        android:id="@+id/donate_button"
+        android:layout_width="97dp"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/donate_tile_button"
+        android:fontFamily="@font/muller_bold"
+        android:text="Смотреть"
+        android:textColor="#ffffff"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="70000 BC"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/donateBadgeText"
+        android:layout_width="40dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/donate_tile_timer_red"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="акция"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/donateBadgeTime"
+        android:layout_width="40dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="110dp"
+        android:background="@drawable/donate_tile_timer_white"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="23:35"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/donateBadgeText" />
+
+    <TextView
+        android:id="@+id/donateBadgePercent"
+        android:layout_width="40dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/donate_tile_sale_badge"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingTop="1dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="1dp"
+        android:text="-45%"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/donateBadgeTime" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="ДЛЯ ВАС"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+</androidx.constraintlayout.widget.ConstraintLayout>

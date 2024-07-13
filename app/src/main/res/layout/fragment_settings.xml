@@ -130,7 +130,7 @@
                 android:background="@drawable/button_red_rectangle"
                 android:fontFamily="@font/pt_root_ui_medium"
                 android:gravity="center"
-                android:text="Переустановить игру"
+                android:text="Починить игру"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp" />
 
@@ -143,21 +143,15 @@
                 android:gravity="center"
                 android:orientation="horizontal" >
 
-                <ImageView
-                    android:id="@+id/telegramButton"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/telegram" />
-
                 <Space
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="wrap_content" />
 
                 <ImageView
-                    android:id="@+id/instagramButton"
+                    android:id="@+id/telegramButton"
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/instagram" />
+                    android:src="@drawable/telegram" />
 
                 <Space
                     android:layout_width="@dimen/_20sdp"

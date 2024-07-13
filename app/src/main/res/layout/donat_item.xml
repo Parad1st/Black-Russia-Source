@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="bottom" android:orientation="horizontal" android:paddingLeft="5dp" android:paddingRight="10dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="40dp">
+
+    <Button
+        android:id="@+id/button_leftt"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_gray"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="center"
+        android:text="Button"
+        android:textColor="#ffffff"
+        android:textSize="11sp" />
+
+    <FrameLayout android:id="@+id/frame" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="-10dp" android:layout_weight="2.5">
+
+        <Button
+            android:id="@+id/button_rightt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/button_gray"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center"
+            android:text="Button"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/donate_tile_newbadge"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="-45%"
+            android:textColor="#ffffff"
+            android:textSize="9sp"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

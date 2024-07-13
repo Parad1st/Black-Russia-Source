@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/keyboard_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/close_key_parad1st"
+        android:layout_width="730dp"
+        android:layout_height="142dp"
+        android:visibility="gone"
+        app:srcCompat="?attr/selectableItemBackground" />
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="63dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_buttons"
+                    android:layout_width="325dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|end"
+                    android:gravity="bottom|start|end"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/layout_history"
+                    app:layout_constraintHorizontal_bias="0.035"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <FrameLayout
+                        android:id="@+id/des_bth"
+                        android:layout_width="@dimen/_61sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/keyboard_gray_buttons"
+                        app:layout_constraintBottom_toBottomOf="@+id/nrp_chat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.428"
+                        app:layout_constraintStart_toEndOf="@+id/krik_bth"
+                        app:layout_constraintTop_toTopOf="@+id/rp_chat"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/muller_bold"
+                            android:text="Действие"
+                            android:textColor="#FFFFFF" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/krik_bth"
+                        android:layout_width="@dimen/_47sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/keyboard_gray_buttons"
+                        app:layout_constraintBottom_toBottomOf="@+id/nrp_chat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.142"
+                        app:layout_constraintStart_toEndOf="@+id/nrp_chat"
+                        app:layout_constraintTop_toTopOf="@+id/rp_chat"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/muller_bold"
+                            android:text="Крик"
+                            android:textColor="#FFFFFF" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rp_chat"
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/keyboard_red_buttons"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/nrp_chat"
+                        app:layout_constraintStart_toEndOf="@+id/rp_chat"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/muller_bold"
+                            android:text="RP чат"
+                            android:textColor="#FFFFFF" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/nrp_chat"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="79dp"
+                        android:background="@drawable/keyboard_gray_buttons"
+                        app:layout_constraintBottom_toBottomOf="@+id/rp_chat"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rp_chat">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/muller_bold"
+                            android:text="NRP чат"
+                            android:textColor="#FFFFFF" />
+                    </FrameLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_gravity="end|bottom|center"
+                    android:gravity="end|bottom"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/history_up"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/keyboard_history_new">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:rotation="90"
+                            app:srcCompat="@drawable/arrow_left" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/history_down"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_marginEnd="@dimen/_48sdp"
+                        android:background="@drawable/keyboard_history_new"
+                        android:backgroundTintMode="src_in">
+
+                        <ImageView
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_gravity="center"
+                            android:rotation="-90"
+                            app:srcCompat="@drawable/arrow_left" />
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_input"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/chot5"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_weight="0.7">
+
+                    <com.nvidia.devtech.CustomEditText
+                        android:id="@+id/input"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/ttnorms_medium"
+                        android:gravity="center|left"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textNoSuggestions"
+                        android:singleLine="true"
+                        android:tag="keyboard_input"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff"
+                        android:textCursorDrawable="@color/white"
+                        android:textSize="@dimen/_18sdp" />
+
+                    <TextView
+                        android:id="@+id/hint_params"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/ttnorms_medium"
+                        android:gravity="center_vertical|left|center"
+                        android:maxLines="1"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/_18sdp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/send_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:background="@drawable/keyboard_btn_bg"
+                    android:backgroundTint="#ff241c2b"
+                    android:backgroundTintMode="src_in"
+                    android:padding="@dimen/_3sdp"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:tag="symbol"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ttnorms_medium"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/_3sdp"
+                        android:text=""
+                        android:textColor="#66ffffff"
+                        android:textSize="@dimen/_15sdp" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/clear"
+                    android:layout_width="@dimen/_46sdp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/_18sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_18sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:srcCompat="?attr/selectableItemBackground" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_keyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/chot5"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#57FFFFFF">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/layout_keys"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:divider="@drawable/divider_br_red_s_corn"
+                android:orientation="vertical"
+                android:showDividers="beginning|end">
+
+                <LinearLayout
+                    android:id="@+id/row_0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:divider="@drawable/divider_br_red_s_corn"
+                    android:orientation="horizontal"
+                    android:showDividers="beginning|end">
+
+                    <FrameLayout
+                        android:id="@+id/key_0"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="й"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_1"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ц"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_2"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="у"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_3"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="к"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_4"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="е"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_5"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="н"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_6"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="г"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_7"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ш"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_8"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="щ"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_9"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="з"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_10"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="х"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:divider="@drawable/divider_br_red_s_corn"
+                    android:orientation="horizontal"
+                    android:showDividers="beginning|end">
+
+                    <FrameLayout
+                        android:id="@+id/key_11"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginStart="35dp"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ф"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_12"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ы"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_13"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="в"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_14"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="а"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_15"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="п"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_16"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="р"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_17"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="о"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_18"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="л"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_19"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="д"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_20"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ж"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_21"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginEnd="30dp"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="э"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:divider="@drawable/divider_br_red_s_corn"
+                    android:orientation="horizontal"
+                    android:showDividers="beginning|end">
+
+                    <FrameLayout
+                        android:id="@+id/key_22"
+                        android:layout_width="30dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="shift">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/cpss" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_23"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="."
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_24"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="switch_num2"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="=/&lt;"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_25"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="я"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_26"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ч"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_27"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="с"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_28"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="м"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_29"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="и"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_30"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="т"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_31"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ь"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_32"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="б"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_33"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="ю"
+                            android:textColor="#ffffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_34"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="backspace">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:srcCompat="@drawable/bckspce" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:divider="@drawable/divider_br_red_s_corn"
+                    android:orientation="horizontal"
+                    android:showDividers="beginning|end">
+
+
+                    <FrameLayout
+                        android:id="@+id/key_42"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="/"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_35"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10.0"
+                        android:tag="switch_num">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="123"
+                            android:textColor="#ff9598a2"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_36"
+                        android:layout_width="0.0dip"
+                        android:layout_height="0.0dip"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="switch_num">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="123"
+                            android:textColor="#66ffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_37"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="symbol"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="!"
+                            android:textColor="#66ffffff"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_38"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="switch_lang">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ttnorms_medium"
+                            android:includeFontPadding="false"
+                            android:text="eng"
+
+                            android:textColor="#ff9598a2"
+                            android:textSize="@dimen/_15sdp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_39"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50.0"
+                        android:padding="@dimen/_3sdp"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:tag="space">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            app:srcCompat="@drawable/probil" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/symbols_layout"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="20.0"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/key_40"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:padding="@dimen/_3sdp"
+                            android:tag="symbol">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/ttnorms_medium"
+                                android:includeFontPadding="false"
+                                android:text=","
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_15sdp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/key_41"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:padding="@dimen/_3sdp"
+                            android:tag="symbol">
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/keyboard_btn_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/ttnorms_medium"
+                                android:includeFontPadding="false"
+                                android:text="\?"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_15sdp" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/key_43"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="10.0"
+                        android:padding="@dimen/_3sdp"
+                        android:tag="enter">
+
+                        <ImageView
+                            android:layout_width="@dimen/_37sdp"
+                            android:layout_height="@dimen/_37sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/senddd" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/keyboard_btn_bg" />
+
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/key_hint"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="@dimen/_3sdp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/keyboard_btn_bg"
+            app:tint="#ff584d61"
+            app:tintMode="src_in" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_32sdp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:srcCompat="@drawable/keyboard_btn_bg"
+                app:tint="#ff8a7f93"
+                app:tintMode="src_in" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/ttnorms_medium"
+                android:includeFontPadding="false"
+                android:text="е"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/_16sdp" />
+        </FrameLayout>
+    </FrameLayout>
+
+</FrameLayout>

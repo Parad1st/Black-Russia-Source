@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/donate_parad1st"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff212121"
+    android:layoutDirection="inherit"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/donate_close"
+        android:layout_width="40.0dip"
+        android:layout_height="39.0dip"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bracsbtnexit" />
+
+    <TextView
+        android:id="@+id/bcdon"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:background="@drawable/donate_tile_header_left"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="999 999"
+        android:textColor="@color/white"
+        android:textSize="11.5sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView4"
+        app:layout_constraintEnd_toStartOf="@id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="33.0dip"
+        android:layout_height="42.0dip"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/donate_tile_header_parad1st"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:padding="6.0dip"
+        android:text="BC"
+        android:textColor="@color/white"
+        android:textSize="12.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/donate_close"
+        app:layout_constraintEnd_toStartOf="@id/donate_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/plusbc"
+        android:layout_width="30.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="57.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/bcdon"
+        app:layout_constraintEnd_toEndOf="@id/bcdon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/plus_yellow" />
+
+    <TextView
+        android:id="@+id/moneydon"
+        android:layout_width="85dp"
+        android:layout_height="42dp"
+        android:background="@drawable/donate_tile_header_left"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="\ 999 999 999"
+        android:textColor="@color/white"
+        android:textSize="11.5sp"
+        app:layout_constraintEnd_toStartOf="@id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="33.0dip"
+        android:layout_height="42.0dip"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/donate_tile_header_parad1st"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:padding="6.0dip"
+        android:text="₽"
+        android:textColor="@color/white"
+        android:textSize="16.0sp"
+        app:layout_constraintEnd_toStartOf="@id/plusbc"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/plusrub"
+        android:layout_width="30.0dip"
+        android:layout_height="44.0dip"
+        app:layout_constraintEnd_toStartOf="@id/moneydon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_red" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="274.0dip"
+        android:layout_height="39.0dip"
+        android:layout_marginStart="37.0dip"
+        android:layout_marginEnd="73.0dip"
+        app:layout_constraintEnd_toStartOf="@id/plusrub"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rv_rounded_bottom" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:background="#ffff4500"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="ТОВАРЫ"
+        android:textColor="@color/white"
+        android:textSize="10.5sp"
+        app:layout_constraintStart_toStartOf="@id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="136dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="УСЛУГИ"
+        android:textColor="@color/gray"
+        android:textSize="10.5sp"
+        app:layout_constraintEnd_toEndOf="@id/imageView15"
+        app:layout_constraintTop_toTopOf="@id/imageView15" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="73dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="65dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="BLACK PASS"
+        android:textColor="@color/gray"
+        android:textSize="10.5sp"
+        app:layout_constraintEnd_toEndOf="@id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="69dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="КЕЙСЫ"
+        android:textColor="@color/gray"
+        android:textSize="10.5sp"
+        app:layout_constraintEnd_toEndOf="@id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="388dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="249.0dip"
+        android:layout_marginEnd="225.0dip"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="АКЦИИ И СПЕЦПРЕДЛОЖЕНИЯ"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/footerRight1"
+        android:layout_width="27dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/br_vector_right_gray"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/footerLeft1"
+        android:layout_width="27dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/br_vector_left_gray"
+        android:minWidth="44dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="32dp"
+        android:background="#ff363636"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/downnn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/autoRecycler"
+            android:layout_width="733dp"
+            android:layout_height="match_parent"
+            android:background="#ff363636"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="130dp"
+                android:layout_height="169dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="23dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.791"
+                app:srcCompat="@drawable/donate_tile_background_surprise" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="27dp"
+                android:fontFamily="@font/montsserat_semibold"
+                android:gravity="center"
+                android:text="ПОДАРОК"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toTopOf="@+id/imageView20" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="99dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/muller_medium"
+                android:gravity="center"
+                android:text="Только для вас"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView21"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.294"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="44dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginEnd="43dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView18"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:srcCompat="@drawable/ask_icon" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="131dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="ОТКРОЕТСЯ ЧЕРЕЗ"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView19"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="22dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="01 Ч. 55 МИН."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ActionsRecycler"
+                android:layout_width="440dp"
+                android:layout_height="216dp"
+                android:layout_marginStart="143dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView191"
+                android:layout_width="130dp"
+                android:layout_height="169dp"
+                android:layout_marginEnd="53dp"
+                android:layout_marginBottom="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView192"
+                app:srcCompat="@drawable/donate_tile_background" />
+
+            <ImageView
+                android:id="@+id/imageView192"
+                android:layout_width="130dp"
+                android:layout_height="169dp"
+                android:layout_marginEnd="53dp"
+                android:layout_marginBottom="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView193"
+                app:srcCompat="@drawable/donate_tile_background" />
+
+            <ImageView
+                android:id="@+id/imageView193"
+                android:layout_width="130dp"
+                android:layout_height="169dp"
+                android:layout_marginEnd="168dp"
+                android:layout_marginBottom="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/donate_tile_background" />
+
+            <Button
+                android:id="@+id/donate_button1"
+                android:layout_width="97dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="156dp"
+                android:background="@drawable/donate_tile_button"
+                android:fontFamily="@font/muller_bold"
+                android:text="Смотреть"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView191"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="@+id/imageView191"
+                app:layout_constraintTop_toTopOf="@+id/imageView191" />
+
+            <Button
+                android:id="@+id/donate_button2"
+                android:layout_width="97dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="156dp"
+                android:background="@drawable/donate_tile_button"
+                android:fontFamily="@font/muller_bold"
+                android:text="Смотреть"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView192"
+                app:layout_constraintHorizontal_bias="0.484"
+                app:layout_constraintStart_toStartOf="@+id/imageView192"
+                app:layout_constraintTop_toTopOf="@+id/imageView192" />
+
+            <Button
+                android:id="@+id/donate_button3"
+                android:layout_width="97dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="156dp"
+                android:background="@drawable/donate_tile_button"
+                android:fontFamily="@font/muller_bold"
+                android:text="Смотреть"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView193"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="@+id/imageView193"
+                app:layout_constraintTop_toTopOf="@+id/imageView193" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="VIP SILVER"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView191"
+                app:layout_constraintStart_toStartOf="@+id/imageView191"
+                app:layout_constraintTop_toTopOf="@+id/imageView191" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="35dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="VIP GOLD"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView192"
+                app:layout_constraintStart_toStartOf="@+id/imageView192"
+                app:layout_constraintTop_toTopOf="@+id/imageView192" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="VIP PLATINUM"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView193"
+                app:layout_constraintStart_toStartOf="@+id/imageView193"
+                app:layout_constraintTop_toTopOf="@+id/imageView193" />
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="66dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView191"
+                app:layout_constraintStart_toStartOf="@+id/imageView191"
+                app:layout_constraintTop_toTopOf="@+id/imageView191"
+                app:srcCompat="@drawable/donate_vip_silver" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="124dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="104dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="ПОСМОТРИ ЧТО ВКЛЮЧАЕТ В СЕБЯ НАБОР VIP SILVER"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView191"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView191"
+                app:layout_constraintTop_toTopOf="@+id/imageView191" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="66dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView192"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView192"
+                app:layout_constraintTop_toTopOf="@+id/imageView192"
+                app:srcCompat="@drawable/donate_vip_gold" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="124dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="104dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="ПОСМОТРИ ЧТО ВКЛЮЧАЕТ В СЕБЯ НАБОР VIP GOLD"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView192"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView192"
+                app:layout_constraintTop_toTopOf="@+id/imageView192" />
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="66dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="27dp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView193"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView193"
+                app:layout_constraintTop_toTopOf="@+id/imageView193"
+                app:srcCompat="@drawable/donate_vip_platinum" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="124dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="104dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="ПОСМОТРИ ЧТО ВКЛЮЧАЕТ В СЕБЯ НАБОР VIP PLATINUM"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView193"
+                app:layout_constraintStart_toStartOf="@+id/imageView193"
+                app:layout_constraintTop_toTopOf="@+id/imageView193" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/downnn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="581dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/rv_rounded_top" />
+
+        <Button
+            android:id="@+id/footerLeft"
+            android:layout_width="31dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/br_vector_left_gray"
+            android:minWidth="44dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView18" />
+
+
+        <Button
+            android:id="@+id/footerRight"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/br_vector_right_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView18" />
+
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="85dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="496dp"
+            android:background="#ffff4500"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="АКЦИИ"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="102dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="391dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="ТРАНСПОРТ"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="93dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="298dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="СКИНЫ"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="102dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="192dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="НАБОРЫ"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="58dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="132dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="VIP"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="127dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="АКСЕССУАРЫ"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toTopOf="@+id/imageView18"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:srcCompat="@drawable/back_donate" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/uslugii"
+        android:layout_width="745dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneydon">
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="384dp"
+            android:layout_height="284dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/donate_background_parad1st" />
+
+        <TextView
+            android:id="@+id/textView89"
+            android:layout_width="388dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="СПИСОК УСЛУГ"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView26"
+            app:layout_constraintTop_toTopOf="@+id/imageView26" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/UslugiRecycler"
+            android:layout_width="348dp"
+            android:layout_height="233dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+            app:layout_constraintEnd_toEndOf="@+id/imageView26"
+            app:layout_constraintStart_toStartOf="@+id/imageView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView89"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="205dp"
+            android:layout_height="225dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView26"
+            app:srcCompat="@drawable/donate_tile_background" />
+
+        <TextView
+            android:id="@+id/toptextuslugi"
+            android:layout_width="205dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Купить питуха"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/imageView27"
+            app:layout_constraintStart_toStartOf="@+id/imageView27"
+            app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+        <ImageView
+            android:id="@+id/imgusl"
+            android:layout_width="94dp"
+            android:layout_height="76dp"
+            app:layout_constraintBottom_toTopOf="@+id/costusl"
+            app:layout_constraintEnd_toEndOf="@+id/imageView27"
+            app:layout_constraintStart_toStartOf="@+id/imageView27"
+            app:layout_constraintTop_toBottomOf="@+id/toptextuslugi"
+            app:srcCompat="@drawable/peoples_aples" />
+
+        <TextView
+            android:id="@+id/costusl"
+            android:layout_width="78dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="700 BC"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/donate_butееon"
+            app:layout_constraintEnd_toEndOf="@+id/imageView27"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/imageView27" />
+
+        <Button
+            android:id="@+id/donate_butееon"
+            android:layout_width="170dp"
+            android:layout_height="34dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="172dp"
+            android:background="@drawable/donate_tile_button"
+            android:fontFamily="@font/muller_bold"
+            android:text="КУПИТЬ"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView27"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="@+id/imageView27"
+            app:layout_constraintTop_toBottomOf="@+id/toptextuslugi" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

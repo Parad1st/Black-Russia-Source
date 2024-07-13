@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/helper_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@id/hint_instructor"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        app:srcCompat="@drawable/hint_instructor" />
+
+    <TextView
+        android:id="@+id/hint_text_instructor"
+        android:layout_width="250.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10.0dip"
+        android:background="@drawable/hint_back"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingBottom="10.0dip"
+        android:text="Клиент LUX RUSSIA by Parad1st\nЗаходи поиграть"
+        android:textColor="#ffffffff"
+        android:textSize="10.0sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/hint_instructor"
+        app:layout_constraintTop_toTopOf="@+id/hint_instructor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

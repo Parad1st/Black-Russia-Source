@@ -13,7 +13,16 @@
     <View android:id="@+id/view3" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="70dp" android:layout_marginRight="70dp"/>
     <ScrollView android:layout_width="match_parent" android:layout_height="225dp" android:layout_marginTop="20dp" android:layout_marginStart="70dp" android:layout_marginEnd="70dp">
         <RelativeLayout android:orientation="vertical" android:id="@+id/br_menu_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center_horizontal" android:id="@+id/br_rec_view_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentEnd="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/br_rec_view_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="-2dp"
+                android:layout_marginEnd="2dp" />
         </RelativeLayout>
     </ScrollView>
 </LinearLayout>

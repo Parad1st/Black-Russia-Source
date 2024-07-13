@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jbl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="622dp"
+        android:layout_height="308dp"
+        android:background="#CB000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/search_view2"
+            android:layout_width="280dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/players_list_border_search"
+            android:fontFamily="@font/montsserat_semibold"
+            android:hint="@string/music_list_search_hint"
+            android:imeOptions="actionGo|actionSend|actionDone|flagNoFullscreen|flagNoExtractUi"
+            android:inputType="text"
+            android:paddingStart="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/progress_gray"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_search_view2"
+            android:layout_width="33dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@+id/search_view"
+            android:layout_alignEnd="@+id/search_view"
+            android:layout_alignBottom="@+id/search_view"
+            android:layout_marginStart="560dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/search_view2"
+            app:layout_constraintEnd_toEndOf="@+id/search_view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/JblRecyclerView"
+            android:layout_width="574dp"
+            android:layout_height="194dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="305dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/players_list_bg_value_players"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center"
+            android:text="Выберите песню для локального прослушивания"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/namemusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/muller_bold"
+            android:gravity="center"
+            android:text="Сейчас играет: "
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/JblRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="93dp"
+            android:layout_height="31dp"
+            android:background="@drawable/dialog_item_btn"
+            android:text="Выйти"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.978" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

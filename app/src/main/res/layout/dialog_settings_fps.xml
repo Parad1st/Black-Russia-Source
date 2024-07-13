@@ -7,7 +7,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginBottom="10dp"
-    android:background="#E6212121"
+    android:background="@drawable/dialog_bg"
     android:orientation="vertical"
     android:weightSum="1.0">
 

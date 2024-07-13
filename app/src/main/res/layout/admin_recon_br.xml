@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_recon_br"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="250dp"
+        android:layout_height="337dp"
+        android:layout_marginTop="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/form_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/stats"
+            app:layout_constraintStart_toStartOf="@+id/stats"
+            app:srcCompat="@drawable/admin_form" />
+
+        <ImageView
+            android:id="@+id/stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/admin_stats_2" />
+
+        <ImageView
+            android:id="@+id/statssss_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/stats"
+            app:layout_constraintEnd_toEndOf="@+id/stats"
+            app:layout_constraintStart_toStartOf="@+id/stats"
+            app:layout_constraintTop_toTopOf="@+id/stats"
+            app:layout_constraintVertical_bias="0.907"
+            app:srcCompat="@drawable/admin_stats_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="729dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="372dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nextt_button"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:background="@drawable/admin_red"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/ban_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toEndOf="@+id/ban_button"
+            app:layout_constraintTop_toTopOf="@+id/ban_button"
+            app:layout_constraintVertical_bias="0.538">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:rotation="180"
+                android:src="@drawable/arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prevv_button"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginStart="74dp"
+            android:layout_marginEnd="616dp"
+            android:background="@drawable/admin_red"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/kick_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/kick_button"
+            app:layout_constraintVertical_bias="0.538">
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/kick_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="528dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toEndOf="@+id/re_prev_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.747"
+            app:srcCompat="@drawable/admin_kick" />
+
+        <ImageView
+            android:id="@+id/mute_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="385dp"
+            app:layout_constraintBottom_toBottomOf="@+id/kick_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintStart_toEndOf="@+id/kick_button"
+            app:layout_constraintTop_toTopOf="@+id/kick_button"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/admin_mute" />
+
+        <ImageView
+            android:id="@+id/warn_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="227dp"
+            app:layout_constraintBottom_toBottomOf="@+id/kick_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/jail_button"
+            app:layout_constraintTop_toTopOf="@+id/kick_button"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/admin_warn" />
+
+        <ImageView
+            android:id="@+id/slap_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="148dp"
+            app:layout_constraintBottom_toBottomOf="@+id/kick_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/warn_button"
+            app:layout_constraintTop_toTopOf="@+id/kick_button"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/admin_slap" />
+
+        <ImageView
+            android:id="@+id/jail_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="306dp"
+            app:layout_constraintBottom_toBottomOf="@+id/kick_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/mute_button"
+            app:layout_constraintTop_toTopOf="@+id/kick_button"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/admin_jail" />
+
+        <ImageView
+            android:id="@+id/ban_button"
+            android:layout_width="70dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="69dp"
+            app:layout_constraintBottom_toBottomOf="@+id/slap_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/slap_button"
+            app:layout_constraintTop_toTopOf="@+id/slap_button"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/admin_red" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muller_bold"
+            android:text="BAN"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ban_button"
+            app:layout_constraintEnd_toEndOf="@+id/ban_button"
+            app:layout_constraintStart_toStartOf="@+id/ban_button"
+            app:layout_constraintTop_toTopOf="@+id/ban_button" />
+
+        <ImageView
+            android:id="@+id/nickname_fon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="266dp"
+            app:layout_constraintBottom_toTopOf="@+id/warn_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/admin_nick" />
+
+        <ImageView
+            android:id="@+id/obnv_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/nickname_fon"
+            app:layout_constraintStart_toStartOf="@+id/nickname_fon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.551"
+            app:srcCompat="@drawable/admin_obnv" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="334dp"
+            android:fontFamily="@font/muller_bold"
+            android:text="[0]  "
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nickname_fon"
+            app:layout_constraintEnd_toStartOf="@+id/nickname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nickname_fon" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muller_bold"
+            android:text="Parad1st_Top"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nickname_fon"
+            app:layout_constraintEnd_toEndOf="@+id/nickname_fon"
+            app:layout_constraintStart_toEndOf="@+id/obnv_button"
+            app:layout_constraintStart_toStartOf="@+id/nickname_fon"
+            app:layout_constraintTop_toTopOf="@+id/nickname_fon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/exit_button"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="244dp"
+            android:background="@drawable/admin_red"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintBottom_toBottomOf="@+id/obnv_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nickname"
+            app:layout_constraintTop_toTopOf="@+id/obnv_button">
+
+            <TextView
+                android:id="@+id/exit_pon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muller_bold"
+                android:text="ВЫХОД"
+                android:textColor="#FFFFFF"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

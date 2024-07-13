@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/background_loader"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/launcher_downloader_bg">
+
+	<TextView
+		android:id="@+id/tv_br"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="100dp"
+		android:fontFamily="@font/montserrat_bold"
+		android:lineSpacingMultiplier="0.9"
+		android:paddingStart="-3dp"
+		android:text="LUX\nRUSSIA"
+		android:textAllCaps="true"
+		android:textColor="@color/white"
+		android:textSize="50.0sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/progress_bar"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.504" />
+
+	<TextView
+		android:id="@+id/tv_play_black"
+		android:layout_width="wrap_content"
+		android:layout_height="20dp"
+		android:layout_marginTop="16dp"
+		android:fontFamily="@font/montserrat_regular"
+		android:text="Лучший crmp в твоем телефоне!"
+		android:textColor="@color/white"
+		android:textSize="12.0sp"
+		app:layout_constraintStart_toStartOf="@+id/progress_bar"
+		app:layout_constraintTop_toBottomOf="@+id/tv_br" />
+
+	<ImageView
+		android:id="@+id/iv_smile"
+		android:layout_width="48dp"
+		android:layout_height="48dp"
+		android:src="@drawable/launcher_downloader_smile_ic_2"
+		app:layout_constraintBottom_toBottomOf="@+id/tv_play_black"
+		app:layout_constraintStart_toEndOf="@+id/tv_play_black"
+		app:layout_constraintTop_toTopOf="@+id/tv_play_black" />
+
+	<com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+		android:id="@+id/progress_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/_5sdp"
+		android:layout_marginStart="100dp"
+		android:layout_marginTop="60dp"
+		android:layout_marginEnd="100dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_play_black"
+		app:rcBackgroundColor="#25ffffff"
+		app:rcBackgroundPadding="0dp"
+		app:rcMax="100.0"
+		app:rcProgress="0.0"
+		app:rcProgressColor="@color/gradient1"
+		app:rcRadius="@dimen/_3sdp"
+		app:rcReverse="false"
+		app:rcSecondaryProgress="0.0"
+		app:rcSecondaryProgressColor="@color/gradient2" />
+
+	<TextView
+		android:id="@+id/loading_text"
+		style="@style/MontserratRegular14sp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:text="Загрузка файлов игры…"
+		android:textColor="@color/white"
+		android:textStyle="italic"
+		app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+		app:layout_constraintStart_toStartOf="@+id/progress_bar" />
+
+	<TextView
+		android:id="@+id/loading_percent"
+		style="@style/MontserratRegular14sp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:textStyle="italic"
+		app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+		app:layout_constraintEnd_toEndOf="@+id/progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/donate_podt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_window_square_red"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:paddingBottom="16dp"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/square_red_header"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffffff"
+        android:textSize="16sp">
+
+        <TextView
+            android:id="@+id/podcap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="ПОДТВЕРЖДЕНИЕ"
+            android:textAllCaps="true"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/podt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="ВЫ ДЕЙСТВИТЕЛЬНО ЖЕЛАЕТЕ"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/podt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="ПРИОБРЕСТИ ДАННЫЙ ТОВАР ЗА"
+        android:textAllCaps="true"
+        android:textColor="#ffc107"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/podt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/muller_bold"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="777 BC?"
+        android:textAllCaps="true"
+        android:textColor="#ffc107"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/butonokk"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/donate_tile_button"
+            android:fontFamily="@font/muller_bold"
+            android:minWidth="120dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="ДА"
+            android:layout_marginEnd="20dp"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/butonnoo"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/donate_tile_button_gray"
+            android:fontFamily="@font/muller_bold"
+            android:minWidth="120dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="НЕТ"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

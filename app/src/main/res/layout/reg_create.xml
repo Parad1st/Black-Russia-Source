@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parad1st_reg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registration_back"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="295dp"
+        android:layout_height="match_parent"
+        android:background="#ff212229"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/reg_person"
+        android:layout_width="262.0dip"
+        android:layout_height="249.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/person_art" />
+
+    <TextView
+        android:id="@+id/reg_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="16.0dip"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Регистрация"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="30.0sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/brlogo"
+        android:layout_width="103.0dip"
+        android:layout_height="50.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logobrred" />
+
+    <View
+        android:id="@+id/health_bar"
+        android:layout_width="80.0dip"
+        android:layout_height="5.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:background="@drawable/red_scale"
+        app:layout_constraintBottom_toTopOf="@id/reg_person"
+        app:layout_constraintEnd_toEndOf="@id/reg_person"
+        app:layout_constraintStart_toStartOf="@id/reg_person" />
+
+    <TextView
+        android:id="@+id/reg_nickname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Nick_Name [0]"
+        android:textColor="#ffffffff"
+        android:textSize="12.0sp"
+        app:layout_constraintBottom_toTopOf="@id/health_bar"
+        app:layout_constraintEnd_toEndOf="@id/health_bar"
+        app:layout_constraintStart_toStartOf="@id/health_bar" />
+
+    <EditText
+        android:id="@+id/mail_enter"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="307dp"
+        android:background="@drawable/reg_field"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:hint="Электронная почта (не обязательно)"
+        android:imeOptions="actionSend|flagNoExtractUi|flagNoFullscreen"
+        android:inputType="textEmailAddress"
+        android:longClickable="true"
+        android:maxLength="16"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textColorHint="#ff8a92aa"
+        android:textSize="11.0sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@id/password_enter2"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="251dp"
+        android:background="@drawable/reg_field"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:hint="Пароль"
+        android:imeOptions="actionSend|flagNoExtractUi|flagNoFullscreen"
+        android:inputType="textPassword"
+        android:longClickable="true"
+        android:maxLength="16"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textColorHint="#ff8a92aa"
+        android:textSize="11.0sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password_enter3"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/reg_field"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:hint="Повторите пароль"
+        android:imeOptions="actionSend|flagNoExtractUi|flagNoFullscreen"
+        android:inputType="textPassword"
+        android:longClickable="true"
+        android:maxLength="16"
+        android:paddingLeft="14.0dip"
+        android:paddingRight="14.0dip"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textColorHint="#ff8a92aa"
+        android:textSize="11.0sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password_enter2"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="@+id/password_enter2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@id/play_but222"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/donate_tile_button"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/password_enter2" />
+
+    <Button
+        android:id="@+id/play_but23"
+        android:layout_width="246dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/donate_tile_button_gray"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="ПРОПУСТИТЬ"
+        android:textColor="#ffffffff"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/play_but222"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/play_but222"
+        app:layout_constraintTop_toBottomOf="@+id/play_but222" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/reg_border"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.487" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="252dp"
+        android:layout_height="112dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ref_bg"
+        android:fontFamily="@font/muller_medium"
+        android:gravity="top"
+        android:text="\n  Для начала игры, заполни все поля\n \n  •Пароль должен состоять от 6 до 16 символов\n \n  •Пароль чувствителен к регистру"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/brlogo"
+        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        app:layout_constraintStart_toEndOf="@+id/health_bar"
+        app:layout_constraintTop_toBottomOf="@+id/reg_header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/text_layout"
+        android:layout_width="244dp"
+        android:layout_height="72dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/password_enter2"
+        app:layout_constraintStart_toStartOf="@+id/password_enter2"
+        app:layout_constraintTop_toBottomOf="@+id/password_enter2">
+
+        <TextView
+            android:id="@+id/parad1st_poniil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="!"
+            android:textColor="#FFFFFF"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/parad1st_ponii"
+            app:layout_constraintTop_toBottomOf="@+id/parad1st_ponka"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/parad1st_ponii"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="уровня"
+            android:textColor="#FF9800"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/parad1st_ponka"
+            app:layout_constraintTop_toBottomOf="@+id/parad1st_ponka" />
+
+        <TextView
+            android:id="@+id/parad1st_poni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="3"
+            android:textColor="#FF9800"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="@+id/parad1st_ponka"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/parad1st_ponka"
+            app:layout_constraintTop_toBottomOf="@+id/parad1st_ponnn" />
+
+        <TextView
+            android:id="@+id/parad1st_ponka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="13dp"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="ценные призы по достижению"
+            android:textColor="#FFFFFF"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parad1st_ponnn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/parad1st_ponk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="154dp"
+            android:layout_marginEnd="31dp"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="получите"
+            android:textColor="#FFFFFF"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="@+id/parad1st_ponnn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/parad1st_ponnn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/parad1st_ponnn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="23dp"
+            android:drawablePadding="2.0dip"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="он и вы"
+            android:textColor="#FF9800"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="@+id/parad1st_ponn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="@+id/parad1st_ponn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/parad1st_ponn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="29dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:text="Введя никнейм пригласившего \nвас игрока, "
+            android:textColor="#FFFFFF"
+            android:textSize="12.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
