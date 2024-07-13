@@ -1,15 +1,9 @@
-package com.blackrussia.launcher.adapter;
+package com.byparad1st.launcher.adapter;
 
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Build;
-
-import android.view.View.OnClickListener;
 import android.graphics.PorterDuff;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.animation.AnimationUtils;
-import android.view.animation.Animation;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,15 +11,11 @@ import android.widget.*;
 
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import android.content.Context;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.model.Servers;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.model.Servers;
 import java.util.ArrayList;
 
-import com.bumptech.glide.Glide;
 import com.dinuscxj.progressbar.CircleProgressBar;
 
 public class ServersAdapter extends RecyclerView.Adapter<ServersAdapter.ServersViewHolder> {

@@ -1,12 +1,8 @@
-package com.blackrussia.launcher.adapter;
+package com.byparad1st.launcher.adapter;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Environment;
-import android.os.Build;
 
 import android.os.Handler;
-import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
@@ -19,13 +15,10 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import android.content.Context;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.activity.StoryActivity;
-import com.blackrussia.launcher.model.News;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.activity.StoryActivity;
+import com.byparad1st.launcher.model.News;
 import java.util.ArrayList;
 
 import com.bumptech.glide.Glide;
@@ -78,9 +71,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     public static class NewsViewHolder extends RecyclerView.ViewHolder {
         
-		TextView title;
-		ImageView image;
-		FrameLayout container;
+		public TextView title;
+		public ImageView image;
+		public FrameLayout container;
 
         public NewsViewHolder(View itemView) {
             super(itemView);

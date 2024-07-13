@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.adapter;
+package com.byparad1st.launcher.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,11 +11,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.model.News;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.model.News;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.other.Utils;
 import com.bumptech.glide.Glide;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 import java.util.ArrayList;
@@ -75,12 +73,12 @@ public class SliderStoriesAdapter extends SliderViewAdapter<SliderStoriesAdapter
     }
 
     public class Holder extends SliderViewAdapter.ViewHolder {
-        ImageView image;
+        public ImageView image;
         View itemView;
-        FrameLayout more;
+        public FrameLayout more;
         TextView text;
-        TextView title;
-        Context hcontext;
+        public TextView title;
+        public Context hcontext;
 
         public Holder(View view) {
             super(view);
