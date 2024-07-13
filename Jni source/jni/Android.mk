@@ -20,7 +20,7 @@ include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := samp
+LOCAL_MODULE := sampvoice
 LOCAL_LDLIBS := -llog -lOpenSLES
 
 LOCAL_C_INCLUDES += $(wildcard $(LOCAL_PATH)/vendor/)
@@ -28,6 +28,7 @@ LOCAL_C_INCLUDES += $(wildcard $(LOCAL_PATH)/vendor/)
 # samp
 FILE_LIST := $(wildcard $(LOCAL_PATH)/*.cpp)
 FILE_LIST += $(wildcard $(LOCAL_PATH)/game/*.cpp)
+FILE_LIST += $(wildcard $(LOCAL_PATH)/clientlogic/*.cpp)
 FILE_LIST += $(wildcard $(LOCAL_PATH)/net/*.cpp)
 FILE_LIST += $(wildcard $(LOCAL_PATH)/util/*.cpp)
 FILE_LIST += $(wildcard $(LOCAL_PATH)/game/RW/RenderWare.cpp)
