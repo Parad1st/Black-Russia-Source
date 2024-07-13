@@ -13,4 +13,3 @@ Write-Output "[BUILD] Starting..."
 Write-Output "[BUILD] Done!"
 
 Exit $LASTEXITCODE
-wewfwe
