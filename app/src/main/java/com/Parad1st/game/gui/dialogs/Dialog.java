@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.dialogs;
+package com.byparad1st.game.gui.dialogs;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,10 +11,10 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.nvidia.devtech.CustomEditText;
+import com.byparad1st.game.R;
+import com.byparad1st.game.gui.util.CustomRecyclerView;
+import com.byparad1st.game.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
-import com.blackrussia.game.gui.util.CustomRecyclerView;
-import com.blackrussia.game.gui.util.Utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

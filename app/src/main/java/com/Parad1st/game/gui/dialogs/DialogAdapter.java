@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.dialogs;
+package com.byparad1st.game.gui.dialogs;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.blackrussia.game.R;
-import com.blackrussia.game.gui.util.MaskedEditText;
-import com.blackrussia.game.gui.util.Utils;
+import com.byparad1st.game.R;
+import com.byparad1st.game.gui.util.MaskedEditText;
+import com.byparad1st.game.gui.util.Utils;
 
 import java.util.ArrayList;
 
