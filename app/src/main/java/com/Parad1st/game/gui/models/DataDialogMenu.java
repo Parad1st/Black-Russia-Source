@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.models;
+package com.byparad1st.game.gui.models;
 
 public class DataDialogMenu {
     private int id;

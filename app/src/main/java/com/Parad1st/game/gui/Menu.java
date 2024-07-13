@@ -1,12 +1,12 @@
-package com.blackrussia.game.gui;
+package com.byparad1st.game.gui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 
-import com.blackrussia.game.R;
-import com.blackrussia.game.gui.adapters.DialogMenuAdapter;
-import com.blackrussia.game.gui.models.DataDialogMenu;
-import com.blackrussia.game.gui.util.Utils;
+import com.byparad1st.game.R;
+import com.byparad1st.game.gui.adapters.DialogMenuAdapter;
+import com.byparad1st.game.gui.models.DataDialogMenu;
+import com.byparad1st.game.gui.util.Utils;
 import com.nvidia.devtech.NvEventQueueActivity;
 
 import android.content.Context;
@@ -17,11 +17,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.transition.TransitionManager;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -66,7 +64,7 @@ public class Menu {
                     } else {
                         try {
                             NvEventQueueActivity.getInstance().sendRPC(1, String.valueOf(index).getBytes("windows-1251"), index);
-                            Toast.makeText(activity, String.valueOf(index), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(activity, String.valueOf(index), Toast.LENGTH_SHORT).show();
                             close();
                         } catch (UnsupportedEncodingException e) {
                             e.printStackTrace();
