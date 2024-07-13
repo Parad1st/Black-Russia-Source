@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.adapters;
+package com.byparad1st.game.gui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.blackrussia.game.R;
-import com.blackrussia.game.gui.models.DataDialogMenu;
+import com.byparad1st.game.R;
+import com.byparad1st.game.gui.models.DataDialogMenu;
 import java.util.List;
 
 public class DialogMenuAdapter extends RecyclerView.Adapter<DialogMenuAdapter.DialogMenuHolder> {
