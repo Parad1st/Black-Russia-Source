@@ -1,147 +1,336 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/hud_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/hud_main"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:id="@+id/linearLayout3"
-            android:layout_width="@dimen/_9sdp"
-            android:layout_height="@dimen/_55sdp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginRight="@dimen/_2sdp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <ImageView
-                android:id="@+id/hud_star_1"
-                android:layout_width="@dimen/_9sdp"
-                android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-            <ImageView android:id="@+id/hud_star_2" android:layout_width="@dimen/_9sdp" android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-            <ImageView android:id="@+id/hud_star_3" android:layout_width="@dimen/_9sdp" android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-            <ImageView android:id="@+id/hud_star_4" android:layout_width="@dimen/_9sdp" android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-            <ImageView android:id="@+id/hud_star_5" android:layout_width="@dimen/_9sdp" android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-            <ImageView android:id="@+id/hud_star_6" android:layout_width="@dimen/_9sdp" android:layout_height="@dimen/_9sdp" android:src="@drawable/ic_star"/>
-        </LinearLayout>
+	<ImageView
+		android:id="@+id/logobr"
+		android:layout_width="128.0dip"
+		android:layout_height="43.0dip"
+		android:background="@drawable/logobrred"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/_81sdp"
-        android:layout_height="@dimen/_23sdp"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:src="@drawable/hud_up"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<ImageView
+		android:id="@+id/imageView17"
+		android:layout_width="25.0dip"
+		android:layout_height="14.0dip"
+		android:layout_marginStart="4.0dip"
+		android:visibility="gone"
+		app:layout_constraintStart_toEndOf="@id/logobr"
+		app:layout_constraintTop_toTopOf="@id/logobr"
+		app:srcCompat="@drawable/logobrx2" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/_7sdp"
-        android:layout_height="@dimen/_7sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:src="@drawable/hud_ruble"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+	<ImageView
+		android:id="@+id/imageView14"
+		android:layout_width="52.0dip"
+		android:layout_height="50.0dip"
+		android:layout_marginStart="24.0dip"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imageView7"
+		app:srcCompat="@drawable/off_micro" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="@dimen/_57sdp"
-        android:layout_height="@dimen/_22sdp"
-        android:src="@drawable/hud_center"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+	<ImageView
+		android:id="@+id/imageView4"
+		android:layout_width="11.0dip"
+		android:layout_height="10.0dip"
+		android:layout_marginStart="96dp"
+		android:layout_marginTop="124dp"
+		android:background="@drawable/hud_armore"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="@dimen/_10sdp"
-        android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/hud_heart"
-        android:layout_marginLeft="@dimen/_1sdp"
-        android:layout_marginTop="@dimen/_1sdp"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+	<ImageView
+		android:id="@+id/imageView3"
+		android:layout_width="12.0dip"
+		android:layout_height="12.0dip"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="24dp"
+		android:background="@drawable/hud_heartt"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/hud_health_pb"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="@dimen/_34sdp"
-        android:layout_height="@dimen/_5sdp"
-        android:indeterminate="false"
-        android:progress="44"
-        android:progressDrawable="@drawable/progressbar"
-        android:layout_marginLeft="@dimen/_2sdp"
-        android:progressTint="#ffff4141"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+	<ImageView
+		android:id="@+id/radar_hude"
+		android:layout_width="130.0dip"
+		android:layout_height="110.0dip"
+		android:layout_marginStart="16.0dip"
+		android:layout_marginTop="16.0dip"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/hud_back" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="@dimen/_10sdp"
-        android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/hud_armor"
-        android:layout_marginLeft="@dimen/_1sdp"
-        android:layout_marginBottom="@dimen/_1sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6" />
+	<ImageView
+		android:id="@+id/hud_weapon"
+		android:layout_width="32.0dip"
+		android:layout_height="32.0dip"
+		android:layout_marginStart="99.0dip"
+		android:layout_marginTop="89.0dip"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/weapon_0" />
 
-    <ProgressBar
-        android:id="@+id/hud_armor_pb"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="@dimen/_34sdp"
-        android:layout_height="@dimen/_5sdp"
-        android:indeterminate="false"
-        android:progress="43"
-        android:layout_marginLeft="@dimen/_2sdp"
-        android:progressDrawable="@drawable/progressbar"
-        android:progressTint="#AEA3A3"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+	<ImageView
+		android:id="@+id/hud_menu"
+		android:layout_width="37.0dip"
+		android:layout_height="35.0dip"
+		android:layout_marginTop="12.0dip"
+		android:layout_marginEnd="12.0dip"
+		android:background="@drawable/ab_three"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="@dimen/_66sdp"
-        android:layout_height="@dimen/_38sdp"
-        android:src="@drawable/hud_down"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+	<ImageView
+		android:id="@+id/hud_BP"
+		android:layout_width="37.0dip"
+		android:layout_height="35.0dip"
+		android:layout_marginEnd="12dp"
+		android:background="@drawable/ab_two"
+		app:layout_constraintBottom_toBottomOf="@id/hud_menu"
+		app:layout_constraintEnd_toStartOf="@id/hud_menu"
+		app:layout_constraintTop_toTopOf="@id/hud_menu"
+		app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/hud_weapon"
-        android:layout_width="@dimen/_33sdp"
-        android:layout_height="@dimen/_33sdp"
-        android:layout_marginLeft="@dimen/_7sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/weapon_0" />
+	<ImageView
+		android:id="@+id/hud_maga"
+		android:layout_width="37.0dip"
+		android:layout_height="35.0dip"
+		android:layout_marginEnd="12dp"
+		android:background="@drawable/ab_four"
+		app:layout_constraintBottom_toBottomOf="@id/hud_BP"
+		app:layout_constraintEnd_toStartOf="@id/hud_BP"
+		app:layout_constraintTop_toTopOf="@id/hud_BP"
+		app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/hud_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/_18sdp"
-        android:fontFamily="@font/muller_bold"
-        android:text="566,434,343"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_7sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+	<ImageView
+		android:id="@+id/hud_yvedomlenia"
+		android:layout_width="37.0dip"
+		android:layout_height="35.0dip"
+		android:layout_marginEnd="12dp"
+		android:background="@drawable/ab_one"
+		app:layout_constraintBottom_toBottomOf="@id/hud_maga"
+		app:layout_constraintEnd_toStartOf="@id/hud_maga"
+		app:layout_constraintTop_toTopOf="@id/hud_maga"
+		app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:src="@drawable/hud_menu"
-        android:id="@+id/hud_menu"
-        android:layout_marginTop="@dimen/_1sdp"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+	<ImageView
+		android:id="@+id/imageView"
+		android:layout_width="120dip"
+		android:layout_height="30.0dip"
+		android:layout_marginTop="60dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/ab_fon" />
 
+	<TextView
+		android:id="@+id/hud_money"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/montserrat_bolditalic"
+		android:text="999.999.999"
+		android:textColor="@android:color/white"
+		android:textSize="@dimen/_7sdp"
+		app:layout_constraintBottom_toBottomOf="@+id/imageView"
+		app:layout_constraintEnd_toEndOf="@+id/imageView"
+		app:layout_constraintStart_toStartOf="@+id/imageView"
+		app:layout_constraintTop_toTopOf="@id/imageView" />
+
+	<ImageView
+		android:id="@+id/ruble_png"
+		android:layout_width="12.0dip"
+		android:layout_height="11.0dip"
+		android:background="@drawable/hud_ruble_white"
+		app:layout_constraintBottom_toBottomOf="@+id/hud_money"
+		app:layout_constraintStart_toEndOf="@+id/hud_money"
+		app:layout_constraintTop_toTopOf="@+id/hud_money" />
+
+	<ImageView
+		android:id="@+id/grzona"
+		android:layout_width="110.0dip"
+		android:layout_height="110.0dip"
+		android:layout_marginStart="26.0dip"
+		android:layout_marginTop="16.0dip"
+		android:background="@drawable/greenzonatd"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/imageView16"
+		android:layout_width="83.0dip"
+		android:layout_height="24.0dip"
+		android:layout_marginStart="12.0dip"
+		android:layout_marginTop="37.0dip"
+		android:background="@drawable/gpstd"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/imageView14" />
+
+	<ImageView
+		android:id="@+id/hud_star_1"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="76.0dip"
+		android:layout_marginTop="4.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/hud_star_2"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="16.0dip"
+		android:layout_marginTop="5.0dip"
+		android:layout_marginBottom="1.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintBottom_toBottomOf="@id/hud_star_1"
+		app:layout_constraintStart_toStartOf="@id/hud_star_1"
+		app:layout_constraintTop_toTopOf="@id/hud_star_1" />
+
+	<ImageView
+		android:id="@+id/hud_star_3"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="15.0dip"
+		android:layout_marginTop="10.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintBottom_toBottomOf="@id/hud_star_2"
+		app:layout_constraintStart_toStartOf="@id/hud_star_2"
+		app:layout_constraintTop_toTopOf="@id/hud_star_2" />
+
+	<ImageView
+		android:id="@id/imageView6"
+		android:layout_width="37.0dip"
+		android:layout_height="73.0dip"
+		android:layout_marginStart="9.0dip"
+		android:layout_marginTop="34.0dip"
+		android:rotation="16.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/a_polos" />
+
+	<ImageView
+		android:id="@+id/imageView7"
+		android:layout_width="35.0dip"
+		android:layout_height="88.0dip"
+		android:layout_marginStart="45.0dip"
+		android:layout_marginTop="80.0dip"
+		android:rotation="-58.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/a_polos" />
+
+	<ImageView
+		android:id="@+id/hud_star_4"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="12.0dip"
+		android:layout_marginTop="12.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintBottom_toBottomOf="@id/hud_star_3"
+		app:layout_constraintStart_toStartOf="@id/hud_star_3"
+		app:layout_constraintTop_toTopOf="@id/hud_star_3"
+		app:layout_constraintVertical_bias="0.2" />
+
+	<ImageView
+		android:id="@+id/hud_star_5"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="10.0dip"
+		android:layout_marginTop="12.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintBottom_toBottomOf="@id/hud_star_4"
+		app:layout_constraintStart_toStartOf="@id/hud_star_4"
+		app:layout_constraintTop_toTopOf="@id/hud_star_4"
+		app:layout_constraintVertical_bias="0.0" />
+
+	<ImageView
+		android:id="@+id/hud_star_6"
+		android:layout_width="@dimen/_9sdp"
+		android:layout_height="@dimen/_9sdp"
+		android:layout_marginStart="6.0dip"
+		android:layout_marginTop="18.0dip"
+		android:src="@drawable/ic_star"
+		app:layout_constraintBottom_toBottomOf="@id/hud_star_5"
+		app:layout_constraintStart_toStartOf="@id/hud_star_5"
+		app:layout_constraintTop_toTopOf="@id/hud_star_5"
+		app:layout_constraintVertical_bias="0.25" />
+
+	<com.triggertrap.seekarc.SeekArc
+		android:id="@+id/progress_hp"
+		android:layout_width="137.0dip"
+		android:layout_height="124.0dip"
+		android:layout_marginStart="14.0dip"
+		android:layout_marginTop="11.0dip"
+		app:arcColor="#00000000"
+		app:arcWidth="@dimen/_4sdp"
+		app:enabled="false"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:progress="90"
+		app:progressColor="#ffff1100"
+		app:progressWidth="@dimen/_3sdp"
+		app:rotation="205"
+		app:roundEdges="true"
+		app:startAngle="38"
+		app:sweepAngle="61"
+		app:touchInside="true" />
+
+	<com.triggertrap.seekarc.SeekArc
+		android:id="@+id/progress_armor"
+		android:layout_width="140.0dip"
+		android:layout_height="126.0dip"
+		android:layout_marginStart="10.0dip"
+		android:layout_marginTop="10.0dip"
+		android:padding="@dimen/_3sdp"
+		app:arcColor="#00000000"
+		app:arcWidth="@dimen/_4sdp"
+		app:enabled="false"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:progress="75"
+		app:progressColor="#321891"
+		app:progressWidth="@dimen/_3sdp"
+		app:rotation="162"
+		app:roundEdges="true"
+		app:startAngle="8"
+		app:sweepAngle="60"
+		app:touchInside="true" />
+
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="37.0dip"
+		android:layout_height="73.0dip"
+		android:layout_marginStart="9.0dip"
+		android:layout_marginTop="34.0dip"
+		android:rotation="16.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/a_polos" />
+
+	<ImageView
+		android:id="@+id/imageView6"
+		android:layout_width="35.0dip"
+		android:layout_height="88.0dip"
+		android:layout_marginStart="45.0dip"
+		android:layout_marginTop="80.0dip"
+		android:rotation="-58.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:srcCompat="@drawable/a_polos" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/chat"
+		android:layout_width="0.0dip"
+		android:layout_height="108dp"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="280dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/hud_yvedomlenia"
+		app:layout_constraintStart_toEndOf="@+id/progress_hp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
