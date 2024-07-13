@@ -8,9 +8,10 @@
 #include "../gui/gui.h"
 #include "../chatwindow.h"
 #include "../keyboard.h"
-#include "../CSettings.h"
+#include "../settings.h"
 #include "../game/game.h"
 #include "../net/netgame.h"
+
 extern CNetGame* pNetGame;
 void Log(const char*, ...);
 void CrashLog(const char*, ...);
@@ -69,7 +70,7 @@ void CVoiceChatClient::OnClientDisconnected(ENetEvent& event)
 void CVoiceChatClient::OnClientConnected(ENetEvent& event)
 {
 }
-#include "..//CLocalisation.h"
+#include "..//clientlogic/ChatMessenger.h"
 void CVoiceChatClient::OnPacketIncoming(ENetEvent& event)
 {
 	CRawData data(event.packet->data, event.packet->dataLength, true);
