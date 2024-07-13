@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:startColor="#c50000"
+        android:endColor="#ff6317"
+        android:angle="90"
+        >
+
+    </gradient>
+    <corners android:radius="@dimen/_5sdp"/>
+
+    <stroke android:width="2dp"
+        android:color="#EF922C"/>
+
+    <corners android:radius="@dimen/_5sdp"/>
+</shape>

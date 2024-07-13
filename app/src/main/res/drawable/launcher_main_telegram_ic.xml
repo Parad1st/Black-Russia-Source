@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:height="25.0dip" android:width="27.0dip" android:viewportWidth="76.0" android:viewportHeight="72.0">
+	<path android:fillColor="@drawable/launcher_main_telegram_ic__0" android:pathData="M28.251,45.544L27.06,62.296C28.764,62.296 29.503,61.564 30.388,60.685L38.376,53.05L54.931,65.173C57.966,66.865 60.105,65.974 60.924,62.38L71.79,11.464L71.794,11.461C72.757,6.973 70.171,5.218 67.213,6.319L3.343,30.772C-1.016,32.464 -0.95,34.894 2.602,35.995L18.931,41.074L56.86,17.341C58.645,16.159 60.268,16.813 58.932,17.995L28.251,45.544Z" />
+</vector>

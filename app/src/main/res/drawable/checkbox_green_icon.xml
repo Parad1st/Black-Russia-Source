@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:height="65dp" android:width="65dp" android:drawable="@drawable/checkbox_green"/>
+</layer-list>

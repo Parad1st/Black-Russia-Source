@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:drawable="@drawable/launcher_main_button_bg" />
+	<item>
+		<shape android:shape="rectangle">
+			<gradient android:startColor="#80b6bfd9" android:endColor="@color/transparent" android:angle="0.0" android:type="radial" android:centerY="-0.5" android:gradientRadius="50.0dip" android:centerColor="#42b6bfd9" />
+			<corners android:radius="6.0dip" />
+		</shape>
+	</item>
+</layer-list>
