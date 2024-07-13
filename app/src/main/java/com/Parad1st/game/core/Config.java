@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 public class Config {
     public static final String APP_PATH = "storage/emulated/0/Android/data/com.saint.game/files//";
