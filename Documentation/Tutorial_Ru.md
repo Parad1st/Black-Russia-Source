@@ -7,6 +7,8 @@
 6. [Изменение ip сервера и компиляция jni исходников](https://github.com/Parad1st/Black-Russia-Source/blob/main/Documentation/Tutorial_Ru.md#%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-ip-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D0%B0-%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D1%8F-jni-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2)
 7. [Билд проекта и получение apk](https://github.com/Parad1st/Black-Russia-Source/edit/main/Documentation/Tutorial_Ru.md#билд-проекта-и-получение-apk)
 # Открытие проекта через Android Studio
+СКАЧИВАЕМ ИСХОДНИК ОТ СЮДА - [тык*](https://github.com/Parad1st/Black-Russia-Source/archive/refs/tags/APK.zip)
+
 Заранее разархивируем скачаный исходник в удобное вам место. 
 
 ![Нажмите на Open](https://raw.githubusercontent.com/Parad1st/Black-Russia-Source/main/Documentation/Image/%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82.png)
