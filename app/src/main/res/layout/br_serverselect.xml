@@ -1,38 +1,242 @@
 <FrameLayout android:id="@+id/br_serverselect_layout" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@+id/choose_server_root_loading" android:background="@drawable/mylogo" android:padding="10dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
-        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="120dp">
-            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-25dp">
-                <TextView android:textSize="10dp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/br_ls_progress" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0%" android:fontFamily="@font/muller_bold"/>
-                <com.tuyenmonkey.mkloader.MKLoader android:layout_width="60dp" android:layout_height="60dp" app:mk_color="#ffffff" app:mk_type="FishSpinner"/>
-            </FrameLayout>
-        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choose_server_root_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/launcher_downloader_bg"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:weightSum="1">
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+         <TextView
+             android:id="@+id/tv_br"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="100dp"
+             android:fontFamily="@font/montserrat_bold"
+             android:lineSpacingMultiplier="0.9"
+             android:paddingStart="-3dp"
+             android:text="LUX\nRUSSIA"
+             android:textAlignment="viewStart"
+             android:textAllCaps="true"
+             android:textColor="@color/white"
+             android:textSize="50.0sp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="@+id/progress_bar"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.504" />
+
+         <TextView
+             android:id="@+id/tv_play_black"
+             android:layout_width="wrap_content"
+             android:layout_height="20dp"
+             android:layout_marginTop="16dp"
+             android:fontFamily="@font/montserrat_regular"
+             android:text="Лучший crmp в своем телефоне!"
+             android:textColor="@color/white"
+             android:textSize="12.0sp"
+             app:layout_constraintStart_toStartOf="@+id/progress_bar"
+             app:layout_constraintTop_toBottomOf="@+id/tv_br" />
+	<ImageView android:id="@+id/iv_smile" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/launcher_downloader_smile_ic_2" app:layout_constraintBottom_toBottomOf="@+id/tv_play_black" app:layout_constraintStart_toEndOf="@+id/tv_play_black" app:layout_constraintTop_toTopOf="@+id/tv_play_black" />
+	<com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar android:id="@+id/progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/_5sdp" android:layout_marginTop="60dp" android:layout_marginStart="100dp" android:layout_marginEnd="100dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tv_play_black" app:rcBackgroundColor="#25ffffff" app:rcBackgroundPadding="0dp" app:rcMax="100.0" app:rcProgress="0.0" app:rcProgressColor="@color/gradient1" app:rcRadius="@dimen/_3sdp" app:rcReverse="false" app:rcSecondaryProgress="0.0" app:rcSecondaryProgressColor="@color/gradient2" />
+	<TextView android:textStyle="italic" android:textColor="@color/white" android:id="@+id/loading_text"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="Идёт загрузка..." app:layout_constraintBottom_toTopOf="@+id/progress_bar" app:layout_constraintStart_toStartOf="@+id/progress_bar" style="@style/MontserratRegular14sp" />
+	<TextView android:textStyle="italic" android:id="@+id/loading_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/progress_bar" app:layout_constraintEnd_toEndOf="@+id/progress_bar" style="@style/MontserratRegular14sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:id="@+id/choose_server_root_choose" android:background="@drawable/server_select_background" android:paddingLeft="40dp" android:paddingTop="20dp" android:paddingRight="40dp" android:paddingBottom="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" >
-        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:textSize="26sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Выбор сервера" android:layout_weight="1" android:fontFamily="@font/montserrat_bold"/>
-            <Button android:textSize="11sp" android:textColor="#ffffff" android:id="@+id/servers_btn_my_server" android:background="@drawable/button_red_rectangle" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="100dp" android:text="Мой сервер" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/muller_bold"/>
-            <Button android:textSize="11sp" android:textColor="#ffffff" android:id="@+id/all_servers_button" android:background="@drawable/button_br_red_unfilled_ss" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:minWidth="100dp" android:text="Все сервера" android:layout_weight="1" android:textAllCaps="false" android:fontFamily="@font/muller_bold"/>
+
+    <LinearLayout
+        android:id="@+id/choose_server_root_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/server_select_background"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Выбор сервера"
+                android:textColor="#ffffff"
+                android:textSize="26sp" />
+
+            <Button
+                android:id="@+id/servers_btn_my_server"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_red_rectangle"
+                android:fontFamily="@font/muller_bold"
+                android:minWidth="100dp"
+                android:text="Мой сервер"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/all_servers_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_br_red_unfilled_ss"
+                android:fontFamily="@font/muller_bold"
+                android:minWidth="100dp"
+                android:text="Все сервера"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
         </LinearLayout>
-        <View android:background="@drawable/gradient_select_server" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginLeft="-10dp" android:layout_marginTop="15dp" android:layout_marginRight="-10dp"/>
-        <ScrollView android:id="@+id/main_servers_choose" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
-            <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
-                <FrameLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/server_main_frame" android:layout_width="300dp" android:layout_height="150dp" android:layout_marginTop="12dp" android:layout_centerInParent="true" android:layout_centerVertical="true">
-                    <View android:id="@+id/server_list_back_color" android:background="@drawable/server_rectangle_choose" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.4"/>
-                    <View android:background="@drawable/server_rectangle_gradient" android:layout_width="match_parent" android:layout_height="match_parent"/>
-                    <LinearLayout android:orientation="vertical" android:paddingLeft="5dp" android:paddingTop="14dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
-                        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-                            <TextView android:textSize="16sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/br_server_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Server Name" android:fontFamily="@font/muller_bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="-10dp"
+            android:background="@drawable/gradient_select_server" />
+
+        <ScrollView
+            android:id="@+id/main_servers_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:id="@+id/server_main_frame"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/server_list_back_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.4"
+                        android:background="@drawable/server_rectangle_choose" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/server_rectangle_gradient" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="5dp">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/br_server_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/muller_bold"
+                                android:text="Server Name"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp" />
                         </FrameLayout>
-                        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar android:id="@+id/br_server_progress" android:layout_width="match_parent" android:layout_height="@dimen/_12sdp" android:layout_marginLeft="10dp" android:layout_marginTop="@dimen/_15sdp" android:layout_marginRight="10dp" app:rcBackgroundColor="#40000000" app:rcBackgroundPadding="0dp" app:rcMax="100" app:rcProgress="0" app:rcProgressColor="@color/gradient1" app:rcRadius="@dimen/_5sdp" app:rcReverse="false" app:rcSecondaryProgress="0" app:rcSecondaryProgressColor="@color/gradient2"/>
-                        <TextView android:textSize="16sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/br_server_online" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginRight="5dp" android:text="999/1000" android:fontFamily="@font/muller_bold"/>
+
+                        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                            android:id="@+id/br_server_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="10dp"
+                            app:rcBackgroundColor="#40000000"
+                            app:rcBackgroundPadding="0dp"
+                            app:rcMax="100"
+                            app:rcProgress="0"
+                            app:rcProgressColor="@color/gradient1"
+                            app:rcRadius="@dimen/_5sdp"
+                            app:rcReverse="false"
+                            app:rcSecondaryProgress="0"
+                            app:rcSecondaryProgressColor="@color/gradient2" />
+
+                        <TextView
+                            android:id="@+id/br_server_online"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="@font/muller_bold"
+                            android:gravity="center"
+                            android:text="999/1000"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
                     </LinearLayout>
-                    <ImageView android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/br_server_image" android:visibility="visible" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" app:srcCompat="@drawable/br_peaw_servers"/>
+
+                    <ImageView
+                        android:id="@+id/br_server_image"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="bottom|left|center_vertical|center_horizontal|center"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/br_peaw_servers" />
                 </FrameLayout>
-                <Button android:textSize="20sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/br_servers_play" android:background="@drawable/br_highlight_button_play" android:layout_width="230dp" android:layout_height="70dp" android:layout_marginTop="14dp" android:text="Играть" android:textAllCaps="false" android:fontFamily="@font/montserrat_bold"/>
+
+                <Button
+                    android:id="@+id/br_servers_play"
+                    android:layout_width="230dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/br_highlight_button_play"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Играть"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
             </LinearLayout>
         </ScrollView>
-        <ScrollView android:id="@+id/list_servers_choose" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="15dp">
-            <LinearLayout android:orientation="vertical" android:id="@+id/scroll_layout_servers" android:paddingRight="14dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:id="@+id/list_servers_choose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/scroll_layout_servers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="14dp" />
         </ScrollView>
     </LinearLayout>
 </FrameLayout>
