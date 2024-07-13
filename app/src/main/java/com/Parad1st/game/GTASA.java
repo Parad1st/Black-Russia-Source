@@ -1,4 +1,4 @@
-package com.blackrussia.game;
+package com.byparad1st.game;
 
 import android.os.Bundle;
 
