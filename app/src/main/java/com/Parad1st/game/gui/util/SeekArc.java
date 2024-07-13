@@ -21,7 +21,7 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  ******************************************************************************/
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -35,7 +35,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.blackrussia.game.R;
+import com.byparad1st.game.R;
 
 /**
  *

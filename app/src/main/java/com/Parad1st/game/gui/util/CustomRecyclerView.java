@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;

@@ -1,12 +1,18 @@
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.text.Html;
+import android.text.Layout;
 import android.text.Spanned;
+import android.text.StaticLayout;
+import android.text.TextPaint;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -42,7 +48,7 @@ public class Utils {
 
     private static void fadeIn(View view) {
         if (view != null) {
-            view.animate().setDuration(150).setListener(new AnimatorListenerAdapter() {
+            view.animate().setDuration(500).setListener(new AnimatorListenerAdapter() {
                 public void onAnimationEnd(Animator animation) {
                     super.onAnimationEnd(animation);
                 }
@@ -52,7 +58,7 @@ public class Utils {
 
     private static void fadeOut(final View view) {
         if (view != null) {
-            view.animate().setDuration(150).setListener(new AnimatorListenerAdapter() {
+            view.animate().setDuration(500).setListener(new AnimatorListenerAdapter() {
                 public void onAnimationEnd(Animator animation) {
                     view.setVisibility(View.GONE);
                     super.onAnimationEnd(animation);
@@ -123,5 +129,46 @@ public class Utils {
             sb.append(AB.charAt(rnd.nextInt(AB.length())));
         }
         return sb.toString();
+    }
+    
+    public static int getTextLength(TextView textView) {
+        TextPaint textPaint = new TextPaint();
+        textPaint.setTextSize(textView.getTextSize());
+        textPaint.setTypeface(textView.getTypeface());
+        return (int) textPaint.measureText(textView.getText().toString());
+    }
+    
+    public static void makeAllViewsVisible(ViewGroup viewGroup) {
+        viewGroup.setVisibility(View.VISIBLE);
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            if (viewGroup.getChildAt(i) instanceof ViewGroup) {
+                makeAllViewsVisible((ViewGroup) viewGroup.getChildAt(i));
+            } else {
+                viewGroup.getChildAt(i).setVisibility(View.VISIBLE);
+            }
+        }
+    }
+
+    public static void changeTextViewWidth(TextView textView) {
+        textView.post(new Runnable() {
+            @Override
+            public void run() {
+                TextPaint textPaint = new TextPaint();
+                textPaint.setTextSize(textView.getTextSize());
+                textPaint.setTypeface(textView.getTypeface());
+                textPaint.measureText(textView.getText().toString());
+                StaticLayout staticLayout = new StaticLayout(textView.getText(), textPaint, 10000, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
+                int lineCount = staticLayout.getLineCount();
+                float lineWidth = staticLayout.getLineWidth(0);
+                for (int i = 0; i < lineCount; i++) {
+                    if (staticLayout.getLineWidth(i) >= lineWidth) {
+                        lineWidth = staticLayout.getLineWidth(i) + 5.0f;
+                    }
+                }
+                ViewGroup.LayoutParams layoutParams = textView.getLayoutParams();
+                layoutParams.width = (int) lineWidth;
+                textView.setLayoutParams(layoutParams);
+            }
+        });
     }
 }

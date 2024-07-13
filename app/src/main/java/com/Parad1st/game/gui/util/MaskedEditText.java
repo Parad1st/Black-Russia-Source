@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.blackrussia.game.R;
+import com.byparad1st.game.R;
 
 public class MaskedEditText extends AppCompatEditText implements TextWatcher {
     public static final String SPACE = " ";

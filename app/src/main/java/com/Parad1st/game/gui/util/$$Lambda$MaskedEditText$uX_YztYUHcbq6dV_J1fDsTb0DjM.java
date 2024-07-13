@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 
 import android.view.KeyEvent;
 import android.widget.TextView;

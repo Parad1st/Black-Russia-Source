@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui.util;
+package com.byparad1st.game.gui.util;
 
 public class Range {
     private int end = -1;
