@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.blackrussia.game.R;
+import com.byparad1st.game.R;
 
 import java.util.ArrayList;
 
