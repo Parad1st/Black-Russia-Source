@@ -1,15 +1,14 @@
-package com.blackrussia.launcher.fragment;
+package com.byparad1st.launcher.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.*;
-import android.widget.*;
 
 import androidx.fragment.app.Fragment;
 
-import com.blackrussia.game.R;
+import com.byparad1st.game.R;
 
 public class ForumFragment extends Fragment {
 
@@ -22,7 +21,7 @@ public class ForumFragment extends Fragment {
 
         webView = (WebView) inflate.findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://forum-blackrussiab.tk/");
+        webView.loadUrl("youtube.com/@Parad1st");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(false);
         webView.getSettings().setUseWideViewPort(false);

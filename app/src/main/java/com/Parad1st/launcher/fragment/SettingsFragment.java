@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.fragment;
+package com.byparad1st.launcher.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.other.Utils;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.other.Utils;
 
 import org.ini4j.Wini;
 
@@ -25,12 +25,6 @@ import java.io.File;
 import java.io.IOException;
 
 import com.downloader.*;
-import com.downloader.Error;
-
-import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class SettingsFragment extends Fragment {
 
@@ -54,9 +48,9 @@ public class SettingsFragment extends Fragment {
                         new View.OnClickListener() {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
-								File gameDirectory = (new File(Environment.getExternalStorageDirectory() + "/Blast"));
+								File gameDirectory = (new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA"));
 								Utils.delete(gameDirectory);
-								startActivity(new Intent(getActivity(), com.blackrussia.launcher.activity.LoaderActivity.class));
+								startActivity(new Intent(getActivity(), com.byparad1st.launcher.activity.LoaderActivity.class));
                             }
         });
         ((TextView) inflate.findViewById(R.id.resetSettings))
@@ -71,24 +65,24 @@ public class SettingsFragment extends Fragment {
                         new View.OnClickListener() {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
-                                startActivity(new Intent("android.intent.action.VIEW", Uri.parse("")));
+                                startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://t.me/")));
                             }
         });
-        ((ImageView) inflate.findViewById(R.id.instagramButton))
+        /*((ImageView) inflate.findViewById(R.id.instagramButton))
                 .setOnClickListener(
                         new View.OnClickListener() {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
                                 startActivity(new Intent("android.intent.action.VIEW", Uri.parse("")));
                             }
-        });
+        });*/
         ((ImageView) inflate.findViewById(R.id.vkButton))
                 .setOnClickListener(
                         new View.OnClickListener() {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
                                 startActivity(
-                                        new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/blackrussia.online")));
+                                        new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/brilliantrussia.mobile")));
                             }
                         });
         ((ImageView) inflate.findViewById(R.id.discordButton))
@@ -96,7 +90,7 @@ public class SettingsFragment extends Fragment {
                         new View.OnClickListener() {
                             public void onClick(View v) {
                                 v.startAnimation(animation);
-                                startActivity(new Intent("android.intent.action.VIEW", Uri.parse("")));
+                                startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://discord.com/")));
                             }
         });
 
@@ -114,7 +108,7 @@ public class SettingsFragment extends Fragment {
                                         File f =
                                                 new File(
                                                         Environment.getExternalStorageDirectory()
-                                                                + "/BlackRussia/SAMP/settings.ini");
+                                                                + "/LUXRUSSIA/SAMP/settings.ini");
                                         if (!f.exists()) {
                                             f.createNewFile();
                                             f.mkdirs();
@@ -123,7 +117,7 @@ public class SettingsFragment extends Fragment {
                                                 new Wini(
                                                         new File(
                                                                 Environment.getExternalStorageDirectory()
-                                 + "/BlackRussia/SAMP/settings.ini"));
+                                 + "/LUXRUSSIA/SAMP/settings.ini"));
 								 if(checkValidNick(inflate)){
 									 w.put("client", "name", nickname.getText().toString());
                                         Toast.makeText(
@@ -147,7 +141,7 @@ public class SettingsFragment extends Fragment {
 
     private void InitLogic() {
         try {
-            Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/BlackRussia/SAMP/settings.ini"));
+            Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA/SAMP/settings.ini"));
             nickname.setText(w.get("client", "name"));
             w.store();
         } catch (IOException e) {

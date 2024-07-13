@@ -1,31 +1,13 @@
-package com.blackrussia.launcher.fragment;
+package com.byparad1st.launcher.fragment;
 
-import android.os.Bundle;          
-import android.os.Environment;
-import android.os.Build;
+import android.os.Bundle;
 
 import android.app.Dialog;
-import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
-import android.webkit.ValueCallback;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.bumptech.glide.load.Key;
-import java.net.URLEncoder;
-
-import android.widget.*;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View.OnClickListener;
 import android.view.View;
@@ -34,11 +16,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
 import android.view.LayoutInflater;
 
-import androidx.fragment.app.Fragment;
-
-import com.blackrussia.game.R;
-
-import java.io.UnsupportedEncodingException;
+import com.byparad1st.game.R;
 
 public class DonateFragment extends Fragment {
 	
