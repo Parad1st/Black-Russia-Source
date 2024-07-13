@@ -41,6 +41,7 @@ public:
 
 	void AddChatMessage(char* szNick, uint32_t dwNickColor, char* szMessage);
 	void AddInfoMessage(char* szFormat, ...);
+	void Opencc();
 	void AddDebugMessage(char* szFormat, ...);
 	void AddDebugMessageNonFormatted(char* szStr);
 	void AddClientMessage(uint32_t dwColor, char* szStr);

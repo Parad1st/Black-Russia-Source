@@ -2,7 +2,7 @@
 #include "gui/gui.h"
 #include "chatwindow.h"
 #include "keyboard.h"
-#include "CSettings.h"
+#include "settings.h"
 #include "game/game.h"
 #include "net/netgame.h"
 #include "vendor/bass/bass.h"
@@ -39,7 +39,7 @@ BOOL(*BASS_Set3DPosition_func)(const BASS_3DVECTOR* pos, const BASS_3DVECTOR* ve
 BOOL(*BASS_ChannelSet3DAttributes_func)(DWORD handlee, int mode, float min, float max, int iangle, int oangle, float outvol);
 BOOL(*BASS_ChannelSetAttribute_func)(DWORD handle, DWORD attrib, float value);
 DWORD (*BASS_ChannelFlags_func)(DWORD handle, DWORD flags, DWORD mask);
-
+BOOL (*BASS_ChannelPause_func)(DWORD handle);
 
 BOOL BASS_Init(int device, DWORD freq, DWORD flags, void* win, void* dsguid)
 {
@@ -96,14 +96,19 @@ BOOL BASS_ChannelSetAttribute(DWORD handle, DWORD attrib, float value)
 	return BASS_ChannelSetAttribute_func(handle, attrib, value);
 }
 
+BOOL BASS_ChannelPause(DWORD handle)
+{
+	return BASS_ChannelPause_func(handle);
+}
+
 void InitBASSFuncs()
 {
 	void* handle;
 
 #ifdef GAME_EDITION_CR
-	handle = dlopen("/data/data/com.blackrussia.game/lib/libbass.so", 3);
+	handle = dlopen("/data/data/com.viskigames.game/lib/libbass.so", 3);
 #else
-	handle = dlopen("/data/data/com.blackrussia.game/lib/libbass.so", 3);
+	handle = dlopen("/data/data/com.viskigames.game/lib/libbass.so", 3);
 #endif
 	if (!handle)
 	{
@@ -132,11 +137,14 @@ void InitBASSFuncs()
 	BASS_ChannelSetAttribute_func = GetBASSFunc<BOOL(*)(DWORD handle, DWORD attrib, float value)>(handle, "BASS_ChannelSetAttribute");
 
 	BASS_ChannelFlags_func = GetBASSFunc< DWORD(*)(DWORD handle, DWORD flags, DWORD mask)>(handle, "BASS_ChannelFlags");
+
+	BASS_ChannelPause_func = GetBASSFunc<BOOL(*)(DWORD handle)>(handle, "BASS_ChannelPause");
 }
 
 BOOL returnedValue;
 #include "util/CJavaWrapper.h"
 
+//Повороты головой как на ПК с синхранизацией
 #ifdef GAME_EDITION_CR
 uint32_t g_uiHeadMoveEnabled = 0;
 #else
@@ -144,8 +152,8 @@ uint32_t g_uiHeadMoveEnabled = 1;
 #endif
 
 uint32_t g_uiBorderedText = 1;
-#include "CDebugInfo.h"
-#include "CLocalisation.h"
+#include "debug.h"
+#include "clientlogic/ChatMessenger.h"
 #include "scoreboard.h"
 #include "game/CCustomPlateManager.h"
 #include <fcntl.h>
@@ -153,18 +161,30 @@ uint32_t g_uiBorderedText = 1;
 extern CScoreBoard* pScoreBoard;
 bool ProcessVoiceCommands(const char* str)
 {
-	/*if (strstr(str, "/all"))
+        if (strstr(str, "/music"))
+	{
+		pNetGame->GetStreamPool()->StopIndividualStream();
+		g_pJavaWrapper->ShowJbl();
+		return true;
+	}
+	if (strstr(str, "/tab"))
 	{
 		pScoreBoard->Toggle();
 		return true;
-	}*/
+	}
 
-	if (strstr(str, "/hudeditor"))
+	if (strstr(str, "/hud"))
 	{
 		g_pJavaWrapper->ShowClientSettings();
 		return true;
 	}
 	
+	if (strstr(str, "/client"))
+	{
+		//g_pJavaWrapper->ShowSettings();
+		return true;
+	}
+
 	if (strstr(str, "/fpsinfo"))
 	{
 		CDebugInfo::ToggleDebugDraw();
@@ -176,11 +196,11 @@ bool ProcessVoiceCommands(const char* str)
 		g_bShowVoiceList ^= 1;
 		if (g_bShowVoiceList)
 		{
-			pChatWindow->AddDebugMessage("������� ������ ��������� �����");
+			pChatWindow->AddDebugMessage("                              ");
 		}
 		else
 		{
-			pChatWindow->AddDebugMessage("�������� ������ ��������� �����");
+			pChatWindow->AddDebugMessage("                               ");
 		}
 		return true;
 	}
@@ -211,16 +231,16 @@ bool ProcessVoiceCommands(const char* str)
 		int id = 0;
 		if (sscanf(str, "%d", &id) == -1)
 		{
-			pChatWindow->AddDebugMessage("���������: /vmute [playerid]");
+			pChatWindow->AddDebugMessage("         : /vmute [playerid]");
 			return true;
 		}
 		if (id < 0 || id > 1000)
 		{
-			pChatWindow->AddDebugMessage("���������: ID ������ ���� � �������� �� 0 �� 1000");
+			pChatWindow->AddDebugMessage("         : ID                           0    1000");
 			return true;
 		}
 		pVoice->MutePlayer(id);
-		pChatWindow->AddDebugMessage("��� ������� ����� � ����: %d", id);
+		pChatWindow->AddDebugMessage("                        : %d", id);
 		return true;
 	}
 
@@ -238,16 +258,16 @@ bool ProcessVoiceCommands(const char* str)
 		int id = 0;
 		if (sscanf(str, "%d", &id) == -1)
 		{
-			pChatWindow->AddDebugMessage("���������: /vunmute [playerid]");
+			pChatWindow->AddDebugMessage("         : /vunmute [playerid]");
 			return true;
 		}
 		if (id < 0 || id > 1000)
 		{
-			pChatWindow->AddDebugMessage("���������: ID ������ ���� � �������� �� 0 �� 1000");
+			pChatWindow->AddDebugMessage("         : ID                           0    1000");
 			return true;
 		}
 		pVoice->UnMutePlayer(id);
-		pChatWindow->AddDebugMessage("��� �������� ����� � ����: %d", id);
+		pChatWindow->AddDebugMessage("                         : %d", id);
 		return true;
 	}
 
@@ -265,10 +285,10 @@ bool ProcessVoiceCommands(const char* str)
 		int volume = 0;
 		if (sscanf(str, "%d", &volume) == -1)
 		{
-			pChatWindow->AddDebugMessage("���������: /voicevolume [value]");
+			pChatWindow->AddDebugMessage("         : /voicevolume [value]");
 			return true;
 		}
-		pChatWindow->AddDebugMessage("�����������: ����������� ��������� %d", volume);
+		pChatWindow->AddDebugMessage("           :                       %d", volume);
 		pVoice->SetVolume(volume);
 		return true;
 	}
@@ -288,16 +308,16 @@ bool ProcessVoiceCommands(const char* str)
 		int volume = 0;
 		if (sscanf(str, "%d %d", &id, &volume) == -1)
 		{
-			pChatWindow->AddDebugMessage("���������: /vplayer [playerid] [volume]");
+			pChatWindow->AddDebugMessage("         : /vplayer [playerid] [volume]");
 			return true;
 		}
 		if (id < 0 || id > 1000)
 		{
-			pChatWindow->AddDebugMessage("���������: ID ������ ���� � �������� �� 0 �� 1000");
+			pChatWindow->AddDebugMessage("         : ID                           0    1000");
 			return true;
 		}
 		pVoice->SetVolumePlayer(id, volume);
-		pChatWindow->AddDebugMessage("����������� ��������� %d ��� ������ %d", volume, id);
+		pChatWindow->AddDebugMessage("                      %d            %d", volume, id);
 		return true;
 	}
 	return false;
@@ -401,6 +421,14 @@ bool CChatWindow::OnTouchEvent(int type, bool multi, int x, int y)
 	}
 
 	return true;
+}
+
+void CChatWindow::Opencc()
+{
+    if (pKeyBoard)
+			{
+				pKeyBoard->Open(&ChatWindowInputHandler);
+			}
 }
 
 void CChatWindow::Render()
@@ -674,7 +702,7 @@ void CChatWindow::ProcessPushedCommands()
 void CChatWindow::AddChatMessage(char* szNick, uint32_t dwNickColor, char* szMessage)
 {
 	FilterInvalidChars(szMessage);
-	AddToChatWindowBuffer(CHAT_TYPE_CHAT, szMessage, szNick, m_dwTextColor, dwNickColor);
+	g_pJavaWrapper->AddChatMessage(szMessage, m_dwTextColor);
 }
 
 void CChatWindow::AddInfoMessage(char* szFormat, ...)
@@ -688,7 +716,7 @@ void CChatWindow::AddInfoMessage(char* szFormat, ...)
 	va_end(args);
 
 	FilterInvalidChars(tmp_buf);
-	AddToChatWindowBuffer(CHAT_TYPE_INFO, tmp_buf, nullptr, m_dwInfoColor, 0);
+	g_pJavaWrapper->AddChatMessage(tmp_buf, m_dwInfoColor);
 }
 
 void CChatWindow::AddDebugMessage(char* szFormat, ...)
@@ -702,19 +730,19 @@ void CChatWindow::AddDebugMessage(char* szFormat, ...)
 	va_end(args);
 
 	FilterInvalidChars(tmp_buf);
-	AddToChatWindowBuffer(CHAT_TYPE_DEBUG, tmp_buf, nullptr, m_dwDebugColor, 0);
+	g_pJavaWrapper->AddChatMessage(tmp_buf, m_dwInfoColor);
 }
 
 void CChatWindow::AddDebugMessageNonFormatted(char* szStr)
 {
 	FilterInvalidChars(szStr);
-	AddToChatWindowBuffer(CHAT_TYPE_DEBUG, szStr, nullptr, m_dwDebugColor, 0);
+	g_pJavaWrapper->AddChatMessage(szStr, m_dwInfoColor);
 }
 
 void CChatWindow::AddClientMessage(uint32_t dwColor, char* szStr)
 {
 	FilterInvalidChars(szStr);
-	AddToChatWindowBuffer(CHAT_TYPE_INFO, szStr, nullptr, dwColor, 0);
+	g_pJavaWrapper->AddChatMessage(szStr, dwColor);
 }
 
 void CChatWindow::SetLowerBound(int bound)
@@ -805,29 +833,29 @@ void CChatWindow::AddToChatWindowBuffer(eChatMessageType type, char* szString, c
 	if(type == CHAT_TYPE_CHAT && strlen(szString) > MAX_LINE_LENGTH)
 	{
 		iBestLineLength = MAX_LINE_LENGTH;
-		// ������� ������ ������ � �����
+		//                              
 		while(szString[iBestLineLength] != ' ' && iBestLineLength)
 			iBestLineLength--;
 
-		// ���� ��������� ����� ������ 12 ��������
+		//                             12         
 		if((MAX_LINE_LENGTH - iBestLineLength) > 12)
 		{
-			// ������� �� MAX_MESSAGE_LENGTH/2
+			//            MAX_MESSAGE_LENGTH/2
 			cp1251_to_utf8(entry.utf8Message, szString, MAX_LINE_LENGTH);
 			PushBack(entry);
 
-			// ������� ����� MAX_MESSAGE_LENGTH/2
+			//               MAX_MESSAGE_LENGTH/2
 			entry.szNick[0] = '\0';
 			cp1251_to_utf8(entry.utf8Message, szString+MAX_LINE_LENGTH);
 			PushBack(entry);
 		}
 		else
 		{
-			// ������� �� �������
+			//                   
 			cp1251_to_utf8(entry.utf8Message, szString, iBestLineLength);
 			PushBack(entry);
 
-			// ������� ����� �������
+			//                      
 			entry.szNick[0] = '\0';
 			cp1251_to_utf8(entry.utf8Message, szString+(iBestLineLength+1));
 			PushBack(entry);
@@ -851,4 +879,25 @@ void CChatWindow::FilterInvalidChars(char *szString)
 
 		szString++;
 	}
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_nvidia_devtech_NvEventQueueActivity_Send(JNIEnv *env, jobject thiz, jbyteArray msg)
+{
+    jbyte* pMsg = env->GetByteArrayElements(msg, nullptr);
+    jsize length = env->GetArrayLength(msg);
+
+    std::string szStr((char*)pMsg, length);
+    if (szStr[0] == '/')
+    {
+        if (ProcessVoiceCommands(szStr.c_str()))
+        {
+            return;
+        }
+    }
+    if (szStr[0] == '/') {
+        pNetGame->SendChatCommand(szStr.c_str());
+    } else {
+        pNetGame->SendChatMessage(szStr.c_str());
+    }
 }
