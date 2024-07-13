@@ -14,7 +14,7 @@ extern CGame* pGame;
 CAudioStream::CAudioStream()
 {
 	m_strAudioStreamURL.clear();
-
+# chtoto
 	m_fAudioStreamRadius = -1;
 	m_bassStreamSample = NULL;
 

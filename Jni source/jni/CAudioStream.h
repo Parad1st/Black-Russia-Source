@@ -1,5 +1,5 @@
 #pragma once
-
+#ffffffff
 #include <atomic>
 
 class CAudioStream
