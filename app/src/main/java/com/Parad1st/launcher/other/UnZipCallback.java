@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.other;
+package com.byparad1st.launcher.other;
 
 import com.hzy.lib7z.*;
 

@@ -1,7 +1,4 @@
-package com.blackrussia.launcher.other;
-
-import android.content.Intent;
-import android.content.Context;
+package com.byparad1st.launcher.other;
 
 import java.text.DecimalFormat;
 import java.io.File;
