@@ -1,29 +1,34 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
 #
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# by Parad1st
+#
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+-dontoptimize
+-keep public class com.nvidia.devtech.* { *; }
+-keep public class com.wardrumstudios.utils.* { *; }
+-keep public class com.byparad1st.game.gui.* { *; }
+-keep public class com.byparad1st.game.gui.util.* { *; }
+-keep public class com.byparad1st.game.core.* { *; }
+#-keep public class com.byparad1st.launcher.* { *; }
+-keep public class com.byparad1st.launcher.activity.* { *; }
+-keep public class com.byparad1st.launcher.adapter.* { *; }
+-keep public class com.byparad1st.launcher.fragment.* { *; }
+-keep public class com.byparad1st.launcher.model.* { *; }
+-keep public class com.byparad1st.launcher.other.* { *; }
+-keep public class com.byparad1st.parad1st.reg.* { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+#
+-keep class com.google.gson.stream.** { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
-#-dontobfuscate
+#
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
 
-#-keepclasseswithmembernames class com.nvidia.devtech.*, com.wardrumstudios.utils.*, com.blackrussia.game.*
-
-#-keep public class com.nvidia.devtech.NvEventQueueActivity {
-     #         *; }
-
-#-keep public class com.wardrumstudios.utils.* { *; }
+# 
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.** 
+-dontwarn java.nio.file.*

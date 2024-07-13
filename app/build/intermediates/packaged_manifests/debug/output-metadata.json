@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.blackrussia.game",
+  "applicationId": "com.parad1stgames.game",
   "variantName": "debug",
   "elements": [
     {
@@ -12,7 +12,7 @@
       "filters": [],
       "attributes": [],
       "versionCode": 10,
-      "versionName": "lr-build-stable",
+      "versionName": "parad1st-games-0.1",
       "outputFile": "AndroidManifest.xml"
     }
   ],

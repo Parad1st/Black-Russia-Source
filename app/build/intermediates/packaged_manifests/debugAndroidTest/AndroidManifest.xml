@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.blackrussia.game.test" >
+    package="com.parad1stgames.game.test" >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
     <instrumentation
         android:name="androidx.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.blackrussia.game"
-        android:targetPackage="com.blackrussia.game" />
+        android:label="Tests for com.parad1stgames.game"
+        android:targetPackage="com.parad1stgames.game" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />

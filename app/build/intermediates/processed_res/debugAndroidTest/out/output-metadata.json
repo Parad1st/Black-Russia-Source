@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.blackrussia.game.test",
+  "applicationId": "com.parad1stgames.game.test",
   "variantName": "debugAndroidTest",
   "elements": [
     {

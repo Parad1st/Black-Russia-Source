@@ -1,252 +1,294 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.blackrussia.game"
+3    package="com.parad1stgames.game"
 4    android:versionCode="10"
-5    android:versionName="lr-build-stable" >
+5    android:versionName="parad1st-games-0.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="17"
-8-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+8        android:minSdkVersion="21"
+8-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml
+9-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.WAKE_LOCK" />
-11-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:5:5-68
-11-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:5:22-65
+11-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:5:5-68
+11-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:5:22-65
 12    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-12-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:6:5-76
-12-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:6:22-73
+12-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:6:5-76
+12-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:6:22-73
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:7:5-81
-13-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:7:22-78
+13-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:8:5-80
-14-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:8:22-77
+14-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:8:5-80
+14-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:8:22-77
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:9:5-67
-15-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:9:22-64
+15-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:9:5-67
+15-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:9:22-64
 16    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-16-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:10:5-83
-16-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:10:22-80
+16-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:10:5-83
+16-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:10:22-80
 17    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
-17-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:11:5-82
-17-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:11:22-79
+17-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:11:5-82
+17-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:11:22-79
 18    <uses-permission android:name="android.permission.VIBRATE" />
-18-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:12:5-66
-18-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:12:22-63
+18-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:12:5-66
+18-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:12:22-63
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:13:5-79
-19-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:13:22-76
+19-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:13:5-79
+19-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:13:22-76
 20    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-20-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:14:5-73
-20-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:14:22-70
+20-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:14:5-73
+20-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:14:22-70
 21    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-21-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:15:5-71
-21-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:15:22-68
+21-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:15:5-71
+21-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:15:22-68
 22    <uses-permission android:name="android.permission.BLUETOOTH" />
-22-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:16:5-68
-22-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:16:22-65
+22-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:16:5-68
+22-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:16:22-65
 23    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-23-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:17:5-71
-23-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:17:22-68
+23-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:17:5-71
+23-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:17:22-68
 24
 25    <uses-feature android:glEsVersion="0x00020000" />
-25-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:19:5-54
-25-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:19:19-51
+25-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:19:5-54
+25-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:19:19-51
 26    <uses-feature
-26-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:20:5-22:36
+26-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:20:5-22:36
 27        android:name="android.hardware.touchscreen"
-27-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:21:9-52
+27-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:21:9-52
 28        android:required="false" />
-28-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:22:9-33
+28-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:22:9-33
 29
 30    <supports-screens
-30-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:24:5-29:39
+30-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:24:5-29:39
 31        android:anyDensity="true"
-31-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:25:9-34
+31-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:25:9-34
 32        android:largeScreens="true"
-32-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:26:9-36
+32-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:26:9-36
 33        android:normalScreens="true"
-33-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:27:9-37
+33-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:27:9-37
 34        android:resizeable="true"
-34-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:28:9-34
+34-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:28:9-34
 35        android:smallScreens="true" />
-35-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:29:9-36
+35-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:29:9-36
 36
 37    <!-- To allow starting foreground services on Android P+ - https://developer.android.com/preview/behavior-changes#fg-svc -->
 38    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-38-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:5-77
-38-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:22-74
+38-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:5-77
+38-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:9:22-74
 39
 40    <application
-40-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:31:5-86:19
-41        android:name="androidx.multidex.MultiDexApplication"
-42        android:allowBackup="true"
-42-->[com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\b6d25e1ea2c565e8a8b6be67387d883e\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:35:9-35
-43        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-43-->[androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\530dd259b4c9afe7157e3fb45e0e0b2d\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
-44        android:debuggable="true"
-45        android:hardwareAccelerated="false"
-45-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:32:9-44
-46        android:icon="@drawable/ic_launcher"
-46-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:33:9-45
-47        android:isGame="true"
-47-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:34:9-30
-48        android:label="@string/app_name"
-48-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:35:9-41
-49        android:largeHeap="true"
-49-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:36:9-33
-50        android:logo="@drawable/adtlogo"
-50-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:37:9-41
-51        android:requestLegacyExternalStorage="true"
-51-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:39:9-52
-52        android:supportsRtl="true"
-52-->[com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\34733b0511a887ac4244cb1d1048a4f5\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:14:9-35
+40-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:31:5-87:19
+41        android:allowBackup="true"
+41-->[com.github.Triggertrap:SeekArc:v1.1] C:\Users\Parad1st\.gradle\caches\transforms-3\58138a959997f42006667b8343771a50\transformed\jetified-SeekArc-v1.1\AndroidManifest.xml:35:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.3.1] C:\Users\Parad1st\.gradle\caches\transforms-3\3f80f61daa5e46591c15e380e2e28f12\transformed\core-1.3.1\AndroidManifest.xml:24:18-86
+43        android:debuggable="true"
+44        android:hardwareAccelerated="false"
+44-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:32:9-44
+45        android:icon="@drawable/ic_launcher"
+45-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:33:9-45
+46        android:isGame="true"
+46-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:34:9-30
+47        android:label="@string/app_name"
+47-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:35:9-41
+48        android:largeHeap="true"
+48-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:36:9-33
+49        android:logo="@drawable/adtlogo"
+49-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:37:9-41
+50        android:requestLegacyExternalStorage="true"
+50-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:39:9-52
+51        android:supportsRtl="true"
+51-->[com.github.smarteist:autoimageslider:1.4.0] C:\Users\Parad1st\.gradle\caches\transforms-3\362552646ebc73125f18b40de78ee58a\transformed\jetified-autoimageslider-1.4.0\AndroidManifest.xml:14:9-35
+52        android:testOnly="true"
 53        android:usesCleartextTraffic="true" >
-53-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:38:9-44
+53-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:38:9-44
 54        <activity
-54-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:40:9-44:82
-55            android:name="com.blackrussia.launcher.activity.StoryActivity"
-55-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:41:13-75
+54-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:40:9-44:82
+55            android:name="com.byparad1st.launcher.activity.StoryActivity"
+55-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:41:13-74
 56            android:exported="false"
-56-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:42:13-37
+56-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:42:13-37
 57            android:screenOrientation="portrait"
-57-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:43:13-49
+57-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:43:13-49
 58            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-58-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:44:13-80
+58-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:44:13-80
 59
 60        <provider
-60-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:46:9-54:20
+60-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:46:9-54:20
 61            android:name="androidx.core.content.FileProvider"
-61-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:47:13-62
-62            android:authorities="com.blackrussia.game.provider"
-62-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:48:13-64
+61-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:47:13-62
+62            android:authorities="com.byparad1st.game.provider"
+62-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:48:13-63
 63            android:exported="false"
-63-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:49:13-37
+63-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:49:13-37
 64            android:grantUriPermissions="true" >
-64-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:50:13-47
+64-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:50:13-47
 65            <meta-data
-65-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:51:13-53:58
+65-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:51:13-53:58
 66                android:name="android.support.FILE_PROVIDER_PATHS"
-66-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:52:17-67
+66-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:52:17-67
 67                android:resource="@xml/provider_paths" />
-67-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:53:17-55
+67-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:53:17-55
 68        </provider>
 69
 70        <activity
-70-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:56:9-59:92
-71            android:name="com.blackrussia.game.core.GTASA"
-71-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:57:13-59
+70-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:56:9-59:92
+71            android:name="com.byparad1st.game.core.GTASA"
+71-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:57:13-58
 72            android:screenOrientation="landscape"
-72-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:58:13-50
+72-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:58:13-50
 73            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-73-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:59:13-80
+73-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:59:13-80
 74        <activity
-74-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:60:9-69:20
-75            android:name="com.blackrussia.launcher.activity.SplashActivity"
-75-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:61:13-76
+74-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:60:9-65:20
+75            android:name="com.byparad1st.launcher.activity.SplashActivity"
+75-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:61:13-75
 76            android:exported="true"
-76-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:62:13-36
+76-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:62:13-36
 77            android:screenOrientation="portrait"
-77-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:63:13-49
+77-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:63:13-49
 78            android:theme="@style/AppTheme.WithSplash" >
-78-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:64:13-55
-79            <intent-filter>
-79-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:65:13-68:29
-80                <action android:name="android.intent.action.MAIN" />
-80-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:66:17-69
-80-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:66:25-66
-81
-82                <category android:name="android.intent.category.LAUNCHER" />
-82-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:67:17-77
-82-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:67:27-74
-83            </intent-filter>
-84        </activity>
-85        <activity
-85-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:70:9-74:68
-86            android:name="com.blackrussia.launcher.activity.MainActivity"
-86-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:71:13-74
-87            android:exported="true"
-87-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:72:13-36
-88            android:screenOrientation="portrait"
-88-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:73:13-49
-89            android:theme="@style/AppTheme.NoActionBar" />
-89-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:74:13-56
-90        <activity
-90-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:75:9-78:59
-91            android:name="com.blackrussia.launcher.activity.LoaderActivity"
-91-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:76:13-76
-92            android:screenOrientation="portrait"
-92-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:77:13-49
-93            android:theme="@style/AppTheme.NoActionBar" />
-93-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:78:13-56
-94
-95        <meta-data
-95-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:80:9-82:35
-96            android:name="android.max_aspect"
-96-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:81:13-46
-97            android:value="2.1" />
-97-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:82:13-32
-98        <meta-data
-98-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:83:9-85:57
-99            android:name="preloaded_fonts"
-99-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:84:13-43
-100            android:resource="@array/preloaded_fonts" />
-100-->C:\Users\Parad1st\Desktop\Black Russia Bonus sourses\Java source\app\src\main\AndroidManifest.xml:85:13-54
-101
-102        <service
-102-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
-103            android:name="com.google.firebase.components.ComponentDiscoveryService"
-103-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:30:13-84
-104            android:directBootAware="true"
-104-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
-105            android:exported="false" >
-105-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:31:13-37
-106            <meta-data
-106-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
-107                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-107-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:33:17-109
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\9e6055c7cb4dae45d814a6b1309749f0\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:34:17-82
-109        </service>
-110        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
-110-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:9-118
-110-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:18-115
-111        <service
-111-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:13:9-15:49
-112            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
-112-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:14:13-108
-113            android:process=":filedownloader" />
-113-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\2cdbcfe0a76d57661ad85e1cec7c1fcd\transformed\jetified-library-1.7.7\AndroidManifest.xml:15:13-46
-114
-115        <provider
-115-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
-116            android:name="com.google.firebase.provider.FirebaseInitProvider"
-116-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:27:13-77
-117            android:authorities="com.blackrussia.game.firebaseinitprovider"
-117-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:28:13-72
-118            android:directBootAware="true"
-118-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:29:13-43
-119            android:exported="false"
-119-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:30:13-37
-120            android:initOrder="100" />
-120-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\254a141925b0440fda935cfcdec56649\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:31:13-36
-121
-122        <activity
-122-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-123            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-123-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-124            android:exported="false"
-124-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-125            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-125-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\5bcbb6a25810e02d6effd45e42f35a92\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-126
-127        <meta-data
-127-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
-128            android:name="com.google.android.gms.version"
-128-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
-129            android:value="@integer/google_play_services_version" />
-129-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\472e56d4b6a6bc359cc9ddd1dfd1b8b7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
-130    </application>
-131
-132</manifest>
+78-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:64:13-55
+79        </activity>
+80        <activity
+80-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:66:9-75:20
+81            android:name="com.byparad1st.launcher.activity.MainActivity"
+81-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:67:13-73
+82            android:exported="true"
+82-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:68:13-36
+83            android:screenOrientation="landscape"
+83-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:69:13-50
+84            android:theme="@style/AppTheme.NoActionBar" >
+84-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:70:13-56
+85            <intent-filter>
+85-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:71:13-74:29
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:72:17-69
+86-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:72:25-66
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:73:17-77
+88-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:73:27-74
+89            </intent-filter>
+90        </activity>
+91        <activity
+91-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:76:9-79:59
+92            android:name="com.byparad1st.launcher.activity.LoaderActivity"
+92-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:77:13-75
+93            android:screenOrientation="landscape"
+93-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:78:13-50
+94            android:theme="@style/AppTheme.NoActionBar" />
+94-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:79:13-56
+95
+96        <meta-data
+96-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:81:9-83:35
+97            android:name="android.max_aspect"
+97-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:82:13-46
+98            android:value="2.1" />
+98-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:83:13-32
+99        <meta-data
+99-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:84:9-86:57
+100            android:name="preloaded_fonts"
+100-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:85:13-43
+101            android:resource="@array/preloaded_fonts" />
+101-->C:\Users\Parad1st\Desktop\br — копия\java\app\src\main\AndroidManifest.xml:86:13-54
+102
+103        <service
+103-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
+104            android:name="com.google.firebase.components.ComponentDiscoveryService"
+104-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:30:13-84
+105            android:directBootAware="true"
+105-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+106            android:exported="false" >
+106-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:31:13-37
+107            <meta-data
+107-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
+108                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+108-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:33:17-109
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.firebase:firebase-database:20.0.4] C:\Users\Parad1st\.gradle\caches\transforms-3\45c8e4ab62d4aa200664c02469b54846\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:34:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-crashlytics:18.2.9] C:\Users\Parad1st\.gradle\caches\transforms-3\7ed3818ded755b42b79f19bee1ca79de\transformed\jetified-firebase-crashlytics-18.2.9\AndroidManifest.xml:18:13-20:85
+111                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+111-->[com.google.firebase:firebase-crashlytics:18.2.9] C:\Users\Parad1st\.gradle\caches\transforms-3\7ed3818ded755b42b79f19bee1ca79de\transformed\jetified-firebase-crashlytics-18.2.9\AndroidManifest.xml:19:17-115
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-crashlytics:18.2.9] C:\Users\Parad1st\.gradle\caches\transforms-3\7ed3818ded755b42b79f19bee1ca79de\transformed\jetified-firebase-crashlytics-18.2.9\AndroidManifest.xml:20:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\3ca1a47945287c62c001d17465bf7d74\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+114                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+114-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\3ca1a47945287c62c001d17465bf7d74\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-installations:17.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\3ca1a47945287c62c001d17465bf7d74\transformed\jetified-firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+116        </service>
+117        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+117-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:9-118
+117-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:12:18-115
+118        <service
+118-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:13:9-15:49
+119            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
+119-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:14:13-108
+120            android:process=":filedownloader" />
+120-->[com.liulishuo.filedownloader:library:1.7.7] C:\Users\Parad1st\.gradle\caches\transforms-3\d71ff8905c3b36b4d121462a0fdead41\transformed\jetified-library-1.7.7\AndroidManifest.xml:15:13-46
+121        <service
+121-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:29:9-35:19
+122            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+122-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:30:13-103
+123            android:exported="false" >
+123-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:31:13-37
+124            <meta-data
+124-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:32:13-34:39
+125                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+125-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:33:17-94
+126                android:value="cct" />
+126-->[com.google.android.datatransport:transport-backend-cct:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\1d14bc687282fd001267fa42b56dad00\transformed\jetified-transport-backend-cct-3.1.2\AndroidManifest.xml:34:17-36
+127        </service>
+128        <service
+128-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:26:9-30:19
+129            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+129-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:27:13-117
+130            android:exported="false"
+130-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:28:13-37
+131            android:permission="android.permission.BIND_JOB_SERVICE" >
+131-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:29:13-69
+132        </service>
+133
+134        <receiver
+134-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:32:9-34:40
+135            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+135-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:33:13-132
+136            android:exported="false" />
+136-->[com.google.android.datatransport:transport-runtime:3.1.2] C:\Users\Parad1st\.gradle\caches\transforms-3\c4fdd2ec11a2f4028e3df3890544f573\transformed\jetified-transport-runtime-3.1.2\AndroidManifest.xml:34:13-37
+137
+138        <provider
+138-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+139            android:name="com.google.firebase.provider.FirebaseInitProvider"
+139-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+140            android:authorities="com.parad1stgames.game.firebaseinitprovider"
+140-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+141            android:directBootAware="true"
+141-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+142            android:exported="false"
+142-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+143            android:initOrder="100" />
+143-->[com.google.firebase:firebase-common:20.1.0] C:\Users\Parad1st\.gradle\caches\transforms-3\c0e7ce10c23213d8b0b1f774d6cf07c0\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+144
+145        <activity
+145-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\4820c307fc7ff39c7b2c20f94aecabe7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+146            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+146-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\4820c307fc7ff39c7b2c20f94aecabe7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+147            android:exported="false"
+147-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\4820c307fc7ff39c7b2c20f94aecabe7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+148            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+148-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Parad1st\.gradle\caches\transforms-3\4820c307fc7ff39c7b2c20f94aecabe7\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+149
+150        <meta-data
+150-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\da0a3d2dfb74a903443f7ce7edc1bed7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+151            android:name="com.google.android.gms.version"
+151-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\da0a3d2dfb74a903443f7ce7edc1bed7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+152            android:value="@integer/google_play_services_version" />
+152-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Parad1st\.gradle\caches\transforms-3\da0a3d2dfb74a903443f7ce7edc1bed7\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+153    </application>
+154
+155</manifest>

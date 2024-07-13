@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-km-rKH\\values-km-rKH.xml",
+            "outputFile": "C:\\Users\\Parad1st\\Desktop\\br — копия\\java\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-km-rKH\\values-km-rKH.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\src\\main\\res\\values-km-rKH\\strings.xml",
+                    "source": "C:\\Users\\Parad1st\\Desktop\\br — копия\\java\\app\\src\\main\\res\\values-km-rKH\\strings.xml",
                     "from": {
                         "startLines": "28,29,30,31,32,27,13,12,11,6,10,8,9,7,19,18,5,17,16,3,4,2,20,23,22,21,24,15,14,25,26",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

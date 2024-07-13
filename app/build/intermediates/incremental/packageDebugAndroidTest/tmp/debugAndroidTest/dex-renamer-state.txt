@@ -1,4 +1,7 @@
-#Fri Apr 05 21:54:48 MSK 2024
-base.0=C\:\\Users\\Parad1st\\Desktop\\Black Russia Bonus sourses\\Java source\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\classes.dex
-path.0=classes.dex
+#Tue Jul 09 16:17:35 MSK 2024
+base.0=C\:\\Users\\Parad1st\\Desktop\\br†Ч копи€\\java\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.1=C\:\\Users\\Parad1st\\Desktop\\br†Ч копи€\\java\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\1\\classes.dex
+path.0=0/classes.dex
+path.1=1/classes.dex
 renamed.0=classes.dex
+renamed.1=classes2.dex

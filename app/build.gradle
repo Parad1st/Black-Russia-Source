@@ -1,22 +1,20 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
 
 android {
+    //compileSdkVersion 33
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
 
-    compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
-    }
-
     defaultConfig {
-        minSdkVersion 17
+        minSdk 21
         targetSdkVersion 28
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        applicationId "com.blackrussia.game"
-        versionName "lr-build-stable"
+        applicationId 'com.parad1stgames.game'
+        versionName "parad1st-games-0.1"
         versionCode 10
         vectorDrawables.useSupportLibrary = true
 
@@ -25,6 +23,9 @@ android {
         ndk {
             abiFilters 'armeabi-v7a'
         }
+    }
+    lintOptions {
+        checkReleaseBuilds false
     }
 }
 
@@ -52,4 +53,7 @@ dependencies {
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
     implementation platform('com.google.firebase:firebase-bom:29.2.1')
     implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation 'com.github.pedromassango:doubleClick:v1.1'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.9'
 }
