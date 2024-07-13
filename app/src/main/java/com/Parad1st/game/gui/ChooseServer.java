@@ -1,4 +1,4 @@
-package com.blackrussia.game.gui;
+package com.byparad1st.game.gui;
 
 import android.animation.Animator;
 import android.app.Activity;
@@ -16,19 +16,27 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.res.ResourcesCompat;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
-import com.blackrussia.game.R;
-import com.blackrussia.game.gui.util.Utils;
-import com.blackrussia.launcher.model.Servers;
-import com.blackrussia.launcher.other.Lists;
+import com.byparad1st.game.R;
+import com.byparad1st.game.gui.util.Utils;
+import com.byparad1st.launcher.model.Servers;
+import com.byparad1st.launcher.other.Interface;
 import com.nvidia.devtech.NvEventQueueActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChooseServer {
 
@@ -43,12 +51,18 @@ public class ChooseServer {
     LinearLayout linearLayout2;
     View findViewById, findViewById2;
     Button myButton, allButton;
+    public ImageView hud_x2;
+    public ImageView hud_gps;
+    public ImageView hud_zona;
+    RoundCornerProgressBar progressbar;
 
     public ChooseServer(Activity activity){
         aactivity = activity;
-        mServers = Lists    .slist;
+        hud_gps = aactivity.findViewById(R.id.imageView16);
+        hud_zona = aactivity.findViewById(R.id.grzona);
+        hud_x2 = aactivity.findViewById(R.id.imageView17);
         serverLayout = activity.findViewById(R.id.br_serverselect_layout);
-        percentText = activity.findViewById(R.id.br_ls_progress);
+        percentText = activity.findViewById(R.id.loading_percent);
         chooseServerLayout = activity.findViewById(R.id.choose_server_root_choose);
         loadingLayout = activity.findViewById(R.id.choose_server_root_loading);
         type = NvEventQueueActivity.getInstance().getLastServer();
@@ -56,16 +70,47 @@ public class ChooseServer {
         findViewById2 = aactivity.findViewById(R.id.list_servers_choose);
         myButton = aactivity.findViewById(R.id.servers_btn_my_server);
         allButton = aactivity.findViewById(R.id.all_servers_button);
+        progressbar = aactivity.findViewById(R.id.progress_bar);
+        mServers = new ArrayList<Servers>();
+        
+        Retrofit retrofit = new Retrofit.Builder()
+				.baseUrl("http://vbd.fdv.dd/")
+				.addConverterFactory(GsonConverterFactory.create())
+				.build();
+
+		Interface sInterface = retrofit.create(Interface.class);
+
+		Call<List<Servers>> scall = sInterface.getServers();
+
+		scall.enqueue(new Callback<List<Servers>>() {
+			@Override
+			public void onResponse(Call<List<Servers>> call, Response<List<Servers>> response) {
+
+				List<Servers> servers = response.body();
+
+				for (Servers server : servers) {
+					mServers.add(new Servers(server.getColor(), server.getDopname(), server.getname(), server.getOnline(), server.getmaxOnline()));
+				}
+			}
+
+			@Override
+			public void onFailure(Call<List<Servers>> call, Throwable t) {
+				Toast.makeText(activity, "Не удалось подключится к серверу, попробуйте перезайти", Toast.LENGTH_SHORT).show();
+			}
+		});
+		
         Utils.HideLayout(serverLayout, false);
     }
 
     public void Update(int percent) {
-        if (percent <= 100)
+        if (percent <= 100) {
             percentText.setText(new Formatter().format("%d%s", Integer.valueOf(percent), "%").toString());
+            progressbar.setProgress(percent);
+        }
         else {
             chooseServerLayout.setVisibility(View.VISIBLE);
             chooseServerLayout.setAlpha(0.0f);
-            chooseServerLayout.animate().setDuration(1500).alpha(1.0f).setListener(new Animator.AnimatorListener() {
+            chooseServerLayout.animate().setDuration(2000).alpha(1.0f).setListener(new Animator.AnimatorListener() {
                 @Override
                 public void onAnimationCancel(Animator animator) {
                 }
@@ -113,7 +158,7 @@ public class ChooseServer {
         LinearLayout linearLayout = aactivity.findViewById(R.id.scroll_layout_servers);
         linearLayout.setScrollbarFadingEnabled(false);
         size = (mServers.size() / 4 ) + 1;
-        mProgress = aactivity.findViewById(R.id.br_ls_progress);
+        mProgress = aactivity.findViewById(R.id.loading_percent);
         String str = "fsdf";
         aactivity.findViewById(R.id.server_main_frame).setOnClickListener(view -> {
             view.startAnimation(AnimationUtils.loadAnimation(aactivity, R.anim.button_click));
@@ -240,4 +285,5 @@ public class ChooseServer {
     public void Show() {
         Utils.ShowLayout(serverLayout, false);
     }
+
 }
