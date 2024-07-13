@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import com.byparad1st.game.R;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
 
 import java.util.HashMap;
 

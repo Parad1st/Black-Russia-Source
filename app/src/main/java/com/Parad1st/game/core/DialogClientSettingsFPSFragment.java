@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -10,8 +10,8 @@ import android.widget.SeekBar;
 
 import androidx.fragment.app.Fragment;
 
+import com.byparad1st.game.R;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
 
 import java.util.HashMap;
 import java.util.Iterator;

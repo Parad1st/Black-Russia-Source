@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.byparad1st.game.R;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
 
 
 public class DialogClientSettings extends DialogFragment {
@@ -57,18 +57,6 @@ public class DialogClientSettings extends DialogFragment {
             public void onClick(View view) {
                 mContext.onSettingsWindowSave();
                 getDialog().dismiss();
-            }
-        });
-
-        ((AppCompatButton)rootview.findViewById(R.id.dialog_settings_button_reset)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mContext.onSettingsWindowDefaults(tabLayout.getSelectedTabPosition() + 1);
-
-                ISaveableFragment fragment = (ISaveableFragment)adapter.getItem(tabLayout.getSelectedTabPosition());
-                fragment.getValues();
-
-                mContext.onSettingsWindowSave();
             }
         });
 

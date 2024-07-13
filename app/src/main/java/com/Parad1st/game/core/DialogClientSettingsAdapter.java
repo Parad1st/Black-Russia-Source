@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

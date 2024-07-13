@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -17,8 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.byparad1st.game.R;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
 
 import java.util.HashMap;
 import java.util.Iterator;

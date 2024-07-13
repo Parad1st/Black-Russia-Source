@@ -1,9 +1,12 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.Toast;
+
+import com.byparad1st.launcher.activity.MainActivity;
 import com.wardrumstudios.utils.WarMedia;
 
 public class GTASA extends WarMedia {
@@ -23,7 +26,7 @@ public class GTASA extends WarMedia {
         }
 
         System.loadLibrary("GTASA");
-        System.loadLibrary("samp");
+        System.loadLibrary("sampvoice");
     }
 
     public static void staticEnterSocialClub()
@@ -83,9 +86,16 @@ public class GTASA extends WarMedia {
         super.onCreate(bundle);
     }
 
+    private void startAll()
+    {
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
     public void onDestroy()
     {
         System.out.println("GTASA onDestroy");
+        Toast.makeText(getApplicationContext(), "Начните игру заново", Toast.LENGTH_SHORT).show();
+        startAll();
         super.onDestroy();
     }
 

@@ -1,4 +1,4 @@
-package com.blackrussia.game.core;
+package com.byparad1st.game.core;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -11,8 +11,8 @@ import android.widget.FrameLayout;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
+import com.byparad1st.game.R;
 import com.nvidia.devtech.NvEventQueueActivity;
-import com.blackrussia.game.R;
 import com.skydoves.colorpickerview.ColorEnvelope;
 import com.skydoves.colorpickerview.ColorPickerDialog;
 import com.skydoves.colorpickerview.listeners.ColorEnvelopeListener;
