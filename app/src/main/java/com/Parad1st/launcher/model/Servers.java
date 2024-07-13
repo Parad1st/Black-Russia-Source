@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.model;
+package com.byparad1st.launcher.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
