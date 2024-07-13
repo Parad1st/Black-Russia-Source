@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.activity;
+package com.byparad1st.launcher.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,12 +9,11 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 
 import com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar;
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.adapter.SliderStoriesAdapter;
-import com.blackrussia.launcher.other.Lists;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.adapter.SliderStoriesAdapter;
+import com.byparad1st.launcher.other.Lists;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 

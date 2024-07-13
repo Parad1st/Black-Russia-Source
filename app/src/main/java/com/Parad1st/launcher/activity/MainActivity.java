@@ -1,241 +1,279 @@
-package com.blackrussia.launcher.activity;
+package com.byparad1st.launcher.activity;
 
-import android.os.Bundle;          
+import android.Manifest;
+import android.os.Bundle;
 import android.os.Environment;
-import android.os.Build;
 import android.content.pm.PackageManager;
-import android.os.StatFs;
 
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.widget.*;
-import android.content.pm.ApplicationInfo;
-import androidx.core.content.FileProvider;
-import android.graphics.PorterDuff;
+
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.Context;
-import android.content.ComponentName;
 import android.net.Uri;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.activity.SplashActivity;
-import com.blackrussia.launcher.fragment.MonitoringFragment;
-import com.blackrussia.launcher.fragment.ForumFragment;
-import com.blackrussia.launcher.fragment.DonateFragment;
-import com.blackrussia.launcher.fragment.SettingsFragment;
-import com.blackrussia.launcher.activity.LoaderActivity;
+import com.byparad1st.game.R;
+import com.byparad1st.launcher.Registration.reg;
+
+import org.ini4j.Wini;
 
 import java.io.File;
 
+import java.io.IOException;
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
-    
-	public LinearLayout donateButton;
-    public DonateFragment donateFragment;
-    public ImageView donateImage;
-    public TextView donateTV;
-    public LinearLayout monitoringButton;
-    public MonitoringFragment monitoringFragment;
-    public ImageView monitoringImage;
-    public TextView monitoringTV;
-    public LinearLayout playButton;
-    public ImageView playImage;
-    public LinearLayout forumButton;
-    public ForumFragment forumFragment;
-    public ImageView forumImage;
-    public TextView forumTV;
-    public LinearLayout settingsButton;
-    public SettingsFragment settingsFragment;  
-    public ImageView settingsImage;
-    public TextView settingsTV;
 	
+	EditText nickname;
+	ImageButton ib_info;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_main);
 		
 		Animation animation = AnimationUtils.loadAnimation(this, R.anim.button_click);
 		
-		monitoringTV = (TextView) findViewById(R.id.monitoringTV);
-        settingsTV = (TextView) findViewById(R.id.settingsTV);
-        forumTV = (TextView) findViewById(R.id.forumTV);
-        donateTV = (TextView) findViewById(R.id.donateTV);
+		if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED || checkSelfPermission(Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_DENIED) {
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
+        }
+        
+        InitLogic();
+        LoadNick();
+        
+        nickname = findViewById(R.id.edit_text_name);
+        ib_info = findViewById(R.id.ib_info);
 		
-        monitoringImage = (ImageView) findViewById(R.id.monitoringImage);
-        settingsImage = (ImageView) findViewById(R.id.settingsImage);
-        forumImage = (ImageView) findViewById(R.id.forumImage);
-        donateImage = (ImageView) findViewById(R.id.donateImage);
-        playImage = (ImageView) findViewById(R.id.playImage);
-		
-        monitoringButton = (LinearLayout) findViewById(R.id.monitoringButton);
-        settingsButton = (LinearLayout) findViewById(R.id.settingsButton);
-        forumButton = (LinearLayout) findViewById(R.id.rouletteButton);
-        donateButton = (LinearLayout) findViewById(R.id.donateButton);
-        playButton = (LinearLayout) findViewById(R.id.playButton);
-		
-		monitoringFragment = new MonitoringFragment();
-        settingsFragment = new SettingsFragment();
-        forumFragment = new ForumFragment();
-        donateFragment = new DonateFragment(); 
-	
-	    replaceFragment(monitoringFragment);
-		
-		monitoringButton.setOnClickListener(new OnClickListener() {
+	    ((AppCompatButton) findViewById(R.id.button_play)).setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 v.startAnimation(animation);
-                onClickMonitoring();
+                Timer t = new Timer();
+                t.schedule(new TimerTask(){
+                   @Override
+                   public void run() {
+                       onClickPlay();
+                   }
+                }, 200L);
             }
         });
-		
-        settingsButton.setOnClickListener(new OnClickListener() {
+        
+        ((ImageButton) ib_info).setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 v.startAnimation(animation);
-                onClickSettings();
+                TextView info_nick = findViewById(R.id.text_view_info_about_nickname);
+                if(info_nick.getVisibility() == View.INVISIBLE)
+                    info_nick.setVisibility(View.VISIBLE);
+                else 
+                    info_nick.setVisibility(View.INVISIBLE);
             }
         });
-		
-        forumButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-              v.startAnimation(animation);
-			  onClickForum();
+        
+        ((ImageButton) findViewById(R.id.button_vk)).setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+            	v.startAnimation(animation);
+        	    Timer t = new Timer();
+                t.schedule(new TimerTask(){
+                   @Override
+                   public void run() {
+                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://vk.com/blackrussia.online")));
+                   }
+                }, 200L);
             }
         });
-		
-        donateButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-               v.startAnimation(animation);
-			   onClickDonate();
+        
+        ((ImageButton) findViewById(R.id.button_discord)).setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+            	v.startAnimation(animation);
+        	    Timer t = new Timer();
+                t.schedule(new TimerTask(){
+                   @Override
+                   public void run() {
+                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://discord.gg/")));
+                   }
+                }, 200L);
             }
         });
-		
-        playButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-               v.startAnimation(animation);
-			   startTimer();
+        
+        ((ImageButton) findViewById(R.id.button_telegram)).setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+            	v.startAnimation(animation);
+        	    Timer t = new Timer();
+                t.schedule(new TimerTask(){
+                   @Override
+                   public void run() {
+                       startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://t.me/br_dev")));
+                   }
+                }, 200L);
             }
         });
+        
+        ((AppCompatButton) findViewById(R.id.button_clean_game)).setOnClickListener(new OnClickListener() {
+        	public void onClick(View v) {
+            	v.startAnimation(animation);
+        	    Timer t = new Timer();
+                t.schedule(new TimerTask(){
+                   @Override
+                   public void run() {
+                       ToLoad();
+                   }
+                }, 200L);
+            }
+        });
+        
+        
+        ((EditText) nickname)
+                .setOnEditorActionListener(
+                        new EditText.OnEditorActionListener() {
+                            @Override
+                            public boolean onEditorAction(
+                                    TextView v, int actionId, KeyEvent event) {
+                                if (actionId == EditorInfo.IME_ACTION_SEARCH
+                                        || actionId == EditorInfo.IME_ACTION_DONE
+                                        || event.getAction() == KeyEvent.ACTION_DOWN
+                                                && event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                                    try {
+                                        File f =
+                                                new File(
+                                                        Environment.getExternalStorageDirectory()
+                                                                + "/LUXRUSSIA/SAMP/settings.ini");
+                                        if (!f.exists()) {
+                                            f.createNewFile();
+                                            f.mkdirs();
+                                        }
+                                        Wini w =
+                                                new Wini(
+                                                        new File(
+                                                                Environment.getExternalStorageDirectory()
+                                 + "/LUXRUSSIA/SAMP/settings.ini"));
+								 if(checkValidNick()){
+									 w.put("client", "name", nickname.getText().toString());
+                                        //Toast.makeText(this, "Ваш новый никнейм успешно сохранен!", Toast.LENGTH_SHORT).show();
+                                        tost("Ваш новый никнейм успешно сохранен!");
+                                     reg.setNick(String.valueOf(nickname.getText()));
+								 } else {
+									 checkValidNick();
+								 }
+                                        w.store();
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                        tost("Установите игру!");
+                                    }
+                                }
+                                return false;
+                            }
+        });
+        
+        nickname.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        
+            }
+
+             @Override
+             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                 try {
+                     File f = new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA/SAMP/settings.ini");
+                     if (!f.exists()) {
+                         f.createNewFile();
+                         f.mkdirs();
+                     }
+                     Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA/SAMP/settings.ini"));
+					 if(checkValidNick()){
+						w.put("client", "name", nickname.getText().toString());        
+					  } else {
+					      checkValidNick();
+					   }
+                       w.store();
+                       } catch (IOException e) {
+                           e.printStackTrace();
+                       }
+                 }
+
+             @Override
+             public void afterTextChanged(Editable editable) {
+        
+             }
+        });
+     }
+    
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode != 1000) {
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO}, 1000);
+        } 
     }
-	
-	public void onClickPlay() {
+
+    public void onClickPlay() {
         if(IsGameInstalled()) {
-            startActivity(new Intent(getApplicationContext(), com.blackrussia.game.core.GTASA.class));
+            startActivity(new Intent(this, com.byparad1st.game.core.GTASA.class));
 		} else {
-		    startActivity(new Intent(getApplicationContext(), LoaderActivity.class));
+		   ToLoad();
 		}
     }
-
-    public void onClickSettings() {
-            setTextColor(settingsButton, settingsTV, settingsImage);
-            replaceFragment(this.settingsFragment);
-    }
-
-    public void onClickForum() {
-            setTextColor(forumButton, forumTV, forumImage);
-            replaceFragment(forumFragment);
-    }
-
-    public void onClickDonate() {
-            setTextColor(donateButton, donateTV, donateImage);
-            replaceFragment(donateFragment);
-    }
     
-	public void onClickMonitoring() {
-            setTextColor(monitoringButton, monitoringTV, monitoringImage);
-            replaceFragment(monitoringFragment);
-    }
-	
-    public void setTextColor(LinearLayout linearLayout, TextView textView, ImageView imageView) {
-        monitoringButton.setAlpha(0.45f);
-        settingsButton.setAlpha(0.45f);
-        forumButton.setAlpha(0.45f);
-        donateButton.setAlpha(0.45f);
-        monitoringTV.setTextColor(getResources().getColor(R.color.menuTextDisable));
-        settingsTV.setTextColor(getResources().getColor(R.color.menuTextDisable));
-        forumTV.setTextColor(getResources().getColor(R.color.menuTextDisable));
-        donateTV.setTextColor(getResources().getColor(R.color.menuTextDisable));
-        monitoringImage.setColorFilter(getResources().getColor(R.color.menuTextDisable), PorterDuff.Mode.SRC_IN);
-        settingsImage.setColorFilter(getResources().getColor(R.color.menuTextDisable), PorterDuff.Mode.SRC_IN);
-        forumImage.setColorFilter(getResources().getColor(R.color.menuTextDisable), PorterDuff.Mode.SRC_IN);
-        donateImage.setColorFilter(getResources().getColor(R.color.menuTextDisable), PorterDuff.Mode.SRC_IN);
-        linearLayout.setAlpha(1.0f);
-        textView.setTextColor(getResources().getColor(R.color.menuTextEnable));
-        imageView.setColorFilter(getResources().getColor(R.color.menuTextEnable), PorterDuff.Mode.SRC_IN);
-    }
-
-    public void replaceFragment(Fragment fragment) {
-        FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
-        beginTransaction.replace(R.id.container, fragment);
-        beginTransaction.commit();
-    }
-	
-	public boolean isRecordAudioPermissionGranted() {
-        if (Build.VERSION.SDK_INT < 23 || checkSelfPermission("android.permission.RECORD_AUDIO") == 0) {
-            return true;
-        }
-        ActivityCompat.requestPermissions(this, new String[]{"android.permission.RECORD_AUDIO"}, 2);
-        return false;
-    }
-
-    public boolean isStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT < 23 || checkSelfPermission("android.permission.WRITE_EXTERNAL_STORAGE") == 0) {
-            return true;
-        }
-        ActivityCompat.requestPermissions(this, new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 1);
-        return false;
-    }
-	
-	private boolean IsGameInstalled()
+    private boolean IsGameInstalled()
     {
-        String CheckFile = Environment.getExternalStorageDirectory() + "/BlackRussia/texdb/gta3.img";
+        String CheckFile = Environment.getExternalStorageDirectory() + "/LUXRUSSIA/texdb/gta3.img";
         File file = new File(CheckFile);
         return file.exists();
     }
-	
-	private void startTimer()
+    
+    private void ToLoad()
     {
-        Timer t = new Timer();
-        t.schedule(new TimerTask(){
-
-            @Override
-            public void run() {
-                onClickPlay();
-            }
-        }, 200L);
+    	startActivity(new Intent(this, LoaderActivity.class));
     }
 	
-	public void onDestroy() {
-        super.onDestroy();
-        
-    }
-
-    public void onRestart() {
-        super.onRestart();
-        
+	private void InitLogic() {
+        try {
+            Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA/SAMP/settings.ini"));
+            nickname = findViewById(R.id.edit_text_name);
+            nickname.setText(w.get("client", "name"));
+            w.store();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 	
 	public boolean checkValidNick(){
-		EditText nick = (EditText) findViewById(R.id.editText);
+        EditText nick = (EditText) findViewById(R.id.edit_text_name);
 		if(nick.getText().toString().isEmpty()) {
-			Toast.makeText(this, "Введите ник", Toast.LENGTH_SHORT).show();
+            tost("Введите ник");
 			return false;
 		}
 		if(!(nick.getText().toString().contains("_"))){
-			Toast.makeText(this, "Ник должен содержать символ \"_\"", Toast.LENGTH_SHORT).show();
+            tost("Ник должен содержать символ \"_\"");
 			return false;
 		}
 		if(nick.getText().toString().length() < 4){
-			Toast.makeText(this, "Длина ника должна быть не менее 4 символов", Toast.LENGTH_SHORT).show();
+            tost("Длина ника должна быть не менее 4 символов");
 			return false;
 		}
 		return true;
+	}
+
+    private void LoadNick() {
+        try {
+            Wini w = new Wini(new File(Environment.getExternalStorageDirectory() + "/LUXRUSSIA/SAMP/settings.ini"));
+            reg.setNick(w.get("client", "name"));
+            w.store();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+	
+	private void tost(String pon)
+	{
+		Toast.makeText(this, pon, Toast.LENGTH_SHORT).show();
 	}
 } 

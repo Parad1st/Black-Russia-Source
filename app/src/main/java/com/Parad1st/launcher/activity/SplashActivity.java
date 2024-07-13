@@ -1,4 +1,4 @@
-package com.blackrussia.launcher.activity;
+package com.byparad1st.launcher.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -11,9 +11,10 @@ import android.net.NetworkInfo;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
-import com.blackrussia.game.R;
+import com.byparad1st.game.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,14 +22,13 @@ import java.util.TimerTask;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.blackrussia.game.R;
-import com.blackrussia.launcher.adapter.NewsAdapter;
-import com.blackrussia.launcher.model.News;
+import com.byparad1st.launcher.adapter.NewsAdapter;
+import com.byparad1st.launcher.model.News;
 
-import com.blackrussia.launcher.adapter.ServersAdapter;
-import com.blackrussia.launcher.model.Servers;
-import com.blackrussia.launcher.other.Interface;
-import com.blackrussia.launcher.other.Lists;
+import com.byparad1st.launcher.adapter.ServersAdapter;
+import com.byparad1st.launcher.model.Servers;
+import com.byparad1st.launcher.other.Interface;
+import com.byparad1st.launcher.other.Lists;
 
 import com.google.firebase.database.*;
 
@@ -45,9 +45,19 @@ public class SplashActivity extends AppCompatActivity{
 	
 	DatabaseReference databaseServers;
 	ServersAdapter serversAdapter;
-	
 	public static ArrayList<Servers> slist;
     public static ArrayList<News> nlist;
+
+	// Идентификатор уведомления
+	private static final int NOTIFY_ID = 101;
+
+	// Идентификатор канала
+	private static String CHANNEL_ID = "qq channel";
+	// Объявим переменную в начале класса
+	private int counter = 101;
+
+// Теперь у уведомлений будут новые идентификаторы
+//notificationManager.notify(counter++, builder.build());
 	
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -123,6 +133,16 @@ public class SplashActivity extends AppCompatActivity{
     private void startLauncher()
     {
         startActivity(new Intent(this, MainActivity.class));
+		NotificationCompat.Builder builder =
+				new NotificationCompat.Builder(SplashActivity.this, CHANNEL_ID)
+						.setSmallIcon(R.drawable.logo_splash)
+						.setContentTitle("LUX RUSSIA")
+						.setContentText("Вводи промокод #LUX и получай бонус")
+						.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+		NotificationManagerCompat notificationManager =
+				NotificationManagerCompat.from(SplashActivity.this);
+		notificationManager.notify(NOTIFY_ID, builder.build());
         finish();
     }
 	
