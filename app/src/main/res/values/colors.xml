@@ -46,10 +46,11 @@
     <color name="color_0F0F0F">#ff0f0f0f</color>
     <color name="menuTextDisable">#ffffffff</color>
     <color name="menuTextEnable">#ffde2a09</color>
-    <color name="white25">#40ffffff</color>
+    <color name="white15">#40ffffff</color>
     <color name="blue">#ff3ea2ff</color>
     <color name="gray">#ff666666</color>
     <color name="colorAccent">#ffed4319</color>
     <color name="colorPrimary">#ff000000</color>
     <color name="colorPrimaryDark">#ff000000</color>
+    <color name="yellow">#FAE207</color>
 </resources>

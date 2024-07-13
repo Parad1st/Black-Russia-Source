@@ -17,4 +17,27 @@
     <item type="id" name="wifiSettingsButton" />
     <item type="id" name="imageView1" />
     <item type="id" name="progressBar1" />
+    <item name="speed_text" type="id" />
+    <item name="speedometer" type="id" />
+    <item name="constraintLayout" type="id" />
+    <item name="speed_line" type="id" />
+    <item name="imageView5" type="id" />
+    <item name="imageView10" type="id" />
+    <item name="imageView8" type="id" />
+    <item name="blinker" type="id" />
+    <item name="textView2" type="id" />
+    <item name="linearLayout" type="id" />
+    <item name="speed_lock_ico" type="id" />
+    <item name="speed_engine_ico" type="id" />
+    <item name="imageView9" type="id" />
+    <item name="imageView11" type="id" />
+    <item name="speed_fuel_text" type="id" />
+    <item name="imageView12" type="id" />
+    <item name="strela_pravo" type="id" />
+    <item name="strela_levo" type="id" />
+    <item name="imageView13" type="id" />
+    <item name="speed_car_hp_text" type="id" />
+    <item name="textView" type="id" />
+    <item name="password_text" type="id" />
+    <item name="auto_switch" type="id" />
 </resources>

@@ -7,7 +7,6 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="colorAccent">#ff0000ee</item>
     </style>
-
     <style name="Theme.IAPTheme" parent="@android:style/Theme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
@@ -74,6 +73,10 @@
     <item name="windowNoTitle">true</item>
     <item name="android:windowTitleSize">0dp</item>
     </style>
+    <style name="PopupWindowAnimationNotification">
+        <item name="android:windowEnterAnimation">@anim/popup_show_notification</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide_notification</item>
+    </style>
 
     <style name="AppTheme.WithSplash">
     <item name="android:windowBackground">@drawable/splash</item>
@@ -83,4 +86,9 @@
     <item name="windowNoTitle">true</item>
     <item name="android:windowTitleSize">0dp</item>
     </style>
-    </resources>
+
+    <style name="MontserratRegular14sp"><item name="android:textSize">14.0sp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_regular</item></style>
+
+    <style name="MontserratRegular12sp"><item name="android:textSize">12.0sp</item><item name="android:textColor">@android:color/white</item><item name="android:fontFamily">@font/montserrat_regular</item></style>
+</resources>
+
