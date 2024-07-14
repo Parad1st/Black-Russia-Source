@@ -2,8 +2,8 @@
 #include "../util/armhook.h"
 #include "common.h"
 char* PLAYERS_REALLOC = nullptr;
-#include "../CSettings.h"
-#include "..//CDebugInfo.h"
+#include "../settings.h"
+#include "..//debug.h"
 #include "game.h"
 #include "CExtendedCarColors.h"
 extern CSettings* pSettings;
@@ -81,6 +81,16 @@ void ANDRunThread_hook(void* a1);
 
 void ApplyPatches_level0()
 {
+		//             (                     )
+	WriteMemory(g_libGTASA + 0x573640, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x573668, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x57367C, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x573690, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x5736C8, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x5736D8, (int)"dxt", 3);
+  	WriteMemory(g_libGTASA + 0x5736E8, (int)"dxt", 3);
+	
+	
 	PLAYERS_REALLOC = ((char* (*)(uint32_t))(g_libGTASA + 0x179B40))(404 * 257 * sizeof(char));
 	memset(PLAYERS_REALLOC, 0, 404 * 257);
 	UnFuck(g_libGTASA + 0x5D021C);
@@ -187,7 +197,7 @@ void ApplyPatches()
   sub_45A32(dword_14A458 + 0x2DC8E0, nullsub_39, 2);	
 	*/
 
-	NOP(g_libGTASA + 0x402472, 2);
+	//NOP(g_libGTASA + 0x402472, 2);
 	// fucking shit from rockstar CRealTimeShadowManager::Update(void)
 	NOP(g_libGTASA + 0x0039B2C0, 2);
 	// DefaultPCSaveFileName
@@ -326,8 +336,14 @@ void ApplyInGamePatches()
 {
 	
 	Log("Installing patches (ingame)..");
+	
+	//copebar patches
+	WriteMemory(g_libGTASA+0x52DD38, (uintptr_t)"\x00\x20\x70\x47", 4);
+    NOP(g_libGTASA + 0x39AD14, 1);
+    memcpy((uint32_t*)(g_libGTASA+0x5DE734), "0x10000000", 10);
+    *(float*)(g_libGTASA + 0x608558) = 200.0f;
 
-	/* Разблокировка карты */
+	/*                     */
 	// CTheZones::ZonesVisited[100]
 	memset((void*)(g_libGTASA + 0x8EA7B0), 1, 100);
 	// CTheZones::ZonesRevealed
@@ -344,10 +360,10 @@ void ApplyInGamePatches()
 	UnFuck(g_libGTASA + 0x398A34);
 	NOP(g_libGTASA + 0x398A34, 2);
 
-	// множитель для MaxHealth
+	//               MaxHealth
 	UnFuck(g_libGTASA + 0x3BAC68);
 	*(float*)(g_libGTASA + 0x3BAC68) = 176.0f;
-	// множитель для Armour
+	//               Armour
 	UnFuck(g_libGTASA + 0x27D884);
 	*(float*)(g_libGTASA + 0x27D884) = 176.0;
 
@@ -358,13 +374,13 @@ void ApplyInGamePatches()
 	NOP(g_libGTASA + 0x003D6FDC, 2);
 	NOP(g_libGTASA + 0x0026B214, 2);
 
-	// ПОТРАЧЕНО
+	//          
 	WriteMemory(g_libGTASA + 0x3D62FC, (uintptr_t)"\xF7\x46", 2);
 
 	// CPlayerPed::CPlayerPed task fix
 	WriteMemory(g_libGTASA + 0x458ED1, (uintptr_t)"\xE0", 1);
 
-	// ReapplyPlayerAnimation (хз зачем)
+	// ReapplyPlayerAnimation (        )
 	NOP(g_libGTASA + 0x45477E, 5);
 
 	// radar draw blips

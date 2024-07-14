@@ -663,7 +663,7 @@ void CCustomPlateManager::Initialise()
 	m_pRuPoliceSprite->m_pRwTexture = (RwTexture*)LoadTextureFromDB("samp", "plate_ru_police");
 	m_pTaxiSprite->m_pRwTexture = (RwTexture*)LoadTextureFromDB("samp", "plate_taxi");
 	m_pRuGosSprite->m_pRwTexture = (RwTexture*)LoadTextureFromDB("samp", "plate_gos");
-	m_pNoPlateSprite->m_pRwTexture = (RwTexture*)LoadTextureFromDB("samp", "plate_outside");
+	m_pNoPlateSprite->m_pRwTexture = (RwTexture*)LoadTextureFromDB("samp", "plate_remap");
 
 	m_pBitmap = new uint8_t[PLATE_BITMAP_HEIGHT * PLATE_BITMAP_WIDTH];
 }
@@ -800,7 +800,11 @@ void CCustomPlateManager::Process()
 			{
 				if (pNetGame->GetVehiclePool()->GetAt(i.vehicleId))
 				{
-					pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("remap_plate", pPlate);
+					pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("plate_remap", pPlate);
+					pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("platecharset", pPlate);
+                                                                                          pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("nomer", pPlate);
+                                                                                          pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("nomera", pPlate);
+                                                                                          pNetGame->GetVehiclePool()->GetAt(i.vehicleId)->ApplyTexture("remap_plate", pPlate);
 				}
 			}
 		}

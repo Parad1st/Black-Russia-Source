@@ -1,20 +1,31 @@
 #include "../main.h"
 #include "../util/armhook.h"
+
 #include "RW/RenderWare.h"
 #include "game.h"
+
 #include "../net/netgame.h"
 #include "../gui/gui.h"
 #include "../util/CJavaWrapper.h"
+
+#include "../CAudioStream.h"
+
+#include "../clientlogic/CRQ_Commands.h"
+#include "../clientlogic/CSkyBox.h"
+
 #include "..///..//santrope-tea-gtasa/encryption/CTinyEncrypt.h"
 #include "..///..//santrope-tea-gtasa/encryption/encrypt.h"
 
 #include "..//voice/CVoiceChatClient.h"
 #include "..//chatwindow.h"
 extern CGame* pGame;
-#include "..//CSettings.h"
+#include "..//settings.h"
 extern CSettings* pSettings;
 extern CChatWindow* pChatWindow;
 extern CVoiceChatClient* pVoice;
+
+//sanrelo.ru
+extern CAudioStream* pAudioStream;
 
 extern "C"
 {
@@ -133,12 +144,12 @@ open:
 }
 
 /* ====================================================== */
+
 void ShowHud() 
-{	
-	CLocalPlayer *pLocalPlayer = pNetGame->GetPlayerPool()->GetLocalPlayer();
+{
 	if(pGame) 
 	{
-		if(pNetGame && pLocalPlayer->lToggle) 
+		if(pNetGame) 
 		{
 			if(pGame->FindPlayerPed() || GamePool_FindPlayerPed()) 
 			{
@@ -151,9 +162,8 @@ void ShowHud()
 					pGUI->GetEat(), 
 					GamePool_FindPlayerPed()->WeaponSlots[GamePool_FindPlayerPed()->byteCurWeaponSlot].dwType, 
 					GamePool_FindPlayerPed()->WeaponSlots[GamePool_FindPlayerPed()->byteCurWeaponSlot].dwAmmo, 
-					GamePool_FindPlayerPed()->WeaponSlots[GamePool_FindPlayerPed()->byteCurWeaponSlot].dwAmmoInClip, 
-					pGame->GetLocalMoney(), 
-					pGame->GetWantedLevel()
+					(int)pPlayerPool->GetLocalPlayerID(), 
+					pGame->GetLocalMoney(), pGame->GetWantedLevel()
 					);
 				}
 				if(pSettings && pSettings->GetReadOnly().iHud)
@@ -168,7 +178,6 @@ void ShowHud()
 		}
 	}
 }
-
 
 /* ====================================================== */
 bool bGameStarted = false;
@@ -419,6 +428,8 @@ void CStreaming_InitImageList_hook()
 	(( uint32_t (*)(char*, uint32_t))(g_libGTASA+0x28E7B0+1))("TEXDB\\GTA_INT.IMG", 1); // CStreaming::AddImageToList
 	(( uint32_t (*)(char*, uint32_t))(g_libGTASA+0x28E7B0+1))("TEXDB\\SAMP.IMG", 1); // CStreaming::AddImageToList
 	(( uint32_t (*)(char*, uint32_t))(g_libGTASA+0x28E7B0+1))("TEXDB\\SAMPCOL.IMG", 1); // CStreaming::AddImageToList
+	//(( uint32_t (*)(char*, uint32_t))(g_libGTASA+0x28E7B0+1))("TEXDB\\GTA_DFF.IMG", 1); // CStreaming::AddImageToList
+	//(( uint32_t (*)(char*, uint32_t))(g_libGTASA+0x28E7B0+1))("TEXDB\\GTA_COL.IMG", 1); // CStreaming::AddImageToList
 
 	//((uint32_t(*)(char*, uint32_t))(g_libGTASA + 0x28E7B0 + 1))("TEXDB\\ARH1.IMG", 1); // CStreaming::AddImageToList
 	//((uint32_t(*)(char*, uint32_t))(g_libGTASA + 0x28E7B0 + 1))("TEXDB\\ARH2.IMG", 1); // CStreaming::AddImageToList
@@ -758,7 +769,7 @@ void (*NvUtilInit)(void);
 void NvUtilInit_hook(void)
 {	
 	NvUtilInit();
-	*(char**)(g_libGTASA + 0x5D1608) = "/storage/emulated/0/BlackRussia/";
+	*(char**)(g_libGTASA + 0x5D1608) = "/storage/emulated/0/LUXRUSSIA/";
 }
 
 void InstallSpecialHooks()
@@ -992,7 +1003,7 @@ int CWidgetButtonEnterCar_Draw_hook(uintptr_t thiz)
 						g_uiLastTickVoice = GetTickCount();
 						if (pVoice->IsDisconnected())
 						{
-							pChatWindow->AddDebugMessage("�� ��������� �� ���������� ����");
+							pChatWindow->AddDebugMessage("                               ");
 							pVoice->DisableInput();
 						}
 					}
@@ -1008,7 +1019,7 @@ int CWidgetButtonEnterCar_Draw_hook(uintptr_t thiz)
 				{
 					if (pVoice->IsDisconnected())
 					{
-						pChatWindow->AddDebugMessage("�� ��������� �� ���������� ����");
+						pChatWindow->AddDebugMessage("                               ");
 						pVoice->DisableInput();
 					}
 					pWidget->SetColor(255, 0x9C, 0xCF, 0x9C);
@@ -1190,6 +1201,12 @@ void CObject__Render_hook(ENTITY_TYPE* thiz)
 	// 004353FE + 1
 	// 004352C4 + 1
 
+	if (CSkyBox::GetSkyObject())
+	{
+		if (CSkyBox::GetSkyObject()->m_pEntity == thiz && !CSkyBox::IsNeedRender())
+			return;
+	}
+
 	uintptr_t dwRetAddr = 0;
 	__asm__ volatile ("mov %0, lr" : "=r" (dwRetAddr));
 	dwRetAddr -= g_libGTASA;
@@ -1241,6 +1258,16 @@ void CObject__Render_hook(ENTITY_TYPE* thiz)
 		* p.first = p.second;
 	resetEntries.clear();
 }
+
+
+void (*CRenderer__RenderEverythingBarRoads)();
+void CRenderer__RenderEverythingBarRoads_hook()
+{
+	CSkyBox::Process();
+
+	CRenderer__RenderEverythingBarRoads();
+}
+
 #pragma optimize( "", off )
 
 char CStreaming__ConvertBufferToObject_hook(int a1, int a2, int a3)
@@ -1442,7 +1469,7 @@ RwFrame* CClumpModelInfo_GetFrameFromId_Post(RwFrame* pFrameResult, RpClump* pCl
 	__asm__ volatile ("mov %0, lr" : "=r" (calledFrom));
 	calledFrom -= g_libGTASA;
 
-	// �� ��������� ���� ���� ��� �����
+	//                                 
 	if (calledFrom == 0x00515708                // CVehicle::SetWindowOpenFlag
 		|| calledFrom == 0x00515730             // CVehicle::ClearWindowOpenFlag
 		|| calledFrom == 0x00338698             // CVehicleModelInfo::GetOriginalCompPosition
@@ -1821,6 +1848,10 @@ void CGame__Process_hook()
 		once = true;
 	}
 
+                 WriteMemory(g_libGTASA + 0x52DD38, (uintptr_t)"\x00\x20\x70\x47", 4); // CCoronas::RenderReflections
+                 NOP(g_libGTASA + 0x39AD14, 1); //render clouds, sunrefl, raineffect 
+                 memcpy((uint32_t*)(g_libGTASA+0x5DE734), "0x10000000", 10); // CStreaming::ms_memoryAvailable(limit);
+
 	if (pNetGame && pNetGame->GetPlayerPool() && pNetGame->GetPlayerPool()->GetLocalPlayer())
 	{
 		CSnow::Process(pNetGame->GetPlayerPool()->GetLocalPlayer()->GetPlayerPed(), pGame->GetActiveInterior());
@@ -1871,6 +1902,8 @@ void CGame__Process_hook()
 			}
 		}
 	}
+
+	if (pAudioStream) pAudioStream->Process();
 
 	CCustomPlateManager::Process();
 }
@@ -2119,7 +2152,7 @@ void CMatrix__SetScale_hook(void* thiz, float x, float y, float z)
 			// front wheel
 			if (g_pLastProcessedVehicleMatrix->m_bWheelSize)
 			{
-				y *= g_pLastProcessedVehicleMatrix->m_fWheelSize * 1.3f; // ���� ��� �������� scale �� ������
+				y *= g_pLastProcessedVehicleMatrix->m_fWheelSize * 1.3f; //                   scale          
 				z *= g_pLastProcessedVehicleMatrix->m_fWheelSize * 1.3f;
 			}
 			if (g_pLastProcessedVehicleMatrix->m_bWheelWidth)
@@ -2485,6 +2518,9 @@ void CSprite2d__Draw_hook(CSprite2d* a1, CRect* a2, CRGBA* a3)
 			else
 			{
 				thiz[6] = 45.0f;
+				
+			CRect* rect = (CRect*)&thiz[3];
+            pGUI->CoordsRadar(rect);
 			}
 		}
 		
@@ -2683,15 +2719,6 @@ int (*CEntity__GetIsOnScreen)(ENTITY_TYPE*);
 int CEntity__GetIsOnScreen_hook(ENTITY_TYPE* thiz)
 {
 	int retn = CEntity__GetIsOnScreen(thiz);
-	
-	/*if (CSkyBox::m_pSkyObjectDaily)
-	{
-		if (thiz == CSkyBox::m_pSkyObjectAfternoon->m_pEntity || thiz == CSkyBox::m_pSkyObjectDaily->m_pEntity ||
-			thiz == CSkyBox::m_pSkyObjectEvening->m_pEntity || thiz == CSkyBox::m_pSkyObjectNight->m_pEntity)
-		{
-			return 1;
-		}
-	}*/
 
 	return retn;
 }
@@ -2853,5 +2880,7 @@ void InstallHooks()
 	SetUpHook(g_libGTASA + 0x0031B164, (uintptr_t)FxEmitterBP_c__Render_hook, (uintptr_t*)& FxEmitterBP_c__Render);
 	SetUpHook(g_libGTASA + 0x0043A17C, (uintptr_t)CPed__ProcessEntityCollision_hook, (uintptr_t*)&CPed__ProcessEntityCollision);
 
+	//SetUpHook(g_libGTASA + 0x3B1778, &CRenderer__RenderEverythingBarRoads_hook, &CRenderer__RenderEverythingBarRoads);
+	SetUpHook(g_libGTASA + 0x3B1778, (uintptr_t)CRenderer__RenderEverythingBarRoads_hook, (uintptr_t*)&CRenderer__RenderEverythingBarRoads);
 	HookCPad();
 }

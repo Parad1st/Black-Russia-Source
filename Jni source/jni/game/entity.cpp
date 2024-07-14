@@ -321,3 +321,13 @@ float CEntity::GetDistanceFromPoint(float X, float Y, float Z)
 	
 	return (float)sqrt(fSX + fSY + fSZ);
 }
+
+void CEntity::RemovePhysical()
+{
+	((void (*)(ENTITY_TYPE*))(*(void**)(m_pEntity->vtable + 16)))(m_pEntity); // CPhysical::Remove
+}
+
+void CEntity::AddPhysical()
+{
+	((void (*)(ENTITY_TYPE*))(*(void**)(m_pEntity->vtable + 8)))(m_pEntity); // CPhysical::Add
+}

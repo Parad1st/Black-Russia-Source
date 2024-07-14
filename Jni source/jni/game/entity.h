@@ -39,6 +39,9 @@ public:
 	float GetDistanceFromLocalPlayerPed();
 	float GetDistanceFromPoint(float x, float y, float z);
 
+	void RemovePhysical();
+	void AddPhysical();
+
 public:
 	ENTITY_TYPE		*m_pEntity;
 	uint32_t		m_dwGTAId;

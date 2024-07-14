@@ -2,7 +2,7 @@
 #include "game.h"
 
 extern CGame* pGame;
-#include "..//CDebugInfo.h"
+#include "..//debug.h"
 
 #include "..//chatwindow.h"
 extern CChatWindow* pChatWindow;
@@ -866,14 +866,14 @@ void CVehicle::ApplyVinyls(uint8_t bSlot1, uint8_t bSlot2)
 
 	if (bSlot1 != 255)
 	{
-		sprintf(&szTex[0], "v_cust_body_%d", bSlot1);
-		ApplyTexture("remap_cbody_0", &szTex[0]);
+		sprintf(&szTex[0], "remapbody%d", bSlot1);
+		ApplyTexture("remapbody0", &szTex[0]);
 	}
 
 	if (bSlot2 != 255)
 	{
-		sprintf(&szTex[0], "v_cust_body_%d", bSlot2);
-		ApplyTexture("remap_cbody_0", &szTex[0]);
+		sprintf(&szTex[0], "remapbody%d", bSlot2);
+		ApplyTexture("remapbody0", &szTex[0]);
 	}
 
 }
@@ -885,7 +885,7 @@ void CVehicle::ApplyToner(uint8_t bSlot, uint8_t bID)
 
 	if (bID == 0)
 	{
-		sprintf(&szOld[0], "remap_toner_%d", bSlot);
+		sprintf(&szOld[0], "remaptoner", bSlot);
 		RemoveTexture(&szOld[0]);
 		return;
 	}
@@ -894,8 +894,8 @@ void CVehicle::ApplyToner(uint8_t bSlot, uint8_t bID)
 		return;
 	}
 
-	sprintf(&szOld[0], "remap_toner_%d", bSlot);
-	sprintf(&szNew[0], "v_cust_t_%d", bID);
+	sprintf(&szOld[0], "remaptoner%d", bSlot);
+	sprintf(&szNew[0], "remaptoner%d", bID);
 	ApplyTexture(&szOld[0], &szNew[0]);
 }
 
@@ -1176,7 +1176,7 @@ void CVehicle::SetCustomShadow(uint8_t r, uint8_t g, uint8_t b, float fSizeX, fl
 	m_Shadow.b = b;
 	m_Shadow.fSizeX = fSizeX;
 	m_Shadow.fSizeY = fSizeY;
-	m_Shadow.pTexture = (RwTexture*)LoadTextureFromDB("gui", szTex);
+	m_Shadow.pTexture = (RwTexture*)LoadTextureFromDB("samp", szTex);
 }
 
 void CVehicle::ProcessWheelOffset(RwFrame* pFrame, bool bLeft, float fValue, int iID)

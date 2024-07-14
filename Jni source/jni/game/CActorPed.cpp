@@ -4,8 +4,7 @@
 #include "../util/armhook.h"
 #include "common.h"
 
-#include "..//CDebugInfo.h"
-
+#include "..//debug.h"
 #include "CActorPed.h"
 
 extern CGame* pGame;

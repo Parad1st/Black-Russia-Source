@@ -141,6 +141,8 @@ public:
 
 	void DrawGangZone(float fPos[], uint32_t dwColor);
 
+	uint8_t IsGamePaused();
+
 private:
 	bool aToggleStatusHUD[HUD_MAX];
 	CCamera* 		m_pGameCamera;

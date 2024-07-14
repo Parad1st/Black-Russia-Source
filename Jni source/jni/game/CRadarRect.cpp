@@ -12,13 +12,13 @@ bool CRadarRect::m_bEnabled = false;
 
 void CRadarRect::LoadTextures()
 {
-	m_pRectTexture = (RwTexture*)LoadTextureFromDB("txd", "radardisc_r");
+	//m_pRectTexture = (RwTexture*)LoadTextureFromDB("txd", "radardisc_r");
 }
 extern CChatWindow* pChatWindow;
 float CRadarRect::CRadar__LimitRadarPoint_hook(float* pos)
 {
 
-	float r, angle;
+/*	float r, angle;
 
 	if (*(uint8_t*)(g_libGTASA + 0x0063E0B4))
 	{
@@ -63,7 +63,7 @@ float CRadarRect::CRadar__LimitRadarPoint_hook(float* pos)
 		}
 	}
 
-	return r;
+	return r;*/
 }
 
 bool CRadarRect::IsEnabled()

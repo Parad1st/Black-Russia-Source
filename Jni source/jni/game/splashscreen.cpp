@@ -133,7 +133,11 @@ void RenderSplash()
 
 	int intMult = (int)percent;
 
-	if (intMult == 51) intMult = 100;
+	if (intMult > 51)
+                  { 
+                          //g_pJavaWrapper->ShowNotification(4, "LUX RUSSIA", 8, "", ">>"); 
+                          intMult = 98; 
+                  }
 
 	g_pJavaWrapper->UpdateSplash(intMult);
 

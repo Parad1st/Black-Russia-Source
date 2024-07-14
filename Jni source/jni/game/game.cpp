@@ -567,3 +567,8 @@ void CGame::DrawGangZone(float fPos[], uint32_t dwColor)
 {
     (( void (*)(float*, uint32_t*, uint8_t))(g_libGTASA+0x3DE7F8+1))(fPos, &dwColor, bGZ);
 }
+
+uint8_t CGame::IsGamePaused()
+{
+	return *(uint8_t*)(g_libGTASA + 0x8C9BA3);
+}

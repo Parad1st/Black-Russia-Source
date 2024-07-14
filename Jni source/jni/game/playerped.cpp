@@ -5,7 +5,7 @@
 #include "common.h"
 #include "vehicle.h"
 
-#include "..//CDebugInfo.h"
+#include "..//debug.h"
 
 extern CGame* pGame;
 extern CNetGame *pNetGame;
@@ -98,7 +98,7 @@ void CPlayerPed::Destroy()
 	}
 
 	/*
-		if(m_dwParachute) ... (��������)
+		if(m_dwParachute) ... (        )
 	*/
 
 	Log("Removing from vehicle..");
@@ -568,7 +568,7 @@ void CPlayerPed::PutDirectlyInVehicle(int iVehicleID, int iSeat)
 	if(!GamePool_Vehicle_GetAt(iVehicleID)) return;
 	if(!GamePool_Ped_GetAt(m_dwGTAId)) return;
 
-	/* ��������
+	/*         
 	if(GetCurrentWeapon() == WEAPON_PARACHUTE) {
 		SetArmedWeapon(0);
 	}*/
@@ -578,7 +578,7 @@ void CPlayerPed::PutDirectlyInVehicle(int iVehicleID, int iSeat)
 	if(pVehicle->fHealth == 0.0f) return;
 	// check is cplaceable
 	if (pVehicle->entity.vtable == g_libGTASA+0x5C7358) return;
-	// check seatid (��������)
+	// check seatid (        )
 
 	if(iSeat == 0)
 	{
@@ -596,7 +596,7 @@ void CPlayerPed::PutDirectlyInVehicle(int iVehicleID, int iSeat)
 
 	if(pNetGame)
 	{
-		// �������� (��������)
+		//          (        )
 	}
 }
 
@@ -791,13 +791,13 @@ void CPlayerPed::ProcessSpecialAction()
 		}
 	}
 }
-// ��������
+//         
 void CPlayerPed::DestroyFollowPedTask()
 {
 
 }
 
-// ��������
+//         
 void CPlayerPed::ClearAllWeapons()
 {
 	uintptr_t dwPedPtr = (uintptr_t)m_pPed;
@@ -809,7 +809,7 @@ void CPlayerPed::ClearAllWeapons()
 	*(uint8_t*)(g_libGTASA + 0x008E864C) = old;
 }
 
-// ��������
+//         
 void CPlayerPed::ResetDamageEntity()
 {
 
@@ -987,6 +987,8 @@ void CPlayerPed::ProcessAttach()
 			}
 			((void (*)(ENTITY_TYPE*))(*(void**)(pObject->m_pEntity->vtable + 16)))(pObject->m_pEntity); // CPhysical::Remove
 
+//                                                      pObject->RemovePhysical();
+
 			MATRIX4X4 outMat;
 			memcpy(&outMat, &hierarchy->pMatrixArray[iID], sizeof(MATRIX4X4));
 
@@ -1038,6 +1040,7 @@ void CPlayerPed::ProcessAttach()
 			//Log("pos %f %f %f", outMat.pos.X, outMat.pos.Y, outMat.pos.Z);
 			((int(*)(ENTITY_TYPE*))(g_libGTASA + 0x0039194C + 1))(pObject->m_pEntity); // CEntity::UpdateRwFrame
 			((void (*)(ENTITY_TYPE*))(*(void**)(pObject->m_pEntity->vtable + 8)))(pObject->m_pEntity); // CPhysical::Add
+//                                                      pObject->AddPhysical();
 		}
 		else
 		{
@@ -1520,7 +1523,7 @@ uint8_t CPlayerPed::GetExtendedKeys()
 	return result;
 }
 
-// ��������
+//         
 uint16_t CPlayerPed::GetKeys(uint16_t *lrAnalog, uint16_t *udAnalog)
 {
 	*lrAnalog = LocalPlayerKeys.wKeyLR;

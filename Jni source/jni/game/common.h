@@ -54,6 +54,14 @@ typedef unsigned short PLAYERID;
 		(var_t) = GetTickCount(); \
 	}
 
+#pragma pack(1)
+enum eAxis
+{
+	X = 0,
+	Y,
+	Z
+};
+
 
 //#define _CDEBUG
 
