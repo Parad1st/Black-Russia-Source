@@ -1,5 +1,3 @@
-///* weikton $ 2022
-///myaski gay\\\
 #include <jni.h>
 #include <android/log.h>
 #include <ucontext.h>
@@ -14,12 +12,12 @@
 #include "playertags.h"
 #include "dialog.h"
 #include "keyboard.h"
-#include "CSettings.h"
-#include "CClientInfo.h"
+#include "settings.h"
+#include "util/CClientJava.h"
 #include "scoreboard.h"
-
+#include "CAudioStream.h"
 #include "util/armhook.h"
-#include "CCheckFileHash.h"
+#include "game/ccheckfilehash.h"
 #include "str_obfuscator_no_template.hpp"
 
 #include "voice/CVoiceChatClient.h"
@@ -32,8 +30,10 @@
 uintptr_t g_libGTASA = 0;
 const char* g_pszStorage = nullptr;
 
-#include "CServerManager.h"
-#include "CLocalisation.h"
+#include "clientlogic/CNetwork.h"
+#include "clientlogic/ChatMessenger.h"
+#include "clientlogic/CSkyBox.h"
+#include "clientlogic/CRQ_Commands.h"
 
 const cryptor::string_encryptor encLib = cryptor::create("libsamp.so", 11);
 void CrashLog(const char* fmt, ...);
@@ -45,7 +45,7 @@ CDialogWindow *pDialogWindow = nullptr;
 CVoiceChatClient* pVoice = nullptr;
 CSnapShotHelper* pSnapShotHelper = nullptr;
 CScoreBoard* pScoreBoard = nullptr;
-
+CAudioStream* pAudioStream = nullptr;
 CGUI *pGUI = nullptr;
 CKeyBoard *pKeyBoard = nullptr;
 CSettings *pSettings = nullptr;
@@ -59,8 +59,7 @@ void MainLoop();
 
 void PrintBuildInfo()
 {
-	Log("SA:MP version: %d.%01d", SAMP_MAJOR_VERSION, SAMP_MINOR_VERSION);
-	Log("Build times: %s %s", __TIME__, __DATE__);
+       Log("Client by parad1st");
 }
 
 #ifdef GAME_EDITION_CR
@@ -76,19 +75,18 @@ extern uintptr_t g_dwRenderQueueOffset;
 
 void PrintBuildCrashInfo()
 {
-	CrashLog("SA:MP version: %d.%01d", SAMP_MAJOR_VERSION, SAMP_MINOR_VERSION);
-	CrashLog("Build time: lebedev :)");
+	CrashLog("LUX RUSSIA");
 	CrashLog("Last processed auto and entity: %d %d", g_usLastProcessedModelIndexAutomobile, g_iLastProcessedModelIndexAutoEnt);
 	CrashLog("Last processed skin and entity: %d %d", g_iLastProcessedSkinCollision, g_iLastProcessedEntityCollision);
 }
 
 #include <sstream>
-#include "CClientInfo.h"
+#include "util/CClientJava.h"
 #include "vendor/bass/bass.h"
 #include "gui/CFontRenderer.h"
 #include "util/CJavaWrapper.h"
 #include "cryptors/INITSAMP_result.h"
-#include "CDebugInfo.h"
+#include "debug.h"
 void InitSAMP(JNIEnv* pEnv, jobject thiz);
 extern "C"
 {
@@ -103,12 +101,14 @@ void InitSAMP(JNIEnv* pEnv, jobject thiz)
 {
 	PROTECT_CODE_INITSAMP;
 
-	Log("Initializing SAMP..");
+	Log("Initializing InitSAMP..");
 
 	InitBASSFuncs();
-	BASS_Init(-1, 44100, BASS_DEVICE_3D, 0, NULL); //������������� ��������� ������
+	BASS_Init(-1, 44100, BASS_DEVICE_3D, 0, NULL); //          
 
-	g_pszStorage = "/storage/emulated/0/BlackRussia/";
+                  //GraphicsHook();                    
+
+	g_pszStorage = "/storage/emulated/0/LUXRUSSIA/";
 
 	if(!g_pszStorage)
 	{
@@ -161,6 +161,7 @@ void InitInMenu()
 	pDialogWindow = new CDialogWindow();
 	pScoreBoard = new CScoreBoard();
 	pSnapShotHelper = new CSnapShotHelper();
+	pAudioStream = new CAudioStream();
 
 	ProcessCheckForKeyboard();
 
@@ -178,8 +179,6 @@ bool unique_library_handler(const char* library)
 		void* current_library_addr = dlopen(info.dli_fname, RTLD_NOW);
 		if (!current_library_addr)
 			return false;
-
-		//Log("%p | %p", current_library_addr, dlopen(library, RTLD_NOW));
 
 		if (dlopen(library, RTLD_NOW) != current_library_addr)
 			return false;
@@ -201,8 +200,7 @@ void ProcessCheckForKeyboard()
 
 void ObfuscatedForceExit3()
 {
-	// CEntity::PreRender
-	
+       /* codevsky */	
 }
 #ifdef GAME_EDITION_CR
 int g_iServer = 1;
@@ -226,6 +224,11 @@ void InitInGame()
 		pGame->SetMaxStats();
 
 		g_pJavaWrapper->UpdateSplash(101);
+		CPlayerPed *pPlayer = pGame->FindPlayerPed();
+	CCamera *pCamera = pGame->GetCamera();
+	pCamera->SetPosition(1093.0f, -2036.0f, 90.0f, 0.0f, 0.0f, 0.0f);
+	pCamera->LookAtPoint(384.0f, -1557.0f, 20.0f, 2);
+	pGame->SetWorldWeather(10);
 		bGameInited = true;
 
 		return;
@@ -233,14 +236,7 @@ void InitInGame()
 
 	if (!bNetworkInited)
 	{
-		
-
-		// HERE IS
-		/*pNetGame = new CNetGame(
-			g_sEncryptedAddresses[g_iServer].decrypt(),
-			g_sEncryptedAddresses[g_iServer].getPort(),
-			pSettings->GetReadOnly().szNickName,
-			pSettings->GetReadOnly().szPassword);*/
+                                    //brp kostile
 		bNetworkInited = true;
 		return;
 	}
@@ -262,7 +258,7 @@ void CTimer__StartUserPause_hook()
 		g_pJavaWrapper->SetPauseState(true);
 	}
 
-	*(uint8_t*)(g_libGTASA + 0x008C9BA3) = 1;
+	*(uint8_t*)(g_libGTASA + 0x008C9BA3) = 0;
 }
 
 void (*CTimer__EndUserPause)();
@@ -274,10 +270,14 @@ void CTimer__EndUserPause_hook()
 		g_pJavaWrapper->SetPauseState(false);
 	}
 
+                 //WriteMemory(g_libGTASA+0x52DD38, "\x00\x20\x70\x47", 4); // CCoronas::RenderReflections
+                 //NOP(g_libGTASA + 0x39AD14, 1); //render clouds, sunrefl, raineffect 
+                 //memcpy((uint32_t*)(g_libGTASA+0x5DE734), "0x10000000", 10); // CStreaming::ms_memoryAvailable(limit);
+
 	*(uint8_t*)(g_libGTASA + 0x008C9BA3) = 0;
 }
 
-#include "CDebugInfo.h"
+#include "debug.h"
 void MainLoop()
 {
 	InitInGame();
@@ -383,7 +383,7 @@ void handler3(int signum, siginfo_t* info, void* contextPtr)
 
 	return;
 }
-
+/*OBFUSCATE("PARAD1ST");*/
 void handler(int signum, siginfo_t *info, void* contextPtr)
 {
 	ucontext* context = (ucontext_t*)contextPtr;
@@ -589,7 +589,7 @@ void RQ_Command_rqSetAlphaTest_hook(char** a1)
 	return;
 }
 
-#include "CFPSFix.h"
+#include "new_fps.h"
 CFPSFix g_fps;
 
 void (*ANDRunThread)(void* a1);
@@ -607,8 +607,6 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved)
 
 	Log("SAMP library loaded! Build time: " __DATE__ " " __TIME__);
 	
-
-
 	g_libGTASA = FindLibrary("libGTASA.so");
 	if(g_libGTASA == 0)
 	{

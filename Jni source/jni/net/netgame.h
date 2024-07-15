@@ -57,6 +57,12 @@ public:
 	void SetGameState(int iGameState) { m_iGameState = iGameState; }
 
 	void ResetVehiclePool();
+        void SendPerson(int id);
+	void SendDonateCar(int carid, int carcost);
+        void sendAutoShopClick(int id);
+        void SendShopStoreClick(int buttonid);
+        void SendReconClick(int id, int splayerid);
+	void SendCustomPacketFuelData(int liters, int cost);
 	void ResetObjectPool();
 	void ResetPickupPool();
 	void ResetGangZonePool();

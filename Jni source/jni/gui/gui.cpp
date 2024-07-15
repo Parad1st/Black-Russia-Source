@@ -7,7 +7,7 @@
 #include "../playertags.h"
 #include "../dialog.h"
 #include "../keyboard.h"
-#include "../CSettings.h"
+#include "../settings.h"
 #include "..//scoreboard.h"
 #include "../util/CJavaWrapper.h"
 #include "../util/util.h"
@@ -22,53 +22,42 @@ extern CKeyBoard *pKeyBoard;
 extern CNetGame *pNetGame;
 extern CJavaWrapper *g_pJavaWrapper;
 
-/* imgui_impl_renderware.h */
 void ImGui_ImplRenderWare_RenderDrawData(ImDrawData* draw_data);
-bool ImGui_ImplRenderWare_Init();
 void ImGui_ImplRenderWare_NewFrame();
 void ImGui_ImplRenderWare_ShutDown();
+bool ImGui_ImplRenderWare_Init();
 
-/*
-	Все координаты GUI-элементов задаются
-	относительно разрешения 1920x1080
-*/
-#define MULT_X	0.00052083333f	// 1/1920
-#define MULT_Y	0.00092592592f 	// 1/1080
+#define MULT_X	0.00052083333f	// *1920
+#define MULT_Y	0.00092592592f 	// *1080
 
 CGUI::CGUI()
 {
-	Log("Initializing GUI..");
+	Log("BRGUI LOAD..");
 
 	m_bMouseDown = 0;
 	m_vTouchPos = ImVec2(-1, -1);
 	m_bNextClear = false;
 	m_bNeedClearMousePos = false;
 
-	// setup ImGUI
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO &io = ImGui::GetIO();
 
 	ImGui_ImplRenderWare_Init();
 
-	// scale
 	m_vecScale.x = io.DisplaySize.x * MULT_X;
 	m_vecScale.y = io.DisplaySize.y * MULT_Y;
-	// font Size
+	
 	m_fFontSize = ScaleY( pSettings->GetReadOnly().fFontSize );
 
 	Log("GUI | Scale factor: %f, %f Font size: %f", m_vecScale.x, m_vecScale.y, m_fFontSize);
-
-	// setup style
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.ScrollbarSize = ScaleY(55.0f);
 	style.WindowBorderSize = 0.0f;
 	ImGui::StyleColorsDark();
 
-	// load fonts
 	char path[0xFF];
 	sprintf(path, "%sSAMP/fonts/%s", g_pszStorage, pSettings->GetReadOnly().szFont);
-	// cp1251 ranges
 	static const ImWchar ranges[] = 
 	{
 		0x0020, 0x0080,
@@ -80,9 +69,9 @@ CGUI::CGUI()
 		0x2110, 0x2130,
 		0
 	};
-	Log("GUI | Loading font: %s", pSettings->GetReadOnly().szFont);
+	//Log("GUI | Loading font: %s", pSettings->GetReadOnly().szFont);
 	m_pFont = io.Fonts->AddFontFromFileTTF(path, m_fFontSize, nullptr, ranges);
-	Log("GUI | ImFont pointer = 0x%X", m_pFont);
+	//Log("GUI | ImFont pointer = 0x%X", m_pFont);
 
 	style.WindowRounding = 0.0f;
 
@@ -100,7 +89,7 @@ CGUI::~CGUI()
 	ImGui_ImplRenderWare_ShutDown();
 	ImGui::DestroyContext();
 }
-#include "..//CServerManager.h"
+#include "..//clientlogic/CNetwork.h"
 bool g_IsVoiceServer()
 {
 	return true;
@@ -129,6 +118,14 @@ void CGUI::PreProcessInput()
 	}
 }
 
+void CGUI::CoordsRadar(CRect* rect)
+{
+        rect->left=83.0f;
+        rect->bottom=57.0f;
+        rect->right=25.0f;
+        rect->top=25.0f;
+}
+
 void CGUI::PostProcessInput()
 {
 	ImGuiIO& io = ImGui::GetIO();
@@ -144,90 +141,14 @@ void CGUI::PostProcessInput()
 		m_bNextClear = true;
 	}
 }
-#include "..//CDebugInfo.h"
+#include "..//debug.h"
 extern CGame* pGame;
-
-void CGUI::SetHealth(float fhpcar){
-   bHealth = static_cast<int>(fhpcar);
-}
-
-int CGUI::GetHealth(){
-	return 1;//static_cast<int>(pVehicle->GetHealth());
-}
-
-void CGUI::SetDoor(int door){
-	bDoor = door;
-}
-
-void CGUI::SetEngine(int engine){
-	bEngine = engine;
-}
-
-void CGUI::SetLights(int lights){
-	bLights = lights;
-}
-
-void CGUI::SetMeliage(float meliage){
-	bMeliage = static_cast<int>(meliage);
-}
-
-void CGUI::SetEat(float eate){
-	eat = static_cast<int>(eate);
-}
-
-int CGUI::GetEat(){
-	return eat;
-}
-
-void CGUI::SetFuel(float fuel){
-   m_fuel = static_cast<int>(fuel);
-}
-
-void CGUI::ShowSpeed(){
-	if (!pGame || !pNetGame || !pGame->FindPlayerPed()->IsInVehicle()) {
-		g_pJavaWrapper->HideSpeed();
-		bMeliage =0;
-		m_fuel = 0;
-		return;
-	}
-	if (pGame->FindPlayerPed()->IsAPassenger()) {
-		g_pJavaWrapper->HideSpeed();
-		bMeliage =0;
-		m_fuel = 0;
-		return;
-	}
-
-	int i_speed = 0;
-	bDoor =0;
-	bEngine = 0;
-	bLights = 0;
-	float fHealth = 0;
-	CVehicle *pVehicle = nullptr;
-	CVehiclePool *pVehiclePool = pNetGame->GetVehiclePool();
-	CPlayerPed *pPlayerPed = pGame->FindPlayerPed();
-    VEHICLEID id = pVehiclePool->FindIDFromGtaPtr(pPlayerPed->GetGtaVehicle());
-    pVehicle = pVehiclePool->GetAt(id);
-    
-    if(pPlayerPed)
-    {
-        if(pVehicle)
-        {
-            VECTOR vecMoveSpeed;
-            pVehicle->GetMoveSpeedVector(&vecMoveSpeed);
-            i_speed = sqrt((vecMoveSpeed.X * vecMoveSpeed.X) + (vecMoveSpeed.Y * vecMoveSpeed.Y) + (vecMoveSpeed.Z * vecMoveSpeed.Z)) * 180;
-            bHealth = pVehicle->GetHealth();
-            bDoor = pVehicle->GetDoorState();
-            bEngine = pVehicle->GetEngineState();
-            bLights = pVehicle->GetLightsState();
-        }
-    }
-	g_pJavaWrapper->ShowSpeed();
-	g_pJavaWrapper->UpdateSpeedInfo(i_speed, m_fuel, bHealth, bMeliage, bEngine, bLights, 0, bDoor);
-}
 
 void CGUI::Render()
 {
 	PreProcessInput();
+
+                  //RenderGUI();
 
 	ProcessPushedTextdraws();
 	if (pChatWindow)
@@ -236,12 +157,11 @@ void CGUI::Render()
 	}
 
 	ImGui_ImplRenderWare_NewFrame();
-	ImGui::NewFrame();
+	ImGui::NewFrame();	
 
-	
-
-	RenderVersion();
-	//RenderRakNetStatistics();
+	//RenderVersion();
+                 
+                  //RenderPosition();
 
 	if (pKeyBoard)
 	{
@@ -260,132 +180,7 @@ void CGUI::Render()
 	if (pScoreBoard) pScoreBoard->Draw();
 	if (pKeyBoard) pKeyBoard->Render();
 	if (pDialogWindow) pDialogWindow->Render();
-
-	/*if (pNetGame && !pDialogWindow->m_bIsActive && pGame->IsToggledHUDElement(HUD_ELEMENT_BUTTONS))
-	{
-		ImGuiIO& io = ImGui::GetIO();
-		ImVec2 vecButSize = ImVec2(ImGui::GetFontSize() * 3.5, ImGui::GetFontSize() * 2.5);
-		ImGui::SetNextWindowPos(ImVec2(2.0f, io.DisplaySize.y / 2.8 - vecButSize.x / 2));
-		ImGui::Begin("###keys", nullptr,
-			ImGuiWindowFlags_NoTitleBar |
-			ImGuiWindowFlags_NoResize |
-			ImGuiWindowFlags_NoScrollbar |
-			ImGuiWindowFlags_NoSavedSettings |
-			ImGuiWindowFlags_AlwaysAutoResize);
-
-		if (ImGui::Button(m_bKeysStatus ? "<<" : ">>", vecButSize))
-		{
-			if (m_bKeysStatus)
-				m_bKeysStatus = false;
-			else
-				m_bKeysStatus = true;
-		}
-
-
-		ImGui::SameLine();
-		if (ImGui::Button("Alt", vecButSize))
-		{
-			CPlayerPool* pPlayerPool = pNetGame->GetPlayerPool();
-			if (pPlayerPool)
-			{
-				CLocalPlayer* pLocalPlayer;
-				if (!pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
-					LocalPlayerKeys.bKeys[ePadKeys::KEY_WALK] = true;
-				else
-					LocalPlayerKeys.bKeys[ePadKeys::KEY_FIRE] = true;
-			}
-		}
-
-		ImGui::SameLine();
-		CVehiclePool* pVehiclePool = pNetGame->GetVehiclePool();
-		if (pVehiclePool)
-		{
-			VEHICLEID ClosetVehicleID = pVehiclePool->FindNearestToLocalPlayerPed();
-			if (ClosetVehicleID < MAX_VEHICLES && pVehiclePool->GetSlotState(ClosetVehicleID))
-			{
-				CVehicle* pVehicle = pVehiclePool->GetAt(ClosetVehicleID);
-				if (pVehicle)
-				{
-					if (pVehicle->GetDistanceFromLocalPlayerPed() < 5.0f)
-					{
-						CPlayerPool* pPlayerPool = pNetGame->GetPlayerPool();
-						if (pPlayerPool)
-						{
-							CLocalPlayer* pLocalPlayer;
-							if (!pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
-							{
-								if (ImGui::Button("G", vecButSize))
-								{
-									if (pNetGame)
-									{
-										if (pPlayerPool)
-										{
-											pLocalPlayer = pPlayerPool->GetLocalPlayer();
-											if (pLocalPlayer)
-											{
-												pLocalPlayer->HandlePassengerEntryEx();
-											}
-										}
-									}
-								}
-							}
-							else
-								if (pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
-								{
-									if (ImGui::Button("L. Ctrl", vecButSize))
-									{
-										LocalPlayerKeys.bKeys[ePadKeys::KEY_ACTION] = true;
-									}
-								}
-							ImGui::SameLine();
-						}
-					}
-				}
-			}
-		}
-		if (m_bKeysStatus)
-		{
-			ImGui::SameLine();
-			if (ImGui::Button("Y", vecButSize))
-				LocalPlayerKeys.bKeys[ePadKeys::KEY_YES] = true;
-			ImGui::SameLine();
-			if (ImGui::Button("N", vecButSize))
-				LocalPlayerKeys.bKeys[ePadKeys::KEY_NO] = true;
-			ImGui::SameLine();
-			if (ImGui::Button("H", vecButSize))
-				LocalPlayerKeys.bKeys[ePadKeys::KEY_CTRL_BACK] = true;
-
-		}
-		ImGui::End();
-	}*/
-
-	if (pNetGame)
-	{
-		if (pVoice && g_IsVoiceServer())
-		{
-			if (pVoice->IsRecording() && GetTickCount() - g_uiLastTickVoice >= 20000)
-			{
-				char buf[64];
-				sprintf(&buf[0], "%d", (int)((30000 - (GetTickCount() - g_uiLastTickVoice)) / 1000) + 1);
-				ImVec2 test(ScaleX(pSettings->GetReadOnly().fButtonMicrophoneX + pSettings->GetReadOnly().fButtonMicrophoneSize / 2.0f) - ImGui::CalcTextSize(&buf[0]).x / 2.0f, ScaleY(g_fMicrophoneButtonPosY) - GetFontSize() * 2.6f);
-				//RenderText(test, 0xFF0000FF, true, &buf[0]);
-			}
-			ImVec2 centre(ScaleX(35.0f), ScaleY(35.0f));
-			if (pVoice->IsDisconnected())
-			{
-				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(1.0f, 0.0f, 0.0f));
-			}
-			if (pVoice->GetNetworkState() == VOICECHAT_CONNECTING || pVoice->GetNetworkState() == VOICECHAT_WAIT_CONNECT)
-			{
-				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(1.0f, 1.0f, 0.0f));
-			}
-			if (pVoice->GetNetworkState() == VOICECHAT_CONNECTED)
-			{
-				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(0.0f, 1.0f, 0.0f));
-			}
-		}
-	}
-
+	
 	CDebugInfo::Draw();
 
 	ImGui::EndFrame();
@@ -445,13 +240,156 @@ bool CGUI::OnTouchEvent(int type, bool multi, int x, int y)
 	return true;
 }
 
+
+void CGUI::RenderPosition()
+{
+    ImGuiIO& io = ImGui::GetIO();
+    MATRIX4X4 matFromPlayer;
+
+    CPlayerPed *pLocalPlayerPed = pGame->FindPlayerPed();
+    pLocalPlayerPed->GetMatrix(&matFromPlayer);
+
+    ImVec2 _ImVec2 = ImVec2(ScaleX(10), io.DisplaySize.y - ImGui::GetFontSize() * 0.85);
+
+    char text[128];
+    sprintf(text, "\t\tPosition > X: %.4f - Y: %.4f - Z: %.4f", matFromPlayer.pos.X, matFromPlayer.pos.Y, matFromPlayer.pos.Z);
+
+    RenderText(_ImVec2, ImColor(255, 255, 255, 255), false, text, nullptr);
+}
+
+void CGUI::RenderGUI()
+{
+		ImGuiIO& io = ImGui::GetIO();
+		ImVec2 vecButSize = ImVec2(ImGui::GetFontSize() * 3.8, ImGui::GetFontSize() * 2.3);
+		ImGui::SetNextWindowPos(ImVec2(2.0f, io.DisplaySize.y / 2.0 - vecButSize.x / 2));
+		ImGui::Begin("###keys", nullptr,
+			ImGuiWindowFlags_NoTitleBar |
+			ImGuiWindowFlags_NoResize |
+			ImGuiWindowFlags_NoScrollbar |
+			ImGuiWindowFlags_NoSavedSettings |
+			ImGuiWindowFlags_AlwaysAutoResize);
+
+		if (ImGui::Button(m_bKeysStatus ? "<" : ">", vecButSize))
+		{
+			if (m_bKeysStatus)
+				m_bKeysStatus = false;
+			else
+				m_bKeysStatus = true;
+		}
+
+		ImGui::SameLine();
+		CVehiclePool* pVehiclePool = pNetGame->GetVehiclePool();
+		if (pVehiclePool)
+		{
+			VEHICLEID ClosetVehicleID = pVehiclePool->FindNearestToLocalPlayerPed();
+			if (ClosetVehicleID < MAX_VEHICLES && pVehiclePool->GetSlotState(ClosetVehicleID))
+			{
+				CVehicle* pVehicle = pVehiclePool->GetAt(ClosetVehicleID);
+				if (pVehicle)
+				{
+					if (pVehicle->GetDistanceFromLocalPlayerPed() < 5.0f)
+					{
+						CPlayerPool* pPlayerPool = pNetGame->GetPlayerPool();
+						if (pPlayerPool)
+						{
+							CLocalPlayer* pLocalPlayer;
+							if (!pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
+							{
+								/*if (ImGui::Button("G", vecButSize))
+								{
+									if (pNetGame)
+									{
+										if (pPlayerPool)
+										{
+											pLocalPlayer = pPlayerPool->GetLocalPlayer();
+											if (pLocalPlayer)
+											{
+												pLocalPlayer->HandlePassengerEntryEx();
+											}
+										}
+									}
+								}*/
+							}
+							else
+								if (pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
+								{
+									if (ImGui::Button("2", vecButSize))
+									{
+										LocalPlayerKeys.bKeys[ePadKeys::KEY_ACTION] = true;
+									}
+								}
+							ImGui::SameLine();
+						}
+					}
+				}
+			}
+		}
+		if (m_bKeysStatus)
+		{
+                                           ImGui::SameLine();
+		if (ImGui::Button("ALT", vecButSize))
+		{
+			CPlayerPool* pPlayerPool = pNetGame->GetPlayerPool();
+			if (pPlayerPool)
+			{
+				CLocalPlayer* pLocalPlayer;
+				if (!pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
+					LocalPlayerKeys.bKeys[ePadKeys::KEY_WALK] = true;
+				else
+					LocalPlayerKeys.bKeys[ePadKeys::KEY_FIRE] = true;
+			}
+		}
+                                                       
+			ImGui::SameLine();
+			if (ImGui::Button("Y", vecButSize))
+				LocalPlayerKeys.bKeys[ePadKeys::KEY_YES] = true;
+			ImGui::SameLine();
+			if (ImGui::Button("N", vecButSize))
+				LocalPlayerKeys.bKeys[ePadKeys::KEY_NO] = true;
+			ImGui::SameLine();
+			if (ImGui::Button("H", vecButSize))
+				LocalPlayerKeys.bKeys[ePadKeys::KEY_CTRL_BACK] = true;
+
+		}
+		ImGui::End();
+	//}
+}
+
+void CGUI::RenderServer()
+{
+	if (pNetGame)
+	{
+		if (pVoice && g_IsVoiceServer())
+		{
+			if (pVoice->IsRecording() && GetTickCount() - g_uiLastTickVoice >= 20000)
+			{
+				char buf[64];
+				sprintf(&buf[0], "%d", (int)((30000 - (GetTickCount() - g_uiLastTickVoice)) / 1000) + 1);
+				ImVec2 test(ScaleX(pSettings->GetReadOnly().fButtonMicrophoneX + pSettings->GetReadOnly().fButtonMicrophoneSize / 2.0f) - ImGui::CalcTextSize(&buf[0]).x / 2.0f, ScaleY(g_fMicrophoneButtonPosY) - GetFontSize() * 2.6f);
+				//RenderText(test, 0xFF0000FF, true, &buf[0]);
+			}
+			ImVec2 centre(ScaleX(35.0f), ScaleY(35.0f));
+			if (pVoice->IsDisconnected())
+			{
+				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(1.0f, 0.0f, 0.0f));
+			}
+			if (pVoice->GetNetworkState() == VOICECHAT_CONNECTING || pVoice->GetNetworkState() == VOICECHAT_WAIT_CONNECT)
+			{
+				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(1.0f, 1.0f, 0.0f));
+			}
+			if (pVoice->GetNetworkState() == VOICECHAT_CONNECTED)
+			{
+				ImGui::GetBackgroundDrawList()->AddCircleFilled(centre, 18.0f, ImColor(0.0f, 1.0f, 0.0f));
+			}
+		}
+	}
+}
+
+
 void CGUI::RenderVersion()
 {
-	return;
-
-	ImGui::GetOverlayDrawList()->AddText(
-		ImVec2(ScaleX(10), ScaleY(10)), 
-		ImColor(IM_COL32_BLACK), PORT_VERSION);
+     ImVec2 verpos = ImVec2(ScaleX(10), ScaleY(10));
+	RenderText(verpos, ImColor(0xFFFFFFFF), true, "v1.5.2"); 
 }
 
 void CGUI::ProcessPushedTextdraws()
@@ -468,11 +406,7 @@ void CGUI::ProcessPushedTextdraws()
 
 void CGUI::RenderRakNetStatistics()
 {
-		//StatisticsToString(rss, message, 0);
 
-		/*ImGui::GetOverlayDrawList()->AddText(
-			ImVec2(ScaleX(10), ScaleY(400)),
-			ImColor(IM_COL32_BLACK), message);*/
 }
 
 extern uint32_t g_uiBorderedText;
@@ -569,4 +503,85 @@ void CGUI::RenderText(ImVec2& posCur, ImU32 col, bool bOutline, const char* text
 	}
 
 	ImGui::GetBackgroundDrawList()->AddText(posCur, col, text_begin, text_end);
+}
+
+
+void CGUI::SetHealth(float fhpcar){
+   bHealth = static_cast<int>(fhpcar);
+}
+
+int CGUI::GetHealth(){
+	return 1;//static_cast<int>(pVehicle->GetHealth());
+}
+
+void CGUI::SetDoor(int door){
+	bDoor = door;
+}
+
+void CGUI::SetEngine(int engine){
+	bEngine = engine;
+}
+
+void CGUI::SetLights(int lights){
+	bLights = lights;
+}
+
+void CGUI::SetMeliage(float meliage){
+	bMeliage = static_cast<int>(meliage);
+}
+
+void CGUI::SetEat(float eate){
+	eat = static_cast<int>(eate);
+}
+
+int CGUI::GetEat(){
+	return eat;
+}
+
+void CGUI::SetFuel(float fuel){
+   m_fuel = static_cast<int>(fuel);
+}
+
+void CGUI::ShowSpeed(){
+	if(pKeyBoard->m_bEnable)
+	    return;
+	if (!pGame || !pNetGame || !pGame->FindPlayerPed()->IsInVehicle()) {
+		g_pJavaWrapper->HideSpeed();
+		bMeliage =0;
+		m_fuel = 0;
+		return;
+	}
+	if (pGame->FindPlayerPed()->IsAPassenger()) {
+		g_pJavaWrapper->HideSpeed();
+		bMeliage =0;
+		m_fuel = 0;
+		return;
+	}
+
+	int i_speed = 0;
+	bDoor =0;
+	bEngine = 0;
+	bLights = 0;
+	float fHealth = 0;
+	CVehicle *pVehicle = nullptr;
+	CVehiclePool *pVehiclePool = pNetGame->GetVehiclePool();
+	CPlayerPed *pPlayerPed = pGame->FindPlayerPed();
+    VEHICLEID id = pVehiclePool->FindIDFromGtaPtr(pPlayerPed->GetGtaVehicle());
+    pVehicle = pVehiclePool->GetAt(id);
+    
+    if(pPlayerPed)
+    {
+        if(pVehicle)
+        {
+            VECTOR vecMoveSpeed;
+            pVehicle->GetMoveSpeedVector(&vecMoveSpeed);
+            i_speed = sqrt((vecMoveSpeed.X * vecMoveSpeed.X) + (vecMoveSpeed.Y * vecMoveSpeed.Y) + (vecMoveSpeed.Z * vecMoveSpeed.Z)) * 180;
+            bHealth = pVehicle->GetHealth();
+            bDoor = pVehicle->GetDoorState();
+            bEngine = pVehicle->GetEngineState();
+            bLights = pVehicle->GetLightsState();
+        }
+    }
+	g_pJavaWrapper->ShowSpeed();
+	g_pJavaWrapper->UpdateSpeedInfo(i_speed, m_fuel, bHealth, bMeliage, bEngine, bLights, 0, bDoor);
 }

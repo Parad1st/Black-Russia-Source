@@ -3,7 +3,7 @@
 #include "netgame.h"
 #include "../chatwindow.h"
 #include "../dialog.h"
-#include "../CSettings.h"
+#include "../settings.h"
 #include "../util/CJavaWrapper.h"
 #include "../voice/CVoiceChatClient.h"
 
@@ -98,7 +98,7 @@ void InitGame(RPCParameters *rpcParams)
 				//Log("Created voice");
 			}
 
-	if(pChatWindow) pChatWindow->AddDebugMessage("Connected to {B9C9BF}%.64s", pNetGame->m_szHostName);
+	//if(pChatWindow) pChatWindow->AddDebugMessage("Connected to {B9C9BF}%.64s", pNetGame->m_szHostName);
 }
 
 void ServerJoin(RPCParameters *rpcParams)
@@ -624,7 +624,7 @@ void ConnectionRejected(RPCParameters *rpcParams)
 		pChatWindow->AddInfoMessage("ПОДКЛЮЧЕНИЕ ЗАКРЫТО: Неверный никнейм");
 		pChatWindow->AddInfoMessage("Использовать никнейм можно от 3 до 20 символов");
 		pChatWindow->AddInfoMessage("Используйте только: a-z, A-Z, 0-9");
-		pChatWindow->AddInfoMessage("Выйдите из игры, зайдите в лаунчер Brilliant Mobile и измените ник!");
+		pChatWindow->AddInfoMessage("Выйдите из игры, зайдите в лаунчер и измените ник!");
 	}
 	else if(byteRejectReason == REJECT_REASON_BAD_MOD)
 	{
@@ -786,7 +786,7 @@ void ProcessIncommingEvent(BYTE bytePlayerID, int iEventType, uint32_t dwParam1,
 			break;
 		}
 		ScriptCommand(&add_car_component, iVehicleID, iComponent, &v);
-		pChatWindow->AddDebugMessage("Added car component: %d",iComponent);
+		//pChatWindow->AddDebugMessage("Added car component: %d",iComponent);
 		break;
 
 	case EVENT_TYPE_CARCOLOR:

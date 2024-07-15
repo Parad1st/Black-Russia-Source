@@ -4,7 +4,7 @@
 #include "net/netgame.h"
 #include "gui/gui.h"
 #include "playertags.h"
-#include "CSettings.h"
+#include "settings.h"
 
 extern CGame *pGame;
 extern CNetGame *pNetGame;

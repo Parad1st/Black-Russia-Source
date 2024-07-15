@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include "game/common.h"
 
+#define SA_ADDR(addr) (g_libGTASA + (addr))
+
 #define SAMP_VERSION	"0.3.7"
 #define PORT_VERSION	"0.69"
 

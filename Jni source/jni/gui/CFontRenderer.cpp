@@ -40,10 +40,10 @@ CFontInstance* CFontRenderer::AddFont(const char* szPath, int iLineHeight)
 			{
 				if (!pInstance->IsOk())
 				{
-					Log("Instance is not ok, deleting");
+					//Log("Instance is not ok, deleting");
 					delete pInstance;
 					pInstance = nullptr;
-					Log("Deleted instance");
+					//Log("Deleted instance");
 					return pInstance;
 				}
 			}

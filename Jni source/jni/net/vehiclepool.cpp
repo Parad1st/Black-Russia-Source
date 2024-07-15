@@ -86,57 +86,57 @@ bool CVehiclePool::New(NEW_VEHICLE *pNewVehicle)
 	{
 		case 0:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 2, "KA 8723 AK", "");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A578AA", "52");
 			break;
 		}
 		case 1:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "c065mk", "77");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A235EE", "39");
 			break;
 		}
 		case 2:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 3, "8765 AX-3", "");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "E000AA", "777");
 			break;
 		}
 		case 3:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 4, "421epa", "02");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "E825AA", "52");
 			break;
 		}
 		case 4:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 5, "a 8762", "77");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A285EA", "52");
 			break;
 		}
 		case 5:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 2, "HA 9823 KK", "");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A657AA", "52");
 			break;
 		}
 		case 6:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "c089mk", "28");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A658EA", "52");
 			break;
 		}
 		case 7:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 3, "2398 AA-7", "");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "A578AE", "52");
 			break;
 		}
 		case 8:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 4, "872epa", "02");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "E782AA", "51");
 			break;
 		}
 		case 9:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 5, "o 9123", "53");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "м158км", "52");
 			break;
 		}
 		case 10:
 		{
-			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 5, "a 8762", "77");
+			CCustomPlateManager::PushPlate(pNewVehicle->VehicleID, 1, "м518ру", "52");
 			break;
 		}
 	}
@@ -163,7 +163,7 @@ bool CVehiclePool::New(NEW_VEHICLE *pNewVehicle)
 
 		// damage status
 		if(pNewVehicle->dwPanelDamageStatus || 
-			pNewVehicle->dwDoorDamageStatus || 
+			pNewVehicle->dwDoorDamageStatus ||
 			pNewVehicle->byteLightDamageStatus)
 		{
 			m_pVehicles[pNewVehicle->VehicleID]->UpdateDamageStatus(

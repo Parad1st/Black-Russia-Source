@@ -2,16 +2,27 @@
 #include "../game/game.h"
 #include "../gui/gui.h"
 #include "netgame.h"
+#include "../util/CJavaWrapper.h"
 
 extern CWidgetManager* g_pWidgetManager;
+extern CJavaWrapper* g_pJavaWrapper;
+extern CNetGame* pNetGame;
 
 #include "../chatwindow.h"
 
-#include "..//CClientInfo.h"
-#include "..//CLocalisation.h"
+#include "..//util/CClientJava.h"
+#include "..//clientlogic/ChatMessenger.h"
+#include "..//clientlogic/CHUD.h"
 
 #define NETGAME_VERSION 4057
-#define AUTH_BS "E02262CF28BC542486C558D4BE9EFB716592AFAF8B"
+#define AUTH_BS "10B3D2B1317ADD02CC1F680BC500A8BC0FD7AD42CE7"
+
+//#define AUTH_BS "E02262CF28BC542486C558D4BE9EFB716592AFAF8B"
+
+//Black Russia New AUTH
+//#define AUTH_BS "10EF38095514DBF164C8FD10438A3C9BCB4DA4A9E15"
+
+//Maga Old
 //#define AUTH_BS "1528354F18550C00AB504591304D0379BB0ACA99043"
 
 extern CGame *pGame;
@@ -38,7 +49,7 @@ unsigned char GetPacketID(Packet *p)
 
 CNetGame::CNetGame(const char* szHostOrIp, int iPort, const char* szPlayerName, const char* szPass)
 {
-	strcpy(m_szHostName, "San Andreas Multiplayer");
+	//strcpy(m_szHostName, "LUX RUSSIA");
 	strncpy(m_szHostOrIp, szHostOrIp, sizeof(m_szHostOrIp));
 	m_iPort = iPort;
 
@@ -82,7 +93,17 @@ CNetGame::CNetGame(const char* szHostOrIp, int iPort, const char* szPlayerName, 
 
 	pGame->EnableClock(false);
 	pGame->EnableZoneNames(false);
+
+	if(pChatWindow) 
+                  {
+                          // затухание чата
+                          pChatWindow->SetChatDissappearTimeout(37, 0);
+
+                          // клиент запущен
+                          pChatWindow->AddDebugMessageNonFormatted(CLocalisation::GetMessage(E_MSG::MODIFIED_FILES));
+                  }
 }
+
 #include "..//voice/CVoiceChatClient.h"
 extern CVoiceChatClient* pVoice;
 CNetGame::~CNetGame()
@@ -143,7 +164,7 @@ CNetGame::~CNetGame()
 
 bool g_IsVoiceServer();
 #include "CUDPSocket.h"
-#include "..//CServerManager.h"
+#include "..//clientlogic/CNetwork.h"
 extern int g_iServer;
 void CNetGame::Process()
 {
@@ -173,6 +194,7 @@ void CNetGame::Process()
 
 	if(GetGameState() == GAMESTATE_CONNECTED)
 	{
+                g_pJavaWrapper->hideHelper();
 		// pool process
 		if(m_pPlayerPool && bProcess) m_pPlayerPool->Process();
 		if (m_pObjectPool) m_pObjectPool->Process();
@@ -197,76 +219,36 @@ void CNetGame::Process()
 	{
 		CPlayerPed *pPlayer = pGame->FindPlayerPed();
 		CCamera *pCamera = pGame->GetCamera();
+                CPlayerPool *pPlayerPool = pNetGame->GetPlayerPool();
 
-		if(pPlayer && pCamera)
-		{
-			if(pPlayer->IsInVehicle())
-				pPlayer->RemoveFromVehicleAndPutAt(1093.4f, -2036.5f, 82.7106f);
+		if(!CHUD::m_bCreatedCar && pPlayer && pCamera)
+		{                                  
+                        pCamera->Restore();
+  	                pCamera->SetBehindPlayer();
+			
+                        if(pPlayer->IsInVehicle())
+				pPlayer->RemoveFromVehicleAndPutAt(431.8335, 250.1207, 11.9394);
 			else
-				pPlayer->TeleportTo(1093.4f, -2036.5f, 82.7106f);
+				pPlayer->TeleportTo(431.8335, 250.1207, 11.9394);
+                                                                       
+                        pPlayer->TogglePlayerControllable(true);
+                        pPlayer->SetModelIndex(122);
 
-			pCamera->SetPosition(1093.0f, -2036.0f, 90.0f, 0.0f, 0.0f, 0.0f);
-			pCamera->LookAtPoint(384.0f, -1557.0f, 20.0f, 2);
 			pGame->SetWorldWeather(m_byteWeather);
-			pGame->DisplayWidgets(false);
-		}
+			pGame->DisplayWidgets(true);
+			pGame->ToggleRadar(false);
+
+                        pGame->NewVehicle(402, 433.8335, 250.1207, 11.9394, 0, false); 
+                 }
+                 CHUD::m_bCreatedCar = true;
 	}
 
 	if(GetGameState() == GAMESTATE_WAIT_CONNECT &&
 		(GetTickCount() - m_dwLastConnectAttempt) > 3000)
 	{
-		/*if (CClientInfo::bSAMPModified)
-		{
-			if (pChatWindow) pChatWindow->AddDebugMessageNonFormatted(CLocalisation::GetMessage(E_MSG::MODIFIED_FILES));
-			SetGameState(GAMESTATE_CONNECTING);
-			m_dwLastConnectAttempt = GetTickCount();
-			return;
-		}
-
-		if (!CClientInfo::bJoinedFromLauncher)
-		{
-			if (pChatWindow) pChatWindow->AddDebugMessageNonFormatted(CLocalisation::GetMessage(E_MSG::NOT_FROM_LAUNCHER));
-			SetGameState(GAMESTATE_CONNECTING);
-			m_dwLastConnectAttempt = GetTickCount();
-			return;
-		}*/
-
 		if(pChatWindow) pChatWindow->AddDebugMessageNonFormatted(CLocalisation::GetMessage(E_MSG::CONNECTING));
-		static bool sent = false;
-		CUDPSocket sock;
-		for (int i = 0; i < 100; i++)
-		{
-			const char* ip = m_pRakClient->GetPlayerID().ToString();
-			if (sock.Bind(5000 + i * 10 + (rand() % 100)))
-			{
-				CRawData data(250);
-				while (data.GetWriteOffset() < 170)
-				{
-					data.Write("SAMP", 4);
-					data.Write("00000000", 8);
-					data.Write(ip, strlen(ip));
-					data.Write("00000000", 8);
-					data.Write(g_sEncryptedAddresses[g_iServer].decrypt(), strlen(g_sEncryptedAddresses[g_iServer].decrypt()));
-					data.Write("00112233445566778899FFFFFFFFFFFFFFFF", 36);
-				}
-				std::string ip = g_sEncryptedAddresses[g_iServer].decrypt();
-				std::stringstream s(ip);
-				int a, b, c, d;
-				char ch;
-				s >> a >> ch >> b >> ch >> c >> ch >> d;
-				CAddress dest(a, b, c, d);
-				dest.usPort = g_sEncryptedAddresses[g_iServer].getPort();
-
-				for (int j = 0; j < 3; j++)
-				{
-					sock.Send(dest, data);
-					usleep(5);
-				}
-
-				break;
-			}
-		}
-
+		g_pJavaWrapper->showHelper(1);
+		
 		m_pRakClient->Connect(m_szHostOrIp, m_iPort, 0, 0, 5);
 		m_dwLastConnectAttempt = GetTickCount();
 		SetGameState(GAMESTATE_CONNECTING);
@@ -295,7 +277,7 @@ void CNetGame::UpdateNetwork()
 		switch(packetIdentifier)
 		{
 			case ID_AUTH_KEY:
-			Log("Incoming packet: ID_AUTH_KEY");
+			//Log("Incoming packet: ID_AUTH_KEY");
 			Packet_AuthKey(pkt);
 			break;
 
@@ -322,15 +304,16 @@ void CNetGame::UpdateNetwork()
 			break;
 
 			case ID_FAILED_INITIALIZE_ENCRIPTION:
-			pChatWindow->AddDebugMessage("Failed to initialize encryption.");
+			//pChatWindow->AddDebugMessage("Failed to initialize encryption.");
 			break;
 
 			case ID_CONNECTION_BANNED:
-			pChatWindow->AddDebugMessageNonFormatted(CLocalisation::GetMessage(E_MSG::BANNED));
+                                                      //g_pJavaWrapper->ShowNotification(4, "Произошла неизвестная сетевая ошибка, переподключение", 7, "", ">>");
+			SetGameState(GAMESTATE_WAIT_CONNECT);
 			break;
 
 			case ID_INVALID_PASSWORD:
-			pChatWindow->AddDebugMessage("Неверный пароль для подключения к серверу!");
+			//pChatWindow->AddDebugMessage("Неверный пароль для подключения к серверу!");
 			m_pRakClient->Disconnect(0);
 			break;
 
@@ -395,7 +378,6 @@ void CNetGame::Packet_TrailerSync(Packet* p)
 }
 
 #define CUSTOM_RPC_TOGGLE_HUD_ELEMENT   0x1
-
 #define RPC_STREAM_CREATE	0x2
 #define RPC_STREAM_POS		0x3
 #define RPC_STREAM_DESTROY	0x4
@@ -411,12 +393,46 @@ void CNetGame::Packet_TrailerSync(Packet* p)
 #define RPC_CUSTOM_HANDLING_DEFAULTS	0x14
 #define RPC_OPEN_SETTINGS	0x15
 
+#define RPC_SHOW_GPS	0x177
+#define RPC_HIDE_GPS	0x170
+
+#define RPC_SHOW_HUD	0x35
+#define RPC_HIDE_HUD	0x36
+
+#define RPC_DONATE	0x37
+#define RPC_DONATE_UPD	0x38
+#define RPC_DONATE_SHOWSC	0x39
+#define RPC_DONATE_BUYCAR	0x41
+
+#define RPC_AUTO_SHOP 0x54
+#define RPC_UPD_SHOP 0x55
+#define RPC_HIDE_AUTO 0x200
+#define RPC_SHOW_SHOP 0x78
+#define RPC_HIDE_SHOP 0x79
+#define RPC_SHOW_RECON 0x92
+#define RPC_HIDE_RECON 0x93
+#define RPC_SHOW_FUEL_STATION 0x88
+#define RPC_SHOW_SPAWN_SELECTOR_WINDOW  0x24
+#define RPC_SHOW_TAB  0x277
+#define RPC_SHOW_INVENTORY 0x266
+#define RPC_SHOW_PRE_DEATH 0x271
+
+#define RPC_SHOW_X2	0x181
+#define RPC_HIDE_X2	0x182
+
+#define RPC_SHOW_ZONA	0x183
+#define RPC_HIDE_ZONA	0x184
+
+#define RPC_GUI_ALT	0x185
+
 #define RPC_CUSTOM_ACTOR_PUT_IN_VEH	0x20
 #define RPC_CUSTOM_ACTOR_REMOVE_VEH	0x21
 #define RPC_CUSTOM_ACTOR_ADD_ADDITIONAL	0x22
 #define RPC_CUSTOM_SET_FUEL				0x25
 #define RPC_CUSTOM_SET_MILEAGE		0x28
 #define RPC_SHOW_NOTIFICATION	0x32
+#define RPC_SHOW_PERSON 0x90
+#define RPC_HIDE_PERSON 0x91
 
 #include "..//game/CCustomPlateManager.h"
 #include "..//util/CJavaWrapper.h"
@@ -431,12 +447,55 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 	//pChatWindow->AddDebugMessage("p %d rpc %d", packetID, rpcID);
 	switch (rpcID)
 	{
+	case RPC_SHOW_GPS:
+	{
+		g_pJavaWrapper->ShowGPS();
+		break;
+	}
+	case RPC_GUI_ALT:
+	{
+		CPlayerPool* pPlayerPool = pNetGame->GetPlayerPool();
+		if (pPlayerPool)
+	                  {
+			CLocalPlayer* pLocalPlayer;
+			if (!pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsInVehicle() && !pPlayerPool->GetLocalPlayer()->GetPlayerPed()->IsAPassenger())
+			                  LocalPlayerKeys.bKeys[ePadKeys::KEY_WALK] = true;
+			else
+				LocalPlayerKeys.bKeys[ePadKeys::KEY_FIRE] = true;
+		}
+		break;
+	}
+	case RPC_HIDE_GPS:
+	{
+		g_pJavaWrapper->HideGPS();
+		break;
+	}
+	case RPC_SHOW_ZONA:
+	{
+		g_pJavaWrapper->ShowZona();
+		break;
+	}
+	case RPC_HIDE_ZONA:
+	{
+		g_pJavaWrapper->HideZona();
+		break;
+	}
+	case RPC_SHOW_X2:
+	{
+		g_pJavaWrapper->ShowX2();
+		break;
+	}
+	case RPC_HIDE_X2:
+	{
+		g_pJavaWrapper->HideX2();
+		break;
+	}
 	case RPC_OPEN_SETTINGS:
 	{
 		g_pJavaWrapper->ShowClientSettings();
 		break;
 	}
-		case RPC_CUSTOM_HANDLING_DEFAULTS:
+	case RPC_CUSTOM_HANDLING_DEFAULTS:
 		{
 			uint16_t vehId;
 			bs.Read(vehId);
@@ -452,7 +511,7 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 
 			break;
 		}
-		case RPC_CUSTOM_VISUALS:
+	case RPC_CUSTOM_VISUALS:
 		{
 			uint16_t vehId;
 			uint8_t bLightsColor[3];
@@ -587,7 +646,7 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 
 			break;
 		}
-		case RPC_CUSTOM_ACTOR_PUT_IN_VEH:
+	case RPC_CUSTOM_ACTOR_PUT_IN_VEH:
 		{
 			uint16_t actorId;
 			VEHICLEID vehicleId;
@@ -856,6 +915,7 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 			float current = 0;
 			bs.Read(current);
 			pGUI->SetFuel(current);
+			break;
 		}
 		case RPC_CUSTOM_SET_MILEAGE :
 		{
@@ -863,6 +923,22 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 			bs.Read(currrent);
 			
 			pGUI->SetMeliage(currrent);
+		}
+		case 0x40:
+		{
+			uint16_t park, key, doors, lights, suspension, launch_control, engine, turbo;
+			
+			bs.Read(park);
+			bs.Read(key);
+			bs.Read(doors);
+			bs.Read(lights);
+			bs.Read(suspension);
+			bs.Read(launch_control);
+			bs.Read(engine);
+			bs.Read(turbo);
+		    
+			g_pJavaWrapper->ShowRadial(park, key, doors, lights, suspension, launch_control, engine, turbo);
+			return;
 		}
 		case RPC_SHOW_NOTIFICATION : 
 		{
@@ -912,8 +988,256 @@ void CNetGame::Packet_CustomRPC(Packet* p)
 			g_pJavaWrapper->ShowNotification(type, text, duration, actionBtn, textBtn);
 			return;
 		}
+		case RPC_SHOW_HUD:
+		{
+			g_pJavaWrapper->ShowHudAndLogo();
+			return;
+		}
+                case RPC_AUTO_SHOP:
+		{
+			g_pJavaWrapper->ShowAuto();
+			break;
+		}
+		case RPC_UPD_SHOP:
+		{
+			char name[256];
+			char szBuff[4096+1];
+
+			uint8_t lenname;
+			bs.Read(lenname);
+
+			memset(name, 0, sizeof(name));
+			memset(szBuff, 0, sizeof(szBuff));
+
+			bs.Read(szBuff, lenname);
+			cp1251_to_utf8(name, szBuff);
+
+			uint32_t price;
+			bs.Read(price);
+
+			uint32_t count;
+			bs.Read(count);
+
+			float maxspeed;
+			bs.Read(maxspeed);
+
+			float acceleration;
+			bs.Read(acceleration);
+
+			uint8_t gear;
+			bs.Read(gear);
+
+			g_pJavaWrapper->UpdateAuto(name, price, count, maxspeed, acceleration, gear);
+			break;
+		}
+		case RPC_HIDE_AUTO:
+		{
+			g_pJavaWrapper->HideAuto();
+			break;
+		}
+                case RPC_SHOW_SHOP:
+		{
+			int price;
+			bs.Read(price);
+
+			g_pJavaWrapper->ShowShop(price);
+			break;
+		}
+		case RPC_HIDE_SHOP:
+		{
+			g_pJavaWrapper->HideShop();
+			break;
+		}
+                case RPC_SHOW_PRE_DEATH:
+		{
+			g_pJavaWrapper->ShowPreDeath();
+			break;
+		}
+                case RPC_SHOW_FUEL_STATION:
+		{
+			int type;
+			bs.Read(type);
+
+			int price1;
+			bs.Read(price1);
+
+			int price2;
+			bs.Read(price2);
+
+			int price3;
+			bs.Read(price3);
+
+			int price4;
+			bs.Read(price4);
+
+			int price5;
+			bs.Read(price5);
+
+			int maxCount;
+			bs.Read(maxCount);
+
+			g_pJavaWrapper->ShowFuelStation(type, price1, price2, price3, price4, price5, maxCount);
+			break;
+		}
+                case RPC_SHOW_SPAWN_SELECTOR_WINDOW:
+		{
+			g_pJavaWrapper->ShowSpawn();
+			break;
+		}
+                case RPC_SHOW_TAB:
+		{
+			g_pJavaWrapper->ShowTabWindow();
+			break;
+		}
+                case RPC_SHOW_PERSON:
+		{
+			g_pJavaWrapper->ShowPerson();
+			break;
+		}
+		case RPC_HIDE_PERSON:
+		{
+			g_pJavaWrapper->HidePerson();
+			break;
+		}
+                case RPC_SHOW_INVENTORY:
+		{
+			int hp;
+			bs.Read(hp);
+
+            int hunger;
+			bs.Read(hunger);
+
+			int skin_id;
+			bs.Read(skin_id);
+
+			int key;
+			bs.Read(key);
+
+			int sumka;
+			bs.Read(sumka);
+
+			g_pJavaWrapper->ShowInventory(hp, hunger, skin_id, key, sumka);
+			break;
+		}
+                case RPC_SHOW_RECON:
+		{
+			char szBuff[4096+1];
+			char name[256];
+		
+
+			uint16_t lenname;
+			bs.Read(lenname);
+
+			memset(name, 0, sizeof(name));
+			memset(szBuff, 0, sizeof(szBuff));
+
+			bs.Read(szBuff, lenname);
+			cp1251_to_utf8(name, szBuff);
+
+			int id;
+			bs.Read(id);
+
+			g_pJavaWrapper->ShowRecon(name, id);
+			return;
+		}
+		case RPC_DONATE:
+		{
+			int money;
+			bs.Read(money);
+
+			int bc;
+			bs.Read(bc);
+		    
+			g_pJavaWrapper->ShowDonate(money, bc);
+			return;
+		}
+		case RPC_DONATE_UPD:
+		{
+			int money;
+			bs.Read(money);
+
+			int bc;
+			bs.Read(bc);
+		    
+			g_pJavaWrapper->UpdateDonate(money, bc);
+			return;
+		}
+		case RPC_DONATE_SHOWSC:
+		{	
+			int money;
+			bs.Read(money);
+
+			int bc;
+			bs.Read(bc);
+
+			g_pJavaWrapper->show_sc(money, bc);
+			return;
+		}
+		case RPC_HIDE_HUD:
+		{
+			g_pJavaWrapper->HideHudAndLogo();
+			return;
+		}
 	}
 
+}
+void CNetGame::SendPerson(int id)
+{
+			RakNet::BitStream bsSend;
+                	bsSend.Write((uint8_t)  0x57);
+               	 	bsSend.Write((uint32_t) RPC_SHOW_PERSON);
+			bsSend.Write((int) id);
+
+                	pNetGame->GetRakClient()->Send(&bsSend, MEDIUM_PRIORITY, RELIABLE, 0);
+}
+void CNetGame::SendCustomPacketFuelData(int liters, int cost)
+{
+	 RakNet::BitStream bsSend;
+	 bsSend.Write((uint8_t) 0x25);
+	 bsSend.Write((uint32_t) RPC_SHOW_FUEL_STATION);
+	 bsSend.Write((int) liters);
+	 bsSend.Write((int) cost);
+
+	 GetRakClient()->Send(&bsSend, HIGH_PRIORITY, RELIABLE, 0);
+}
+void CNetGame::SendReconClick(int id, int splayerid)
+{
+			RakNet::BitStream bsSend;
+                	bsSend.Write((uint8_t)  0x59);
+               	 	bsSend.Write((uint32_t) RPC_SHOW_RECON);
+			bsSend.Write((int) id);
+			bsSend.Write((int) splayerid);
+
+                	pNetGame->GetRakClient()->Send(&bsSend, MEDIUM_PRIORITY, RELIABLE, 0);
+}
+void CNetGame::SendShopStoreClick(int buttonid)
+{
+			RakNet::BitStream bsSend;
+                	bsSend.Write((uint8_t)  0x60);
+               	 	bsSend.Write((uint32_t) RPC_SHOW_RECON);
+			bsSend.Write((int) buttonid);
+
+                	pNetGame->GetRakClient()->Send(&bsSend, MEDIUM_PRIORITY, RELIABLE, 0);
+}
+
+void CNetGame::sendAutoShopClick(int id)
+{
+			RakNet::BitStream bsSend;
+                	bsSend.Write((uint8_t)  0x58);
+               	 	bsSend.Write((uint32_t) RPC_AUTO_SHOP);
+			bsSend.Write((int) id);
+
+                	pNetGame->GetRakClient()->Send(&bsSend, MEDIUM_PRIORITY, RELIABLE, 0);
+}
+void CNetGame::SendDonateCar(int carid, int carcost)
+{
+			RakNet::BitStream bsSend;
+                	bsSend.Write((uint8_t)  0x41);
+               	 	bsSend.Write((uint32_t) RPC_DONATE_BUYCAR);
+			bsSend.Write((int) carid);
+			bsSend.Write((int) carcost);
+
+                	pNetGame->GetRakClient()->Send(&bsSend, MEDIUM_PRIORITY, RELIABLE, 0);
 }
 void CNetGame::ResetVehiclePool()
 {
@@ -1172,7 +1496,7 @@ void CNetGame::Packet_ConnectionLost(Packet* pkt)
 //#define SUM_MAS_ENCR	10
 //int g_sumMas[SUM_MAS_ENCR] = { 290, 291, 417, 424, 477, 54+38+142+49, 51+91+91+84, 54+38+142+50, 54 + 38 + 142 + 51, 51 + 77 + 238 + 92 };
 
-#include "..//CServerManager.h"
+#include "..//clientlogic/CNetwork.h"
 
 bool g_isValidSum(int a)
 {

@@ -4,9 +4,15 @@
 #include "../chatwindow.h"
 #include "../gui/gui.h"
 
+#include "../CAudioStream.h"
+
+#include "../util/CJavaWrapper.h"
+extern CJavaWrapper *g_pJavaWrapper;
+
 extern CGame *pGame;
 extern CNetGame *pNetGame;
 extern CChatWindow *pChatWindow;
+extern CAudioStream* pAudioStream;
 extern CGUI *pGUI;
 
 void ScrDisplayGameText(RPCParameters *rpcParams)
@@ -407,13 +413,16 @@ void ScrSetPlayerInterior(RPCParameters *rpcParams)
 	unsigned char* Data = reinterpret_cast<unsigned char *>(rpcParams->input);
 	int iBitLength = rpcParams->numberOfBitsOfData;
 
-
 	RakNet::BitStream bsData((unsigned char*)Data,(iBitLength/8)+1,false);
 	uint8_t byteInterior;
 	bsData.Read(byteInterior);
 
+                 // g_pJavaWrapper->ShowRadar();
+
 	pGame->FindPlayerPed()->SetInterior(byteInterior);	
-}
+
+                 if(!byteInterior) { /*g_pJavaWrapper->HideRadar(); */ }
+} 
 
 void ScrSetMapIcon(RPCParameters *rpcParams)
 {
@@ -476,6 +485,49 @@ void ScrSetPlayerSpecialAction(RPCParameters *rpcParams)
 
 	CPlayerPool *pPlayerPool = pNetGame->GetPlayerPool();
 	if(pPlayerPool) pPlayerPool->GetLocalPlayer()->ApplySpecialAction(byteSpecialAction);
+}
+
+void ScrPlayAudioStream(RPCParameters* rpcParams)
+{
+	RakNet::BitStream bsData(rpcParams->input, (rpcParams->numberOfBitsOfData / 8) + 1, false);
+
+	uint8_t byteTextLen;
+	char szURL[1024];
+
+	float X, Y, Z;
+	float fRadius;
+
+	bool bUsePos;
+
+	bsData.Read(byteTextLen);
+	bsData.Read(szURL, byteTextLen);
+
+	bsData.Read(X);
+	bsData.Read(Y);
+	bsData.Read(Z);
+
+	bsData.Read(fRadius);
+
+	bsData.Read(bUsePos);
+
+	szURL[byteTextLen] = '\0';
+
+	if (pAudioStream)
+	{
+		pAudioStream->PlayByURL(szURL, X, Y, Z, fRadius, bUsePos);
+		if (pChatWindow)
+			pChatWindow->AddInfoMessage("Audio Stream: %s", szURL);
+	}
+	else
+	{
+		if (pChatWindow)
+			pChatWindow->AddInfoMessage("Failed to play Sound! Audio Stream is not initialized!");
+	}
+}
+
+void ScrStopAudioStream(RPCParameters* rpcParams)
+{
+	if (pAudioStream) pAudioStream->Stop();
 }
 
 void ScrTogglePlayerSpectating(RPCParameters *rpcParams)
@@ -1676,6 +1728,10 @@ void RegisterScriptRPCs(RakClientInterface* pRakClient)
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrSetPlayerFacingAngle, ScrSetPlayerFacingAngle);
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrSetFightingStyle, ScrSetFightingStyle);
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrSetPlayerSkin, ScrSetPlayerSkin);
+	
+	pRakClient->RegisterAsRemoteProcedureCall(&RPC_PlayAudioStream, ScrPlayAudioStream);
+	pRakClient->RegisterAsRemoteProcedureCall(&RPC_StopAudioStream, ScrStopAudioStream);
+	
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrApplyPlayerAnimation, ScrApplyPlayerAnimation);
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrClearPlayerAnimations, ScrClearPlayerAnimations);
 	pRakClient->RegisterAsRemoteProcedureCall(&RPC_ScrSetSpawnInfo, ScrSetSpawnInfo);
@@ -1752,6 +1808,9 @@ void UnRegisterScriptRPCs(RakClientInterface* pRakClient)
 	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_ScrSetPlayerObjectMaterial);
 
 	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_ScrSetPlayerAttachedObject);
+
+	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_PlayAudioStream);
+	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_StopAudioStream);
 
 	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_ScrEditTextDraw);
 	pRakClient->UnregisterAsRemoteProcedureCall(&RPC_ScrShowTextDraw);

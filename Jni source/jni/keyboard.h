@@ -6,6 +6,10 @@
 	зачем я это высрал?
 */
 
+/* 
+                  xz bro
+*/
+
 #define LAYOUT_ENG			0
 #define LAYOUT_RUS			1	
 #define LAYOUT_NUM			2

@@ -2,7 +2,7 @@
 #include "../game/game.h"
 #include "../chatwindow.h"
 #include "../net/netgame.h"
-#include "../CSettings.h"
+#include "../settings.h"
 
 extern CGame *pGame;
 extern CChatWindow *pChatWindow;

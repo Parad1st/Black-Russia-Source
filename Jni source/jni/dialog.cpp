@@ -252,8 +252,8 @@ std::string removeColorTags(std::string line)
 }
 #include "chatwindow.h"
 extern CChatWindow* pChatWindow;
-#include "CServerManager.h"
-#include "CSettings.h"
+#include "clientlogic/CNetwork.h"
+#include "settings.h"
 extern CSettings* pSettings;
 void CDialogWindow::RenderTabList(int dStyle)
 {

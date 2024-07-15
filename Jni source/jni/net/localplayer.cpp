@@ -8,7 +8,7 @@
 #include "../game/common.h"
 #include "..//keyboard.h"
 #include "..//chatwindow.h"
-#include "../CSettings.h"
+#include "../settings.h"
 #include "../util/CJavaWrapper.h"
 extern CKeyBoard* pKeyBoard;
 extern CChatWindow* pChatWindow;

@@ -21,6 +21,9 @@ public:
 	~CGUI();
 
 	void Render();
+                  void RenderGUI();
+                  void RenderPosition();
+                  void RenderServer();
 	void ShowSpeed();
 	void SetHealth(float fHealth);
 	int GetHealth();
@@ -31,12 +34,13 @@ public:
 	int bLights;
 	void SetDoor(int door);
 	int bDoor;
+	static void CoordsRadar(CRect* rect); // тут мне кажется лучше будет static void чем просто void (сам думай).
 	void SetMeliage(float meliage);
-    int bMeliage = 0;
-    void SetEat(float eat);
-    int GetEat();
-    int eat;
-    void SetFuel(float fuel);
+                  int bMeliage = 0;
+                  void SetEat(float eat);
+                  int GetEat();
+                  int eat;
+                  void SetFuel(float fuel);
 	int m_fuel;
 
 	float ScaleX(float x) { return m_vecScale.x * x; }

@@ -4,7 +4,7 @@
 #include "net/netgame.h"
 #include "gui/gui.h"
 #include "vendor/imgui/imgui_internal.h"
-#include "CSettings.h"
+#include "settings.h"
 #include <jni.h>
 #ifndef min
 #define min(a,b) (((a) < (b)) ? (a) : (b))
