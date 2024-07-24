@@ -106,9 +106,9 @@ void InitBASSFuncs()
 	void* handle;
 
 #ifdef GAME_EDITION_CR
-	handle = dlopen("/data/data/com.parad1stgames.game/lib/libbass.so", 3);
+	handle = dlopen("/data/data/com.viskigames.game/lib/libbass.so", 3);
 #else
-	handle = dlopen("/data/data/com.parad1stgames.game/lib/libbass.so", 3);
+	handle = dlopen("/data/data/com.viskigames.game/lib/libbass.so", 3);
 #endif
 	if (!handle)
 	{

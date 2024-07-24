@@ -7,7 +7,7 @@ if (-not ($PSVersionTable.PSEdition -eq "Core")) {
 }
 
 Write-Output "[FAQ] youtube.com/@Parad1st"
-Write-Output "[PR] LUX RUSSIA"
+Write-Output "[PR] BLACK RUSSIA"
 Write-Output "[BUILD] Starting..."
 & $buildScript NDK_PROJECT_PATH=$PSScriptRoot APP_BUILD_SCRIPT=$PSScriptRoot/Android.mk NDK_APPLICATION_MK=$PSScriptRoot/Application.mk NDK_DEBUG=0
 Write-Output "[BUILD] Done!"
