@@ -21,7 +21,7 @@
              android:fontFamily="@font/montserrat_bold"
              android:lineSpacingMultiplier="0.9"
              android:paddingStart="-3dp"
-             android:text="LUX\nRUSSIA"
+             android:text="BLACK RUSSIA"
              android:textAlignment="viewStart"
              android:textAllCaps="true"
              android:textColor="@color/white"
