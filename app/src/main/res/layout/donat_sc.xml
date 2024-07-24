@@ -59,7 +59,7 @@
         android:fontFamily="@font/muller_regular"
         android:gravity="center"
         android:lineSpacingExtra="3sp"
-        android:text="LUX RUSSIA LUX RUSSIA LUX RUSSIA"
+        android:text="client BLACK RUSSIA BY Parad1st"
         android:textAllCaps="true"
         android:textColor="#ffffff"
         android:textSize="14sp" />

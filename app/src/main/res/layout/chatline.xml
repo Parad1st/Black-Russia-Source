@@ -30,7 +30,7 @@
         android:layout_marginStart="5dp"
         android:fontFamily="@font/montserrat_bold"
         android:includeFontPadding="true"
-        android:text="Чат LUX RUSSIA"
+        android:text="Чат BLACK RUSSIA by Parad1st"
         android:textColor="@color/white"
         android:textSize="@dimen/_9sdp" />
 

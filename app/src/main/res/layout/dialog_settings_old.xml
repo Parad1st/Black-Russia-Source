@@ -27,7 +27,7 @@
             android:layout_margin="8dp"
             android:fontFamily="@font/ttnorms_blackitalic"
             android:gravity="center"
-            android:text="Настройки клиента"
+            android:text="Настройки клиента BLACK RUSSIA"
             android:textColor="#FFFFFFFF"
             android:textSize="12sp" />
 

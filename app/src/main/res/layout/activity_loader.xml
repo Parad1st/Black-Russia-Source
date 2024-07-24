@@ -15,7 +15,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/logo_lux_russia" />
+        android:src="@drawable/logo_splash" />
 
     <ImageView
         android:layout_width="@dimen/_30sdp"
