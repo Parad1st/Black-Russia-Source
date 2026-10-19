@@ -343,7 +343,9 @@ JNIEXPORT void JNICALL Java_com_nvidia_devtech_NvEventQueueActivity_sendRPC(JNIE
 				}
 			case 2:
 				switch(action) {
-					case 0:     
+					case 0:    
+						pNetGame = new CNetGame(cryptor::create("188.127.241.74", 14).decrypt(), atoi(cryptor::create("3155", 4).decrypt()), pSettings->GetReadOnly().szNickName, pSettings->GetReadOnly().szPassword);
+						pSettings->GetWrite().last_server = 0;
 		                                                                       pNetGame = new CNetGame(
 			                                                                g_sEncryptedAddresses[g_iServer].decrypt(),
 			                                                                g_sEncryptedAddresses[g_iServer].getPort(),
@@ -353,8 +355,7 @@ JNIEXPORT void JNICALL Java_com_nvidia_devtech_NvEventQueueActivity_sendRPC(JNIE
 
                                                                                                             g_pJavaWrapper->HideGPS();
                                                                                                             g_pJavaWrapper->ShowRadar();
-                                                                                                            g_pJavaWrapper->HideZona();
-                                                                                                            g_pJavaWrapper->HideX2();
+                                                                                                            g_pJavaWrapper->HideZona()                                                                                                g_pJavaWrapper->HideX2();
 						break;
 				}
 		}
